@@ -8,7 +8,7 @@ Content is a two-level tree: `<category>/<topic>/<article>.md`. Assets (images, 
 
 ```mermaid
 flowchart TD
-    root["work-notes/ (root)"]
+    root["technical-knowledge/ (root)"]
 
     subgraph cats["Categories (each with topic subdirs + README.md index)"]
         AI["ai/ — claude-code, prompting, agents,<br/>openclaw, superpowers, model-routing, concepts"]

@@ -1,4 +1,4 @@
-# work-notes
+# technical-knowledge
 
 Personal technical knowledge base — Markdown articles grouped into nine top-level categories.
 Each category holds topic subdirectories; images, notebooks and code samples live next to the
