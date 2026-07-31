@@ -18,7 +18,7 @@ article that references them.
 | [Security](./security/) | TLS/HTTPS, authentication, mobile app hardening — 10 articles |
 | [Tools](./tools/) | Docker, Git, VS Code and self-hosted services — 7 articles |
 
-Outside the categories, [`docs/`](./docs/) holds plans, specs and the backlog.
+Outside the categories, [`docs/`](./docs/) holds the backlog plus any plans and specs.
 
 ## AI
 

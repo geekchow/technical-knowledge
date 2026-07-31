@@ -23,7 +23,7 @@ flowchart TD
     end
 
     subgraph tooling["Meta (outside the categories)"]
-        Docs["docs/ — plans, specs, backlog.md"]
+        Docs["docs/ — backlog.md, plans & specs"]
         Index["README.md — generated root index"]
     end
 
