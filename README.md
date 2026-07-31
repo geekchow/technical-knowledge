@@ -8,7 +8,7 @@ article that references them.
 
 | Category | Contents |
 |---|---|
-| [AI](./ai/) | LLM concepts, Claude Code, prompting, agents, model routing — 17 articles |
+| [AI](./ai/) | LLM fundamentals & inference, Claude Code, prompting, agents, model routing — 42 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 14 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 55 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 24 articles |
@@ -18,11 +18,13 @@ article that references them.
 | [Security](./security/) | TLS/HTTPS, authentication, mobile app hardening — 10 articles |
 | [Tools](./tools/) | Docker, Git, VS Code and self-hosted services — 7 articles |
 
-Outside the categories, [`docs/`](./docs/) holds the backlog plus any plans and specs.
+Outside the categories, [`docs/`](./docs/) holds the backlog plus any plans and specs, and
+[`raw/`](./raw/README.md) holds the unpolished study notes that the published article series are
+derived from.
 
 ## AI
 
-_LLM concepts, Claude Code, prompting, agents, model routing_
+_LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 
 **Agents**
 
@@ -34,6 +36,34 @@ _LLM concepts, Claude Code, prompting, agents, model routing_
 - [claude skill](ai/claude-code/claude-skill.md)
 - [Using Claude Code Efficiently](ai/claude-code/guide.md)
 - [skill](ai/claude-code/skill.md)
+
+**Concepts**
+
+- [AI 核心概念梳理：LLM / Prompt / Agent / RAG / MCP / Skill / Context / Harness](ai/concepts/AI核心概念梳理-LLM-Prompt-Agent-RAG-MCP-Skill-Context-Harness.md)
+
+**LLM Fundamentals** — 全景指南，按 00 → 07 顺序阅读
+
+- [00 · 总览：LLM 全景指南](ai/llm-fundamentals/00-overview.md)
+- [01 · WHY：LLM 解决了什么问题](ai/llm-fundamentals/01-why.md)
+- [02 · WHAT：定义、边界与生态位置](ai/llm-fundamentals/02-what.md)
+- [03 · 概念地图：全部概念与关键角色](ai/llm-fundamentals/03-concept-map.md)
+- [04 · 运行示例：一个问题、两个模型](ai/llm-fundamentals/04-running-example.md)
+- [05-01 · 深潜：训练管线，数据如何变成权重](ai/llm-fundamentals/05-01-training-pipeline.md)
+- [05-01a · 深潜：后训练细拆 —— SFT、RLHF、DPO、RLVR](ai/llm-fundamentals/05-01a-post-training.md)
+- [05-02 · 深潜：推理引擎，权重如何被读取](ai/llm-fundamentals/05-02-inference-engine.md)
+- [05-03 · 深潜：参数规模，为什么 7B、70B、670B 如此重要](ai/llm-fundamentals/05-03-param-scale.md)
+- [05-04 · 深潜：开源 vs 闭源，同一份权重两种交付](ai/llm-fundamentals/05-04-open-vs-closed.md)
+- [06 · 完整重演：带着全部深度重跑运行示例](ai/llm-fundamentals/06-walkthrough.md)
+- [07 · 下一步：动手验证与延伸阅读](ai/llm-fundamentals/07-next-steps.md)
+
+**LLM Inference** — 中英双语文章系列，见 [series index](ai/llm-inference/index.md)
+
+- [一次 LLM 推理的完整旅程](ai/llm-inference/llm-inference-process.zh.md) · [The Full Journey of an LLM Inference Request](ai/llm-inference/llm-inference-process.en.md)
+- [KV Cache 完全解析](ai/llm-inference/kv-cache.zh.md) · [KV Cache Explained](ai/llm-inference/kv-cache.en.md)
+- [Chat 阶段 vs Agentic 阶段](ai/llm-inference/chat-vs-agentic.zh.md) · [Chat vs. Agentic](ai/llm-inference/chat-vs-agentic.en.md)
+- [GPU 负责想，CPU 负责做](ai/llm-inference/agentic-cpu-demand.zh.md) · [GPUs Think, CPUs Do](ai/llm-inference/agentic-cpu-demand.en.md)
+- [会续写 ≠ 会帮忙：后训练](ai/llm-inference/post-training.zh.md) · [Completing Text ≠ Being Helpful](ai/llm-inference/post-training.en.md)
+- [FP16 与 INT4 量化](ai/llm-inference/fp16-int4-quantization.zh.md) · [FP16 and INT4 Quantization](ai/llm-inference/fp16-int4-quantization.en.md)
 
 **Model Routing**
 

@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Overview
-Personal technical knowledge base / work notes. A collection of ~135 Markdown articles organized into **nine top-level categories**, each holding topic subdirectories, with supporting images, Jupyter notebooks, and a handful of small embedded code samples. This is a **documentation repo, not an application** — there is no top-level build, test, or run step. `README.md` at the root is the generated index; each category has its own `README.md` too.
+Personal technical knowledge base / work notes. A collection of ~160 Markdown articles organized into **nine top-level categories**, each holding topic subdirectories, with supporting images, Jupyter notebooks, and a handful of small embedded code samples. This is a **documentation repo, not an application** — there is no top-level build, test, or run step. `README.md` at the root is the generated index; each category has its own `README.md` too.
 
 ## Architecture
 Content is a two-level tree: `<category>/<topic>/<article>.md`. Assets (images, diagrams, notebooks, sample code) are colocated beside the article that references them, always via same-directory relative links. A few topic folders additionally contain runnable mini-projects.
@@ -11,7 +11,7 @@ flowchart TD
     root["technical-knowledge/ (root)"]
 
     subgraph cats["Categories (each with topic subdirs + README.md index)"]
-        AI["ai/ — claude-code, prompting, agents,<br/>openclaw, superpowers, model-routing, concepts"]
+        AI["ai/ — llm-fundamentals, llm-inference, claude-code,<br/>prompting, agents, openclaw, superpowers,<br/>model-routing, concepts"]
         Cloud["cloud/ — aws/{eks, networking, ipv4, dynamodb,<br/>lambda, cidr-allocation, step-functions}"]
         DevOps["devops/ — cicd, jenkins, kubernetes, dns, nexus,<br/>linux, shell, networking, observability, practices"]
         Lang["languages/ — java, python, javascript, paradigms"]
@@ -24,6 +24,7 @@ flowchart TD
 
     subgraph tooling["Meta (outside the categories)"]
         Docs["docs/ — backlog.md, plans & specs"]
+        Raw["raw/ — unpolished study notes<br/>(source for derived article series)"]
         Index["README.md — generated root index"]
     end
 
@@ -38,12 +39,14 @@ flowchart TD
     root --> tooling
     cats --> code
 
+    Raw -.extended into.-> AI
+
     AI -.assets.-> Assets["Colocated .png/.webp images & diagrams"]
     Cloud -.assets.-> Assets
     DevOps -.assets.-> Assets
 ```
 
-Content breakdown: ~145 `.md` (incl. 10 generated `README.md`), ~60 images (`.png`/`.webp`/`.PNG`), ~16 `.ipynb`, plus scattered `.py`, `.ts`, `.tf`, `.yml`, `.sh`.
+Content breakdown: ~170 `.md` (incl. 11 generated `README.md`), ~60 images (`.png`/`.webp`/`.PNG`), ~16 `.ipynb`, plus scattered `.py`, `.ts`, `.tf`, `.yml`, `.sh`.
 
 ## Conventions
 - **Notes are Markdown**, filed at `<category>/<topic>/`. Pick an existing category; add a topic subdirectory when the subject is genuinely new. Adding a tenth *category* should be rare.
@@ -51,6 +54,8 @@ Content breakdown: ~145 `.md` (incl. 10 generated `README.md`), ~60 images (`.pn
 - **Colocate assets.** Images and diagrams live next to the article that references them; **links are same-directory relative (`./x.png`)** — never `../`. Anything an article links must move with it.
 - **Diagrams:** prefer inline Mermaid for processes and relationships; use a drawio/exported image only when a diagram is too complex for readable Mermaid.
 - **Bilingual:** filenames and content may be English or Chinese — both are expected.
+- **`raw/` is the source-of-record, category articles are the deliverable.** Rough study notes live at repo-root `raw/<topic>.md`; polished versions are filed in the normal category tree (currently `ai/llm-inference/`, tracked in its `index.md` with CSDN publish checkboxes). **Never edit a `raw/` note when polishing the derived article.**
+- **Article series** (`ai/llm-inference/`, `ai/llm-fundamentals/`) keep a flat topic directory and cross-reference each other with same-directory relative links; `../<topic>/` is only for links across topics. Bilingual pairs are `<topic>.zh.md` + `<topic>.en.md`, where the English one is a parallel rewrite, not a literal translation.
 - **Indexes are generated,** not hand-maintained. After adding or moving articles, regenerate the root and per-category `README.md` files rather than editing them by hand.
 - There is no enforced lint/format tooling across the repo.
 
