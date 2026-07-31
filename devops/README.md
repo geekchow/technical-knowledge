@@ -66,6 +66,7 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 - [Understanding GID in Linux](linux/Linux-GID.md)
 - [Understanding Linux Groups](linux/linux_groups.md)
 - [Linux Permission System](linux/linux_permissions.md)
+- [Screen 会话管理](linux/Screen-会话管理.md)
 
 **Networking**
 
@@ -83,15 +84,18 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 
 - [AgileAlliance](practices/AgileAlliance.md)
 - [Git Branching Strategies: Common Models, Trade-offs, and Choosing One for Correlated API Releases](practices/branching-strategy.md)
+- [Multiple Mac mini share memory](practices/Multiple-Mac-mini-share-memory.md)
 
 **Shell**
 
+- [Zsh Subshell Variable Expansion](shell/2026-04-05-AI-Insight-Zsh-Subshell-Variable-Expansion.md)
 - [Bash](shell/bash.md)
 - [Difference Between `bash` and `sh` --- And Why Lightweight Images Include Only `sh](shell/bash_vs_sh_explained.md)
 - [find](shell/find.md)
 - [grep](shell/grep.md)
 - [network tools](shell/network-tools.md)
 - [Permission of file in Bash](shell/permission.md)
+- [tree — 列目录并排除指定子目录](shell/tree.md)
 - [zsh](shell/zsh.md)
 
 **General**

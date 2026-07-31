@@ -7,17 +7,23 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 **Agents**
 
 - [AI Agent 记忆的 6 个层级：从 CLAUDE.md 到「统一大脑」](agents/ai-agent-memory-6-levels.md)
+- [Build an AI Assistant with LangGraph, Vercel, and Next.js: Use Gmail as a Tool Securely](agents/Build-an-AI-Assistant-with-LangGraph-Vercel-and-Next.js-Use-Gmail-as-a-Tool-Securely.md)
 
 **Claude Code**
 
+- [Claude Code Deep Dive (pdf)](claude-code/claude-code-deep-dive-xelatex.pdf)
 - [Claude Code 安装指南](claude-code/claude-code.md)
 - [claude skill](claude-code/claude-skill.md)
 - [Using Claude Code Efficiently](claude-code/guide.md)
+- [iOS UI design for AI-powered dictionary app](claude-code/iOS-UI-design-for-AI-powered-dictionary-app.md)
+- [One Layer vs Two Layers: Claude Skill Structure](claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](claude-code/skill.md)
+- [Claude Skills Marketplace](claude-code/skills-marketplace.md)
 
 **Concepts**
 
 - [AI 核心概念梳理：LLM / Prompt / Agent / RAG / MCP / Skill / Context / Harness](concepts/AI核心概念梳理-LLM-Prompt-Agent-RAG-MCP-Skill-Context-Harness.md)
+- [LLM 量化版本 是什么版本](concepts/LLM-量化版本-是什么版本.md)
 
 **LLM Fundamentals** — 全景指南，按 00 → 07 顺序阅读
 
@@ -46,6 +52,7 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 **Model Routing**
 
 - [How to user deeprouter api](model-routing/deeprouter.md)
+- [OpenRouter Auto Router vs Model Fallbacks](model-routing/OpenRouter-Auto-Router-vs-Model-Fallbacks.md)
 - [OpenRouter](model-routing/openrouter.md)
 
 **OpenClaw**
@@ -56,6 +63,7 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 **Prompting**
 
 - [Cognitive Mental Model — Learning New Systems in Software Engineering](prompting/cogntive-skill.md)
+- [如何用 AI 整理自己的思路](prompting/how-to-use-ai.md)
 - [ChatGPT is the world's best money maker.](prompting/Make-Money.md)
 - [Prompts for AI](prompting/prompt.md)
 - [ChatGPT is FREE education.](prompting/Study.md)

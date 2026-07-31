@@ -1,0 +1,1 @@
+# One Layer vs Two Layers: Claude Skill Structure

@@ -26,6 +26,10 @@ Java, Python, JavaScript and programming paradigms.
 
 - [Reactive programming](javascript/reactive-programming.md)
 
+**Paradigms**
+
+- [Light state cycle detection bug](paradigms/Light-state-cycle-detection-bug.md)
+
 **Paradigms › Imperative Vs Declarative Program**
 
 - [Declarative vs imperative programming](paradigms/imperative-vs-declarative-program/imperative-declarative.md)
@@ -38,6 +42,8 @@ Java, Python, JavaScript and programming paradigms.
 - [Python 3 进阶复习手册](python/python-advance.md)
 - [requests` pip package](python/python-requests.md)
 - [Python 切片 (Slice) 详解](python/slice.md)
+- [Why Use uv for Python](python/Why-Use-uv-for-Python.md)
+- [解释 python3 的 threading.Semaphore 机制](python/解释-python3-的-threading.Semaphore-机制.md)
 - [subprocess shell (notebook)](python/subprocess-shell.ipynb)
 
 **Python › argparse**

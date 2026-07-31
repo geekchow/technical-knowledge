@@ -1,5 +1,7 @@
 # Python 3 进阶复习手册
 > 数据结构 · 字符串处理 | Python 3.10+ | 13 个核心技巧
+>
+> 排版版本（可直接在浏览器阅读）：[python-advance.html](./python-advance.html)
 
 ---
 

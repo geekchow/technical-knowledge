@@ -20,6 +20,7 @@ Data preparation, notebooks, deep learning, local LLMs.
 
 **LLaMA**
 
+- [Exploring LLMs with MLX and the Neural Accelerators in the M5 GPU](llama/Exploring-LLMs-with-MLX-and-the-Neural-Accelerators-in-the-M5-GPU.md)
 - [llama 2 model setup](llama/setup.md)
 
 **Notebooks**

@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Overview
-Personal technical knowledge base / work notes. A collection of ~160 Markdown articles organized into **nine top-level categories**, each holding topic subdirectories, with supporting images, Jupyter notebooks, and a handful of small embedded code samples. This is a **documentation repo, not an application** — there is no top-level build, test, or run step. `README.md` at the root is the generated index; each category has its own `README.md` too.
+Personal technical knowledge base / work notes. A collection of ~185 Markdown articles organized into **nine top-level categories**, each holding topic subdirectories, with supporting images, Jupyter notebooks, and a handful of small embedded code samples. This is a **documentation repo, not an application** — there is no top-level build, test, or run step. `README.md` at the root is the generated index; each category has its own `README.md` too.
 
 ## Architecture
 Content is a two-level tree: `<category>/<topic>/<article>.md`. Assets (images, diagrams, notebooks, sample code) are colocated beside the article that references them, always via same-directory relative links. A few topic folders additionally contain runnable mini-projects.
@@ -46,7 +46,7 @@ flowchart TD
     DevOps -.assets.-> Assets
 ```
 
-Content breakdown: ~170 `.md` (incl. 11 generated `README.md`), ~60 images (`.png`/`.webp`/`.PNG`), ~16 `.ipynb`, plus scattered `.py`, `.ts`, `.tf`, `.yml`, `.sh`.
+Content breakdown: ~195 `.md` (incl. 11 generated `README.md`), ~60 images (`.png`/`.webp`/`.PNG`), ~16 `.ipynb`, plus scattered `.py`, `.ts`, `.tf`, `.yml`, `.sh`.
 
 ## Conventions
 - **Notes are Markdown**, filed at `<category>/<topic>/`. Pick an existing category; add a topic subdirectory when the subject is genuinely new. Adding a tenth *category* should be rare.

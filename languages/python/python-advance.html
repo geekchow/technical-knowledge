@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python 3 进阶复习手册</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #151820;
+    --surface2: #1c2030;
+    --border: #252a38;
+    --accent: #4ade80;
+    --accent2: #38bdf8;
+    --accent3: #f59e0b;
+    --accent4: #e879f9;
+    --text: #e2e8f0;
+    --text-muted: #64748b;
+    --text-dim: #94a3b8;
+    --code-bg: #0a0c10;
+    --keyword: #c792ea;
+    --string: #c3e88d;
+    --comment: #546e7a;
+    --func: #82aaff;
+    --number: #f78c6c;
+    --builtin: #ffcb6b;
+    --operator: #89ddff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Noto Serif SC', sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0 0 2rem;
+  }
+
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-track { background: transparent; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .sidebar-header {
+    padding: 1.8rem 1.5rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 10;
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .logo-badge {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .sidebar-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+
+  .sidebar-subtitle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  .nav-section {
+    padding: 1rem 1rem 0.4rem;
+  }
+
+  .nav-section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
+  }
+
+  .nav-item:hover { background: var(--surface2); color: var(--text); }
+  .nav-item.active { background: rgba(74,222,128,0.08); color: var(--accent); }
+
+  .nav-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    min-width: 1.4rem;
+    padding-top: 0.1rem;
+  }
+
+  /* ── Main Content ── */
+  .main {
+    flex: 1;
+    padding: 3rem 3.5rem;
+    max-width: 960px;
+  }
+
+  .page-header {
+    margin-bottom: 3.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .page-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    background: linear-gradient(135deg, #e2e8f0 30%, #64748b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .page-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .meta-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .meta-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ── Chapter ── */
+  .chapter {
+    margin-bottom: 4rem;
+  }
+
+  .chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .chapter-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.2);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .chapter-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent2);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--surface2);
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+  }
+
+  .section-body {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+  }
+
+  /* ── Code Block ── */
+  .code-wrap {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.2rem 0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.7rem;
+  }
+
+  .code-lang {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .code-dots { display: flex; gap: 5px; }
+  .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f56; }
+  .dot-y { background: #ffbd2e; }
+  .dot-g { background: #27c93f; }
+
+  pre {
+    padding: 1.2rem 1.4rem;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.75;
+    tab-size: 4;
+  }
+
+  pre::-webkit-scrollbar { height: 4px; }
+  pre::-webkit-scrollbar-track { background: transparent; }
+  pre::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  /* Syntax highlighting */
+  .kw { color: var(--keyword); font-style: italic; }
+  .st { color: var(--string); }
+  .cm { color: var(--comment); font-style: italic; }
+  .fn { color: var(--func); }
+  .nb { color: var(--builtin); }
+  .nm { color: var(--number); }
+  .op { color: var(--operator); }
+  .cls { color: #ffcb6b; }
+  .dec { color: var(--accent4); }
+  .var { color: var(--text); }
+  .pn { color: #89ddff; }  /* punctuation */
+
+  /* ── Info Boxes ── */
+  .info-box {
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.85rem;
+    border-left: 3px solid;
+    line-height: 1.7;
+  }
+
+  .info-tip {
+    background: rgba(74,222,128,0.06);
+    border-color: var(--accent);
+    color: #a7f3d0;
+  }
+
+  .info-warn {
+    background: rgba(245,158,11,0.07);
+    border-color: var(--accent3);
+    color: #fde68a;
+  }
+
+  .info-note {
+    background: rgba(56,189,248,0.07);
+    border-color: var(--accent2);
+    color: #bae6fd;
+  }
+
+  .box-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    opacity: 0.8;
+  }
+
+  /* ── Method Table ── */
+  .method-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    font-size: 0.82rem;
+  }
+
+  .method-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    background: var(--surface2);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .method-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+    vertical-align: top;
+  }
+
+  .method-table tr:last-child td { border-bottom: none; }
+  .method-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .method-table code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--func);
+    background: var(--surface2);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  /* ── Inline Code ── */
+  p code, li code, td code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82em;
+    color: var(--accent2);
+    background: rgba(56,189,248,0.08);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  /* ── Summary Banner ── */
+  .summary {
+    background: linear-gradient(135deg, rgba(74,222,128,0.05), rgba(56,189,248,0.05));
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .summary-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .summary ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .summary ul li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    background: var(--surface2);
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+
+  /* ── Comparison grid ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+
+  .compare-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .compare-card-header {
+    padding: 0.5rem 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .compare-card.good .compare-card-header { color: var(--accent); background: rgba(74,222,128,0.05); }
+  .compare-card.bad .compare-card-header { color: #f87171; background: rgba(248,113,113,0.05); }
+
+  .compare-card pre { padding: 0.9rem 1rem; font-size: 0.78rem; }
+
+  /* divider */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ── Sidebar Navigation ── -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <span class="logo-badge">Py3</span>
+        <span class="sidebar-title">进阶复习手册</span>
+      </div>
+      <div class="sidebar-subtitle">数据结构 · 字符串处理</div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-label">Chapter I &mdash; 数据结构与算法</div>
+      <a class="nav-item" href="#s1-1"><span class="nav-num">1.1</span>条件筛选数据</a>
+      <a class="nav-item" href="#s1-2"><span class="nav-num">1.2</span>元组元素命名</a>
+      <a class="nav-item" href="#s1-3"><span class="nav-num">1.3</span>字典按值排序</a>
+      <a class="nav-item" href="#s1-4"><span class="nav-num">1.4</span>统计元素频度</a>
+      <a class="nav-item" href="#s1-5"><span class="nav-num">1.5</span>多字典公共键</a>
+      <a class="nav-item" href="#s1-6"><span class="nav-num">1.6</span>字典保持有序</a>
+      <a class="nav-item" href="#s1-7"><span class="nav-num">1.7</span>历史记录功能</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-label">Chapter II &mdash; 字符串处理</div>
+      <a class="nav-item" href="#s2-1"><span class="nav-num">2.1</span>多分隔符拆分</a>
+      <a class="nav-item" href="#s2-2"><span class="nav-num">2.2</span>前缀/后缀判断</a>
+      <a class="nav-item" href="#s2-3"><span class="nav-num">2.3</span>文本格式调整</a>
+      <a class="nav-item" href="#s2-4"><span class="nav-num">2.4</span>字符串拼接</a>
+      <a class="nav-item" href="#s2-5"><span class="nav-num">2.5</span>对齐处理</a>
+      <a class="nav-item" href="#s2-6"><span class="nav-num">2.6</span>去除无用字符</a>
+    </div>
+  </nav>
+
+  <!-- ── Main Content ── -->
+  <main class="main">
+
+    <header class="page-header">
+      <div class="page-eyebrow">Python 3 · Senior Review</div>
+      <h1 class="page-title">数据结构 &amp; 字符串<br>处理技巧精要</h1>
+      <div class="page-meta">
+        <span class="meta-chip"><span class="meta-dot"></span>Python 3.10+</span>
+        <span class="meta-chip"><span class="meta-dot" style="background:var(--accent2)"></span>13 个核心技巧</span>
+        <span class="meta-chip"><span class="meta-dot" style="background:var(--accent3)"></span>标准库 · 内置工具</span>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+         CHAPTER I
+    ════════════════════════════════════════════════ -->
+    <section class="chapter" id="chapter1">
+      <div class="chapter-header">
+        <span class="chapter-num">CHAPTER I</span>
+        <h2 class="chapter-title">数据结构与算法相关问题与解决技巧</h2>
+      </div>
+
+      <!-- 1.1 -->
+      <div class="section" id="s1-1">
+        <h3 class="section-title">
+          <span class="section-num">1.1</span>
+          如何在列表、字典、集合中根据条件筛选数据
+        </h3>
+        <p class="section-body">
+          Python 提供了三种核心筛选方式：<strong>列表/字典/集合推导式</strong>、内置函数 <code>filter()</code>
+          以及 <code>itertools.compress()</code>（配合掩码使用）。推导式是最 Pythonic 的方式，同时兼顾可读性与性能。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots">
+              <div class="code-dot dot-r"></div>
+              <div class="code-dot dot-y"></div>
+              <div class="code-dot dot-g"></div>
+            </div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="cm"># ── 列表筛选 ──────────────────────────────────────</span>
+data <span class="op">=</span> [<span class="nm">-3</span>, <span class="nm">5</span>, <span class="nm">-1</span>, <span class="nm">8</span>, <span class="nm">-2</span>, <span class="nm">6</span>, <span class="nm">0</span>]
+
+<span class="cm"># 方式1: 列表推导式 (推荐)</span>
+pos <span class="op">=</span> [x <span class="kw">for</span> x <span class="kw">in</span> data <span class="kw">if</span> x <span class="op">></span> <span class="nm">0</span>]          <span class="cm"># [5, 8, 6]</span>
+
+<span class="cm"># 方式2: filter() —— 返回惰性迭代器，大数据更省内存</span>
+pos <span class="op">=</span> <span class="nb">list</span>(<span class="fn">filter</span>(<span class="kw">lambda</span> x<span class="op">:</span> x <span class="op">></span> <span class="nm">0</span>, data))
+
+<span class="cm"># 方式3: itertools.compress (掩码筛选)</span>
+<span class="kw">from</span> itertools <span class="kw">import</span> compress
+mask <span class="op">=</span> [x <span class="op">></span> <span class="nm">0</span> <span class="kw">for</span> x <span class="kw">in</span> data]
+pos <span class="op">=</span> <span class="nb">list</span>(<span class="fn">compress</span>(data, mask))
+
+<span class="cm"># ── 字典筛选 ──────────────────────────────────────</span>
+prices <span class="op">=</span> {<span class="st">'AAPL'</span>: <span class="nm">182</span>, <span class="st">'BABA'</span>: <span class="nm">78</span>, <span class="st">'TSLA'</span>: <span class="nm">245</span>, <span class="st">'NIO'</span>: <span class="nm">6</span>}
+
+<span class="cm"># 字典推导式: 筛选价格 > 100 的股票</span>
+expensive <span class="op">=</span> {k<span class="op">:</span> v <span class="kw">for</span> k, v <span class="kw">in</span> prices.<span class="fn">items</span>() <span class="kw">if</span> v <span class="op">></span> <span class="nm">100</span>}
+<span class="cm"># {'AAPL': 182, 'TSLA': 245}</span>
+
+<span class="cm"># ── 集合筛选 ──────────────────────────────────────</span>
+nums <span class="op">=</span> {<span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>, <span class="nm">4</span>, <span class="nm">5</span>, <span class="nm">6</span>}
+evens <span class="op">=</span> {x <span class="kw">for</span> x <span class="kw">in</span> nums <span class="kw">if</span> x <span class="op">%</span> <span class="nm">2</span> <span class="op">==</span> <span class="nm">0</span>}   <span class="cm"># {2, 4, 6}</span></pre>
+        </div>
+
+        <div class="info-box info-tip">
+          <div class="box-label">💡 性能建议</div>
+          数据量巨大时，优先用 <code>filter()</code> 或生成器表达式（<code>(x for x in data if ...)</code>），避免一次性构建完整列表占用内存。
+        </div>
+      </div>
+
+      <!-- 1.2 -->
+      <div class="section" id="s1-2">
+        <h3 class="section-title">
+          <span class="section-num">1.2</span>
+          如何为元组中的每个元素命名，提高程序可读性
+        </h3>
+        <p class="section-body">
+          原始元组用下标访问（<code>t[0]</code>、<code>t[2]</code>）可读性极差。有两种命名方案：
+          <strong>collections.namedtuple</strong>（轻量，兼容元组所有操作）和
+          <strong>typing.NamedTuple</strong>（支持类型注解，更现代）。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">from</span> collections <span class="kw">import</span> namedtuple
+<span class="kw">from</span> typing <span class="kw">import</span> NamedTuple
+
+<span class="cm"># ── 方式1: namedtuple (经典) ───────────────────────</span>
+Student <span class="op">=</span> <span class="fn">namedtuple</span>(<span class="st">'Student'</span>, [<span class="st">'name'</span>, <span class="st">'age'</span>, <span class="st">'score'</span>])
+s <span class="op">=</span> <span class="cls">Student</span>(<span class="st">'Alice'</span>, <span class="nm">22</span>, <span class="nm">95.5</span>)
+
+<span class="cm"># 通过名称访问，清晰易读</span>
+<span class="nb">print</span>(s.name, s.score)          <span class="cm"># Alice 95.5</span>
+<span class="cm"># 仍然兼容元组下标和解包</span>
+name, age, score <span class="op">=</span> s
+<span class="nb">print</span>(s[<span class="nm">0</span>])                     <span class="cm"># Alice</span>
+
+<span class="cm"># _replace 返回新实例（namedtuple 不可变）</span>
+s2 <span class="op">=</span> s.<span class="fn">_replace</span>(score<span class="op">=</span><span class="nm">98.0</span>)
+
+<span class="cm"># ── 方式2: typing.NamedTuple (推荐，支持类型注解) ──</span>
+<span class="kw">class</span> <span class="cls">Trade</span>(<span class="cls">NamedTuple</span>):
+    symbol<span class="op">:</span> <span class="nb">str</span>
+    price<span class="op">:</span> <span class="nb">float</span>
+    volume<span class="op">:</span> <span class="nb">int</span>
+    direction<span class="op">:</span> <span class="nb">str</span> <span class="op">=</span> <span class="st">'BUY'</span>  <span class="cm"># 支持默认值</span>
+
+t <span class="op">=</span> <span class="cls">Trade</span>(<span class="st">'600519'</span>, <span class="nm">1680.0</span>, <span class="nm">100</span>)
+<span class="nb">print</span>(t.symbol, t.direction)    <span class="cm"># 600519 BUY</span>
+<span class="nb">print</span>(t.<span class="fn">_asdict</span>())             <span class="cm"># 转 dict</span></pre>
+        </div>
+
+        <div class="info-box info-note">
+          <div class="box-label">📝 Note</div>
+          <code>NamedTuple</code> 是 <code>namedtuple</code> 的类语法糖，两者底层相同。如需可变字段，考虑 <code>dataclasses.dataclass</code>。
+        </div>
+      </div>
+
+      <!-- 1.3 -->
+      <div class="section" id="s1-3">
+        <h3 class="section-title">
+          <span class="section-num">1.3</span>
+          如何根据字典中值的大小，对字典中的项排序
+        </h3>
+        <p class="section-body">
+          字典本身无序排序概念（Python 3.7+ 插入有序）。对值排序的核心是 <code>sorted()</code>
+          配合 <code>key</code> 参数，常用 <code>operator.itemgetter</code> 或 <code>lambda</code>。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">from</span> operator <span class="kw">import</span> itemgetter
+
+scores <span class="op">=</span> {<span class="st">'Alice'</span>: <span class="nm">88</span>, <span class="st">'Bob'</span>: <span class="nm">73</span>, <span class="st">'Charlie'</span>: <span class="nm">95</span>, <span class="st">'Diana'</span>: <span class="nm">81</span>}
+
+<span class="cm"># ── 按值升序 ───────────────────────────────────────</span>
+asc <span class="op">=</span> <span class="fn">sorted</span>(scores.<span class="fn">items</span>(), key<span class="op">=</span><span class="fn">itemgetter</span>(<span class="nm">1</span>))
+<span class="cm"># [('Bob', 73), ('Diana', 81), ('Alice', 88), ('Charlie', 95)]</span>
+
+<span class="cm"># ── 按值降序 ───────────────────────────────────────</span>
+desc <span class="op">=</span> <span class="fn">sorted</span>(scores.<span class="fn">items</span>(), key<span class="op">=</span><span class="fn">itemgetter</span>(<span class="nm">1</span>), reverse<span class="op">=</span><span class="kw">True</span>)
+
+<span class="cm"># ── lambda 等价写法 ────────────────────────────────</span>
+desc2 <span class="op">=</span> <span class="fn">sorted</span>(scores.<span class="fn">items</span>(), key<span class="op">=</span><span class="kw">lambda</span> kv<span class="op">:</span> kv[<span class="nm">1</span>], reverse<span class="op">=</span><span class="kw">True</span>)
+
+<span class="cm"># ── 只取 Top-N：用 heapq 更高效 ────────────────────</span>
+<span class="kw">import</span> heapq
+top3 <span class="op">=</span> heapq.<span class="fn">nlargest</span>(<span class="nm">3</span>, scores.<span class="fn">items</span>(), key<span class="op">=</span><span class="fn">itemgetter</span>(<span class="nm">1</span>))
+<span class="cm"># [('Charlie', 95), ('Alice', 88), ('Diana', 81)]</span>
+
+<span class="cm"># ── 多字段排序：先按值降序，值相同则按键升序 ─────────</span>
+multi <span class="op">=</span> <span class="fn">sorted</span>(scores.<span class="fn">items</span>(), key<span class="op">=</span><span class="kw">lambda</span> kv<span class="op">:</span> (<span class="op">-</span>kv[<span class="nm">1</span>], kv[<span class="nm">0</span>]))</pre>
+        </div>
+
+        <div class="info-box info-tip">
+          <div class="box-label">💡 性能对比</div>
+          <code>itemgetter</code> 是 C 实现，比等效的 <code>lambda</code> 快约 30%；<code>heapq.nlargest/nsmallest</code> 在 n 远小于数据量时，时间复杂度优于全量排序。
+        </div>
+      </div>
+
+      <!-- 1.4 -->
+      <div class="section" id="s1-4">
+        <h3 class="section-title">
+          <span class="section-num">1.4</span>
+          如何统计序列中元素的频度
+        </h3>
+        <p class="section-body">
+          <code>collections.Counter</code> 是专为频度统计设计的子类，支持加减运算、
+          <code>most_common(n)</code> 等实用方法，是最优解。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">from</span> collections <span class="kw">import</span> Counter
+
+words <span class="op">=</span> [<span class="st">'apple'</span>, <span class="st">'banana'</span>, <span class="st">'apple'</span>, <span class="st">'cherry'</span>, <span class="st">'banana'</span>, <span class="st">'apple'</span>]
+
+<span class="cm"># ── 基本用法 ───────────────────────────────────────</span>
+c <span class="op">=</span> <span class="cls">Counter</span>(words)
+<span class="nb">print</span>(c)                <span class="cm"># Counter({'apple': 3, 'banana': 2, 'cherry': 1})</span>
+<span class="nb">print</span>(c[<span class="st">'apple'</span>])       <span class="cm"># 3  (不存在的 key 返回 0 而非 KeyError)</span>
+
+<span class="cm"># ── Top-N 最高频 ───────────────────────────────────</span>
+<span class="nb">print</span>(c.<span class="fn">most_common</span>(<span class="nm">2</span>)) <span class="cm"># [('apple', 3), ('banana', 2)]</span>
+
+<span class="cm"># ── 统计字符串字符频度 ─────────────────────────────</span>
+char_freq <span class="op">=</span> <span class="cls">Counter</span>(<span class="st">"programming"</span>)
+
+<span class="cm"># ── Counter 支持集合运算 ───────────────────────────</span>
+c1 <span class="op">=</span> <span class="cls">Counter</span>(<span class="st">'aababc'</span>)
+c2 <span class="op">=</span> <span class="cls">Counter</span>(<span class="st">'abc'</span>)
+
+combined <span class="op">=</span> c1 <span class="op">+</span> c2      <span class="cm"># 合并计数</span>
+diff     <span class="op">=</span> c1 <span class="op">-</span> c2      <span class="cm"># 差集计数 (只保留正数)</span>
+inter    <span class="op">=</span> c1 <span class="op">&</span> c2      <span class="cm"># 取最小 (交集)</span>
+union    <span class="op">=</span> c1 <span class="op">|</span> c2      <span class="cm"># 取最大 (并集)</span>
+
+<span class="cm"># ── 统计词频 + 按频排名（工程常用）──────────────────</span>
+text <span class="op">=</span> <span class="st">"the cat sat on the mat the cat"</span>
+word_freq <span class="op">=</span> <span class="cls">Counter</span>(text.<span class="fn">split</span>())
+<span class="kw">for</span> word, freq <span class="kw">in</span> word_freq.<span class="fn">most_common</span>():
+    <span class="nb">print</span>(<span class="st">f"</span>{word<span class="op">:</span><span class="nm">10</span>}<span class="st"> </span>{<span class="st">'█'</span> <span class="op">*</span> freq<span class="st">}"</span>)</pre>
+        </div>
+
+        <div class="summary">
+          <div class="summary-title">Counter 常用 API</div>
+          <ul>
+            <li><code>most_common(n)</code></li>
+            <li><code>elements()</code></li>
+            <li><code>update(iterable)</code></li>
+            <li><code>subtract(iterable)</code></li>
+            <li><code>total()</code> <small style="color:var(--text-muted)">3.10+</small></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 1.5 -->
+      <div class="section" id="s1-5">
+        <h3 class="section-title">
+          <span class="section-num">1.5</span>
+          如何快速找到多个字典中的公共键 (key)
+        </h3>
+        <p class="section-body">
+          字典的 <code>.keys()</code> 返回 <strong>视图对象</strong>，支持集合运算（交集 <code>&amp;</code>、并集 <code>|</code>、差集 <code>-</code>）。
+          利用这一特性，可以用一行代码完成多字典公共键查找。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre>d1 <span class="op">=</span> {<span class="st">'a'</span><span class="op">:</span> <span class="nm">1</span>, <span class="st">'b'</span><span class="op">:</span> <span class="nm">2</span>, <span class="st">'c'</span><span class="op">:</span> <span class="nm">3</span>}
+d2 <span class="op">=</span> {<span class="st">'b'</span><span class="op">:</span> <span class="nm">4</span>, <span class="st">'c'</span><span class="op">:</span> <span class="nm">5</span>, <span class="st">'d'</span><span class="op">:</span> <span class="nm">6</span>}
+d3 <span class="op">=</span> {<span class="st">'c'</span><span class="op">:</span> <span class="nm">7</span>, <span class="st">'d'</span><span class="op">:</span> <span class="nm">8</span>, <span class="st">'e'</span><span class="op">:</span> <span class="nm">9</span>}
+
+<span class="cm"># ── 两个字典 ───────────────────────────────────────</span>
+common_2 <span class="op">=</span> d1.<span class="fn">keys</span>() <span class="op">&</span> d2.<span class="fn">keys</span>()   <span class="cm"># {'b', 'c'}</span>
+
+<span class="cm"># ── 多个字典: reduce + & ───────────────────────────</span>
+<span class="kw">from</span> functools <span class="kw">import</span> reduce
+
+dicts <span class="op">=</span> [d1, d2, d3]
+common_all <span class="op">=</span> <span class="fn">reduce</span>(<span class="kw">lambda</span> a, b<span class="op">:</span> a <span class="op">&</span> b, (d.<span class="fn">keys</span>() <span class="kw">for</span> d <span class="kw">in</span> dicts))
+<span class="cm"># {'c'}</span>
+
+<span class="cm"># ── 等价写法: map + set.intersection ──────────────</span>
+common_all2 <span class="op">=</span> <span class="fn">set</span>.<span class="fn">intersection</span>(<span class="op">*</span><span class="fn">map</span>(<span class="fn">set</span>, [d.<span class="fn">keys</span>() <span class="kw">for</span> d <span class="kw">in</span> dicts]))
+
+<span class="cm"># ── 找公共键并取各字典对应的值 ─────────────────────</span>
+<span class="kw">for</span> key <span class="kw">in</span> common_all:
+    values <span class="op">=</span> [d[key] <span class="kw">for</span> d <span class="kw">in</span> dicts <span class="kw">if</span> key <span class="kw">in</span> d]
+    <span class="nb">print</span>(<span class="st">f"key=</span>{key}<span class="st">, values=</span>{values}<span class="st">"</span>)    <span class="cm"># key=c, values=[3, 5, 7]</span></pre>
+        </div>
+
+        <div class="info-box info-note">
+          <div class="box-label">📝 原理</div>
+          <code>dict.keys()</code> 返回 <code>dict_keys</code> 视图，实现了集合协议（<code>__and__</code>、<code>__or__</code> 等），无需转换 <code>set</code> 即可直接做集合运算，且是动态视图，字典变更后视图自动更新。
+        </div>
+      </div>
+
+      <!-- 1.6 -->
+      <div class="section" id="s1-6">
+        <h3 class="section-title">
+          <span class="section-num">1.6</span>
+          如何让字典保持有序
+        </h3>
+        <p class="section-body">
+          Python 3.7+ 中普通 <code>dict</code> 已按<strong>插入顺序</strong>有序。但若需要
+          <strong>访问顺序</strong>排序（LRU 语义）或需要兼容旧代码，使用
+          <code>collections.OrderedDict</code>。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">from</span> collections <span class="kw">import</span> OrderedDict
+
+<span class="cm"># ── Python 3.7+ dict 已按插入顺序有序 ────────────</span>
+d <span class="op">=</span> {}
+d[<span class="st">'first'</span>]  <span class="op">=</span> <span class="nm">1</span>
+d[<span class="st">'second'</span>] <span class="op">=</span> <span class="nm">2</span>
+d[<span class="st">'third'</span>]  <span class="op">=</span> <span class="nm">3</span>
+<span class="nb">list</span>(d)  <span class="cm"># ['first', 'second', 'third'] ✓</span>
+
+<span class="cm"># ── OrderedDict 的独特能力: move_to_end ───────────</span>
+od <span class="op">=</span> <span class="cls">OrderedDict</span>([(<span class="st">'a'</span>, <span class="nm">1</span>), (<span class="st">'b'</span>, <span class="nm">2</span>), (<span class="st">'c'</span>, <span class="nm">3</span>)])
+
+od.<span class="fn">move_to_end</span>(<span class="st">'a'</span>)           <span class="cm"># 'a' 移到末尾: b, c, a</span>
+od.<span class="fn">move_to_end</span>(<span class="st">'c'</span>, last<span class="op">=</span><span class="kw">False</span>) <span class="cm"># 'c' 移到首位: c, b, a</span>
+od.<span class="fn">popitem</span>(last<span class="op">=</span><span class="kw">False</span>)         <span class="cm"># 弹出首项 (FIFO)</span>
+od.<span class="fn">popitem</span>(last<span class="op">=</span><span class="kw">True</span>)          <span class="cm"># 弹出末项 (LIFO/Stack)</span>
+
+<span class="cm"># ── OrderedDict 等值比较关注顺序 ──────────────────</span>
+od1 <span class="op">=</span> <span class="cls">OrderedDict</span>([(<span class="st">'a'</span>, <span class="nm">1</span>), (<span class="st">'b'</span>, <span class="nm">2</span>)])
+od2 <span class="op">=</span> <span class="cls">OrderedDict</span>([(<span class="st">'b'</span>, <span class="nm">2</span>), (<span class="st">'a'</span>, <span class="nm">1</span>)])
+od1 <span class="op">==</span> od2   <span class="cm"># False  (dict == dict 则 True)</span>
+
+<span class="cm"># ── 实现 LRU Cache 概念 (手动版) ──────────────────</span>
+<span class="kw">class</span> <span class="cls">LRUCache</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>, capacity<span class="op">:</span> <span class="nb">int</span>):
+        <span class="var">self</span>.cache <span class="op">=</span> <span class="cls">OrderedDict</span>()
+        <span class="var">self</span>.capacity <span class="op">=</span> capacity
+
+    <span class="kw">def</span> <span class="fn">get</span>(<span class="var">self</span>, key):
+        <span class="kw">if</span> key <span class="kw">not in</span> <span class="var">self</span>.cache: <span class="kw">return</span> <span class="op">-</span><span class="nm">1</span>
+        <span class="var">self</span>.cache.<span class="fn">move_to_end</span>(key)  <span class="cm"># 标记为最近使用</span>
+        <span class="kw">return</span> <span class="var">self</span>.cache[key]
+
+    <span class="kw">def</span> <span class="fn">put</span>(<span class="var">self</span>, key, value):
+        <span class="var">self</span>.cache[key] <span class="op">=</span> value
+        <span class="var">self</span>.cache.<span class="fn">move_to_end</span>(key)
+        <span class="kw">if</span> <span class="fn">len</span>(<span class="var">self</span>.cache) <span class="op">></span> <span class="var">self</span>.capacity:
+            <span class="var">self</span>.cache.<span class="fn">popitem</span>(last<span class="op">=</span><span class="kw">False</span>)  <span class="cm"># 淘汰最旧</span></pre>
+        </div>
+
+        <div class="info-box info-warn">
+          <div class="box-label">⚠️ 注意</div>
+          Python 3.7+ 的普通 <code>dict</code> 在大多数场景已足够，<code>OrderedDict</code> 的主要使用场景是：需要 <code>move_to_end</code>、顺序敏感的相等比较、或需要 <code>popitem(last=False)</code> 实现队列语义。
+        </div>
+      </div>
+
+      <!-- 1.7 -->
+      <div class="section" id="s1-7">
+        <h3 class="section-title">
+          <span class="section-num">1.7</span>
+          如何实现用户的历史记录功能 (最多 n 条)
+        </h3>
+        <p class="section-body">
+          历史记录需要<strong>固定长度的 FIFO 队列</strong>——<code>collections.deque(maxlen=n)</code>
+          是最优数据结构，超出容量时自动淘汰最旧的记录，时间复杂度 O(1)。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">from</span> collections <span class="kw">import</span> deque
+<span class="kw">from</span> dataclasses <span class="kw">import</span> dataclass, field
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime
+
+<span class="cm"># ── 基础用法 ───────────────────────────────────────</span>
+history <span class="op">=</span> <span class="fn">deque</span>(maxlen<span class="op">=</span><span class="nm">5</span>)
+
+<span class="kw">for</span> cmd <span class="kw">in</span> [<span class="st">'ls'</span>, <span class="st">'cd /home'</span>, <span class="st">'pwd'</span>, <span class="st">'cat a.txt'</span>, <span class="st">'vim b.py'</span>, <span class="st">'git log'</span>]:
+    history.<span class="fn">appendleft</span>(cmd)   <span class="cm"># 新记录插入头部</span>
+
+<span class="nb">print</span>(<span class="nb">list</span>(history))
+<span class="cm"># ['git log', 'vim b.py', 'cat a.txt', 'pwd', 'cd /home']  (ls 已被淘汰)</span>
+
+<span class="cm"># ── 封装为历史记录类 ───────────────────────────────</span>
+<span class="kw">class</span> <span class="cls">SearchHistory</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>, max_size<span class="op">:</span> <span class="nb">int</span> <span class="op">=</span> <span class="nm">10</span>):
+        <span class="var">self</span>._history: deque <span class="op">=</span> <span class="fn">deque</span>(maxlen<span class="op">=</span>max_size)
+
+    <span class="kw">def</span> <span class="fn">add</span>(<span class="var">self</span>, query: <span class="nb">str</span>) <span class="op">-></span> <span class="kw">None</span>:
+        <span class="cm"># 去重：如果已存在则移到最前</span>
+        <span class="kw">if</span> query <span class="kw">in</span> <span class="var">self</span>._history:
+            <span class="var">self</span>._history.<span class="fn">remove</span>(query)
+        <span class="var">self</span>._history.<span class="fn">appendleft</span>(query)
+
+    <span class="kw">def</span> <span class="fn">clear</span>(<span class="var">self</span>) <span class="op">-></span> <span class="kw">None</span>:
+        <span class="var">self</span>._history.<span class="fn">clear</span>()
+
+    <span class="kw">def</span> <span class="fn">__iter__</span>(<span class="var">self</span>):
+        <span class="kw">return</span> <span class="fn">iter</span>(<span class="var">self</span>._history)
+
+    <span class="kw">def</span> <span class="fn">__len__</span>(<span class="var">self</span>):
+        <span class="kw">return</span> <span class="fn">len</span>(<span class="var">self</span>._history)
+
+<span class="cm"># 使用</span>
+sh <span class="op">=</span> <span class="cls">SearchHistory</span>(max_size<span class="op">=</span><span class="nm">3</span>)
+sh.<span class="fn">add</span>(<span class="st">"RAG pipeline"</span>)
+sh.<span class="fn">add</span>(<span class="st">"LangChain"</span>)
+sh.<span class="fn">add</span>(<span class="st">"vector db"</span>)
+sh.<span class="fn">add</span>(<span class="st">"RAG pipeline"</span>)  <span class="cm"># 重复，移到最前</span>
+<span class="nb">print</span>(<span class="nb">list</span>(sh))
+<span class="cm"># ['RAG pipeline', 'vector db', 'LangChain']</span></pre>
+        </div>
+
+        <div class="info-box info-tip">
+          <div class="box-label">💡 deque vs list</div>
+          <code>list</code> 头部插入/删除是 O(n)；<code>deque</code> 两端操作均为 O(1)，<code>maxlen</code> 参数让容量管理变成零代码。
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ═══════════════════════════════════════════════
+         CHAPTER II
+    ════════════════════════════════════════════════ -->
+    <section class="chapter" id="chapter2">
+      <div class="chapter-header">
+        <span class="chapter-num" style="color:var(--accent2);background:rgba(56,189,248,0.08);border-color:rgba(56,189,248,0.2)">CHAPTER II</span>
+        <h2 class="chapter-title">复杂场景下字符串处理相关问题与解决技巧</h2>
+      </div>
+
+      <!-- 2.1 -->
+      <div class="section" id="s2-1">
+        <h3 class="section-title">
+          <span class="section-num">2.1</span>
+          如何拆分含有多种分隔符的字符串
+        </h3>
+        <p class="section-body">
+          <code>str.split()</code> 只支持单一分隔符。处理多种分隔符（如 CSV 变体、日志、自由文本）
+          应使用 <code>re.split()</code>，支持正则表达式模式，灵活且高效。
+        </p>
+
+        <div class="compare-grid">
+          <div class="compare-card bad">
+            <div class="compare-card-header">✗ 局限写法</div>
+            <pre><span class="cm"># 只能处理单一分隔符</span>
+s <span class="op">=</span> <span class="st">"a,b;c|d e"</span>
+s.<span class="fn">split</span>(<span class="st">','</span>)
+<span class="cm"># ['a', 'b;c|d e']  ✗</span></pre>
+          </div>
+          <div class="compare-card good">
+            <div class="compare-card-header">✓ 推荐写法</div>
+            <pre><span class="kw">import</span> re
+<span class="fn">re.split</span>(<span class="st">r'[,;|\s]+'</span>, s)
+<span class="cm"># ['a', 'b', 'c', 'd', 'e'] ✓</span></pre>
+          </div>
+        </div>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">import</span> re
+
+s <span class="op">=</span> <span class="st">"one,two;three|four  five\tsix"</span>
+
+<span class="cm"># 以逗号、分号、竖线、空白字符为分隔符</span>
+result <span class="op">=</span> re.<span class="fn">split</span>(<span class="st">r'[,;|\s]+'</span>, s)
+<span class="cm"># ['one', 'two', 'three', 'four', 'five', 'six']</span>
+
+<span class="cm"># ── 保留分隔符（用捕获组）────────────────────────</span>
+result2 <span class="op">=</span> re.<span class="fn">split</span>(<span class="st">r'([,;|])'</span>, <span class="st">"a,b;c"</span>)
+<span class="cm"># ['a', ',', 'b', ';', 'c']</span>
+
+<span class="cm"># ── 预编译正则: 同一模式多次使用时提升性能 ─────────</span>
+SEPARATOR <span class="op">=</span> re.<span class="fn">compile</span>(<span class="st">r'[,;|\s]+'</span>)
+lines <span class="op">=</span> [<span class="st">"a,b,c"</span>, <span class="st">"d;e;f"</span>, <span class="st">"g|h|i"</span>]
+parsed <span class="op">=</span> [SEPARATOR.<span class="fn">split</span>(line) <span class="kw">for</span> line <span class="kw">in</span> lines]
+
+<span class="cm"># ── 过滤空字符串 (首尾分隔符可能产生空串) ──────────</span>
+raw <span class="op">=</span> <span class="st">",a,,b,c,"</span>
+clean <span class="op">=</span> [x <span class="kw">for</span> x <span class="kw">in</span> re.<span class="fn">split</span>(<span class="st">r','</span>, raw) <span class="kw">if</span> x]
+<span class="cm"># ['a', 'b', 'c']</span></pre>
+        </div>
+      </div>
+
+      <!-- 2.2 -->
+      <div class="section" id="s2-2">
+        <h3 class="section-title">
+          <span class="section-num">2.2</span>
+          如何判断字符串 a 是否以字符串 b 开头或结尾
+        </h3>
+        <p class="section-body">
+          使用 <code>str.startswith()</code> 和 <code>str.endswith()</code>，这两个方法都支持传入
+          <strong>元组</strong>来同时匹配多个前/后缀，比正则表达式更快、更易读。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre>filename <span class="op">=</span> <span class="st">"report_2024.xlsx"</span>
+url      <span class="op">=</span> <span class="st">"https://api.example.com/v1"</span>
+
+<span class="cm"># ── 基本用法 ───────────────────────────────────────</span>
+filename.<span class="fn">endswith</span>(<span class="st">'.xlsx'</span>)         <span class="cm"># True</span>
+url.<span class="fn">startswith</span>(<span class="st">'https'</span>)           <span class="cm"># True</span>
+
+<span class="cm"># ── 传入元组: 匹配多个后缀 ────────────────────────</span>
+EXCEL_EXTS <span class="op">=</span> (<span class="st">'.xlsx'</span>, <span class="st">'.xls'</span>, <span class="st">'.csv'</span>)
+filename.<span class="fn">endswith</span>(EXCEL_EXTS)      <span class="cm"># True</span>
+
+<span class="cm"># ── 过滤文件列表 ───────────────────────────────────</span>
+files <span class="op">=</span> [<span class="st">'a.py'</span>, <span class="st">'b.java'</span>, <span class="st">'c.py'</span>, <span class="st">'d.txt'</span>, <span class="st">'e.pyx'</span>]
+py_files <span class="op">=</span> [f <span class="kw">for</span> f <span class="kw">in</span> files <span class="kw">if</span> f.<span class="fn">endswith</span>((<span class="st">'.py'</span>, <span class="st">'.pyx'</span>))]
+<span class="cm"># ['a.py', 'c.py', 'e.pyx']</span>
+
+<span class="cm"># ── 指定搜索范围: start/end 参数 ─────────────────</span>
+s <span class="op">=</span> <span class="st">"Hello, World!"</span>
+s.<span class="fn">startswith</span>(<span class="st">'World'</span>, <span class="nm">7</span>)          <span class="cm"># True (从下标7开始检查)</span>
+
+<span class="cm"># ── 与 pathlib 配合 (推荐处理路径) ────────────────</span>
+<span class="kw">from</span> pathlib <span class="kw">import</span> Path
+p <span class="op">=</span> <span class="cls">Path</span>(<span class="st">"data/report.xlsx"</span>)
+p.suffix <span class="op">==</span> <span class="st">'.xlsx'</span>                <span class="cm"># True (更语义化)</span>
+p.suffix <span class="kw">in</span> EXCEL_EXTS             <span class="cm"># True</span></pre>
+        </div>
+
+        <div class="info-box info-tip">
+          <div class="box-label">💡 性能</div>
+          <code>startswith/endswith</code> 是 C 实现，比 <code>re.match</code> 快数倍。仅在需要复杂模式时才用正则。
+        </div>
+      </div>
+
+      <!-- 2.3 -->
+      <div class="section" id="s2-3">
+        <h3 class="section-title">
+          <span class="section-num">2.3</span>
+          如何调整字符串中文本的格式
+        </h3>
+        <p class="section-body">
+          常见需求包括：驼峰转下划线、日期格式转换、标准化大小写等。
+          核心工具是 <code>re.sub()</code> 配合替换函数，以及字符串内置方法。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">import</span> re
+
+<span class="cm"># ── 大小写转换 ─────────────────────────────────────</span>
+s <span class="op">=</span> <span class="st">"hello world python"</span>
+s.<span class="fn">upper</span>()           <span class="cm"># 'HELLO WORLD PYTHON'</span>
+s.<span class="fn">title</span>()           <span class="cm"># 'Hello World Python'</span>
+s.<span class="fn">capitalize</span>()      <span class="cm"># 'Hello world python'</span>
+s.<span class="fn">swapcase</span>()        <span class="cm"># 'HELLO WORLD PYTHON'</span>
+
+<span class="cm"># ── 驼峰命名 → 下划线命名 (CamelCase → snake_case) ─</span>
+<span class="kw">def</span> <span class="fn">camel_to_snake</span>(name: <span class="nb">str</span>) <span class="op">-></span> <span class="nb">str</span>:
+    <span class="cm"># 在大写字母前插入下划线</span>
+    s1 <span class="op">=</span> re.<span class="fn">sub</span>(<span class="st">r'(.)([A-Z][a-z]+)'</span>, <span class="st">r'\1_\2'</span>, name)
+    <span class="kw">return</span> re.<span class="fn">sub</span>(<span class="st">r'([a-z0-9])([A-Z])'</span>, <span class="st">r'\1_\2'</span>, s1).<span class="fn">lower</span>()
+
+<span class="fn">camel_to_snake</span>(<span class="st">'getUserName'</span>)   <span class="cm"># 'get_user_name'</span>
+<span class="fn">camel_to_snake</span>(<span class="st">'HTTPSRequest'</span>)  <span class="cm"># 'https_request'</span>
+
+<span class="cm"># ── 日期格式转换: MM/DD/YYYY → YYYY-MM-DD ─────────</span>
+date_str <span class="op">=</span> <span class="st">"03/28/2026"</span>
+<span class="cm"># 方式1: re.sub 捕获组</span>
+new_date <span class="op">=</span> re.<span class="fn">sub</span>(<span class="st">r'(\d{2})/(\d{2})/(\d{4})'</span>, <span class="st">r'\3-\1-\2'</span>, date_str)
+<span class="cm"># '2026-03-28'</span>
+<span class="cm"># 方式2: datetime (更鲁棒)</span>
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime
+dt <span class="op">=</span> datetime.<span class="fn">strptime</span>(date_str, <span class="st">"%m/%d/%Y"</span>).<span class="fn">strftime</span>(<span class="st">"%Y-%m-%d"</span>)
+
+<span class="cm"># ── re.sub 传入函数替换 ────────────────────────────</span>
+<span class="cm"># 将字符串中所有数字乘以2</span>
+result <span class="op">=</span> re.<span class="fn">sub</span>(<span class="st">r'\d+'</span>, <span class="kw">lambda</span> m<span class="op">:</span> <span class="nb">str</span>(<span class="nb">int</span>(m.<span class="fn">group</span>()) <span class="op">*</span> <span class="nm">2</span>), <span class="st">"foo12 bar5"</span>)
+<span class="cm"># 'foo24 bar10'</span>
+
+<span class="cm"># ── 标准化空白 ────────────────────────────────────</span>
+messy <span class="op">=</span> <span class="st">"  hello   world  \t python  \n"</span>
+clean <span class="op">=</span> <span class="st">' '</span>.<span class="fn">join</span>(messy.<span class="fn">split</span>())   <span class="cm"># 'hello world python'</span></pre>
+        </div>
+      </div>
+
+      <!-- 2.4 -->
+      <div class="section" id="s2-4">
+        <h3 class="section-title">
+          <span class="section-num">2.4</span>
+          如何将多个小字符串拼接成一个大的字符串
+        </h3>
+        <p class="section-body">
+          这是 Python 新手最容易踩坑的性能陷阱。<code>+</code> 拼接在循环中会产生大量中间对象（O(n²)）。
+          正确方式是 <code>''.join(iterable)</code>，一次性分配内存，时间复杂度 O(n)。
+        </p>
+
+        <div class="compare-grid">
+          <div class="compare-card bad">
+            <div class="compare-card-header">✗ 性能陷阱 O(n²)</div>
+            <pre>result <span class="op">=</span> <span class="st">""</span>
+<span class="kw">for</span> s <span class="kw">in</span> parts:
+    result <span class="op">+=</span> s  <span class="cm"># 每次创建新对象</span></pre>
+          </div>
+          <div class="compare-card good">
+            <div class="compare-card-header">✓ 正确写法 O(n)</div>
+            <pre">result <span class="op">=</span> <span class="st">''</span>.<span class="fn">join</span>(parts)
+<span class="cm"># 一次性构建</span></pre>
+          </div>
+        </div>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre>parts <span class="op">=</span> [<span class="st">'Hello'</span>, <span class="st">'Python'</span>, <span class="st">'World'</span>]
+
+<span class="cm"># ── str.join ───────────────────────────────────────</span>
+result <span class="op">=</span> <span class="st">' '</span>.<span class="fn">join</span>(parts)          <span class="cm"># 'Hello Python World'</span>
+csv    <span class="op">=</span> <span class="st">','</span>.<span class="fn">join</span>(parts)          <span class="cm"># 'Hello,Python,World'</span>
+lines  <span class="op">=</span> <span class="st">'\n'</span>.<span class="fn">join</span>(parts)         <span class="cm"># 多行</span>
+
+<span class="cm"># ── join 接受任意可迭代对象 ────────────────────────</span>
+nums   <span class="op">=</span> <span class="st">'-'</span>.<span class="fn">join</span>(<span class="nb">str</span>(i) <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">5</span>))   <span class="cm"># '0-1-2-3-4'</span>
+
+<span class="cm"># ── f-string: 少量拼接的可读首选 ─────────────────</span>
+name, score <span class="op">=</span> <span class="st">'Alice'</span>, <span class="nm">95</span>
+msg <span class="op">=</span> <span class="st">f"Student </span>{name}<span class="st"> scored </span>{score}<span class="st"> points"</span>
+
+<span class="cm"># ── io.StringIO: 复杂场景下的流式拼接 ────────────</span>
+<span class="kw">import</span> io
+buf <span class="op">=</span> io.<span class="cls">StringIO</span>()
+<span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(<span class="nm">1000</span>):
+    buf.<span class="fn">write</span>(<span class="st">f"line </span>{i}<span class="st">\n"</span>)
+output <span class="op">=</span> buf.<span class="fn">getvalue</span>()
+
+<span class="cm"># ── 性能排名 (短字符串): f-string ≈ join > % > format</span>
+<span class="cm"># ── 性能排名 (大量拼接): join > StringIO >> +=     </span></pre>
+        </div>
+
+        <table class="method-table">
+          <thead>
+            <tr><th>方式</th><th>场景</th><th>推荐度</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>'sep'.join(lst)</code></td><td>列表/可迭代对象拼接</td><td style="color:var(--accent)">★★★★★</td></tr>
+            <tr><td><code>f"..."</code></td><td>少量变量插入，可读性优先</td><td style="color:var(--accent)">★★★★★</td></tr>
+            <tr><td><code>io.StringIO</code></td><td>复杂条件逻辑的流式构建</td><td style="color:var(--accent2)">★★★★</td></tr>
+            <tr><td><code>s += t</code></td><td>循环内拼接，避免使用</td><td style="color:#f87171">★</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2.5 -->
+      <div class="section" id="s2-5">
+        <h3 class="section-title">
+          <span class="section-num">2.5</span>
+          如何对字符串进行左、右、居中对齐
+        </h3>
+        <p class="section-body">
+          Python 提供了 <code>str.ljust()</code>、<code>str.rjust()</code>、<code>str.center()</code>
+          三个方法，以及更强大的格式化语法（f-string / <code>format()</code>），支持自定义填充字符。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre>s <span class="op">=</span> <span class="st">'Python'</span>
+W <span class="op">=</span> <span class="nm">20</span>
+
+<span class="cm"># ── 基本对齐方法 ──────────────────────────────────</span>
+s.<span class="fn">ljust</span>(W)              <span class="cm"># 'Python              ' (左对齐, 空格填充)</span>
+s.<span class="fn">rjust</span>(W)              <span class="cm"># '              Python' (右对齐)</span>
+s.<span class="fn">center</span>(W)             <span class="cm"># '       Python       ' (居中)</span>
+
+<span class="cm"># ── 自定义填充字符 ────────────────────────────────</span>
+s.<span class="fn">ljust</span>(W, <span class="st">'-'</span>)         <span class="cm"># 'Python--------------'</span>
+s.<span class="fn">rjust</span>(W, <span class="st">'0'</span>)         <span class="cm"># '00000000000000Python'</span>
+s.<span class="fn">center</span>(W, <span class="st">'*'</span>)        <span class="cm"># '*******Python*******'</span>
+
+<span class="cm"># ── format() / f-string 对齐语法 ─────────────────</span>
+<span class="cm">#    <  左对齐  |  >  右对齐  |  ^  居中</span>
+<span class="nb">print</span>(<span class="st">f"</span>{s:<span class="op"><</span><span class="nm">20</span>}<span class="st">"</span>)          <span class="cm"># 左对齐, 宽度20</span>
+<span class="nb">print</span>(<span class="st">f"</span>{s:<span class="op">></span><span class="nm">20</span>}<span class="st">"</span>)          <span class="cm"># 右对齐</span>
+<span class="nb">print</span>(<span class="st">f"</span>{s:<span class="op">^</span><span class="nm">20</span>}<span class="st">"</span>)          <span class="cm"># 居中</span>
+<span class="nb">print</span>(<span class="st">f"</span>{s:<span class="op">*^</span><span class="nm">20</span>}<span class="st">"</span>)         <span class="cm"># 居中, '*' 填充</span>
+<span class="nb">print</span>(<span class="st">f"</span>{<span class="nm">3.14159</span>:<span class="op">></span><span class="nm">10.2f</span>}<span class="st">"</span>) <span class="cm"># '      3.14' 右对齐数字</span>
+
+<span class="cm"># ── 打印对齐表格 ─────────────────────────────────</span>
+headers <span class="op">=</span> [<span class="st">'Symbol'</span>, <span class="st">'Price'</span>, <span class="st">'Change'</span>]
+rows    <span class="op">=</span> [(<span class="st">'AAPL'</span>, <span class="nm">182.5</span>, <span class="st">'+1.2%'</span>), (<span class="st">'BABA'</span>, <span class="nm">78.3</span>, <span class="st">'-0.5%'</span>)]
+
+<span class="nb">print</span>(<span class="st">f"</span>{headers[<span class="nm">0</span>]:<span class="op"><</span><span class="nm">10</span>}{headers[<span class="nm">1</span>]:<span class="op">></span><span class="nm">10</span>}{headers[<span class="nm">2</span>]:<span class="op">></span><span class="nm">10</span>}<span class="st">"</span>)
+<span class="nb">print</span>(<span class="st">'-'</span> <span class="op">*</span> <span class="nm">30</span>)
+<span class="kw">for</span> sym, price, chg <span class="kw">in</span> rows:
+    <span class="nb">print</span>(<span class="st">f"</span>{sym:<span class="op"><</span><span class="nm">10</span>}{price:<span class="op">></span><span class="nm">10.1f</span>}{chg:<span class="op">></span><span class="nm">10</span>}<span class="st">"</span>)</pre>
+        </div>
+
+        <div class="info-box info-note">
+          <div class="box-label">📝 f-string 格式迷你语言</div>
+          语法：<code>{value:[[fill]align][sign][#][0][width][grouping][.precision][type]}</code>。
+          对齐符：<code>&lt;</code> 左、<code>&gt;</code> 右、<code>^</code> 居中；数字专用 <code>=</code> 在符号后填充。
+        </div>
+      </div>
+
+      <!-- 2.6 -->
+      <div class="section" id="s2-6">
+        <h3 class="section-title">
+          <span class="section-num">2.6</span>
+          如何去掉字符串中不需要的字符
+        </h3>
+        <p class="section-body">
+          根据场景选择：首尾去除用 <code>strip/lstrip/rstrip</code>；
+          内部替换/删除用 <code>str.replace()</code> 或 <code>str.translate()</code>；
+          复杂模式匹配用 <code>re.sub()</code>。
+        </p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <div class="code-dots"><div class="code-dot dot-r"></div><div class="code-dot dot-y"></div><div class="code-dot dot-g"></div></div>
+            <span class="code-lang">python</span>
+          </div>
+          <pre><span class="kw">import</span> re
+
+<span class="cm"># ── 首尾去除 ───────────────────────────────────────</span>
+s <span class="op">=</span> <span class="st">"  \t Hello, World! \n  "</span>
+s.<span class="fn">strip</span>()              <span class="cm"># 'Hello, World!'  (两端空白)</span>
+s.<span class="fn">lstrip</span>()             <span class="cm"># 左侧空白</span>
+s.<span class="fn">rstrip</span>()             <span class="cm"># 右侧空白</span>
+
+<span class="cm"># 指定去除字符集 (顺序无关, 逐字符匹配)</span>
+<span class="st">'---Hello---'</span>.<span class="fn">strip</span>(<span class="st">'-'</span>)      <span class="cm"># 'Hello'</span>
+<span class="st">'xxHello!xx'</span>.<span class="fn">strip</span>(<span class="st">'x!'</span>)     <span class="cm"># 'Hello'</span>
+
+<span class="cm"># ── str.replace: 删除/替换特定子串 ────────────────</span>
+<span class="st">'Hello, World!'</span>.<span class="fn">replace</span>(<span class="st">','</span>, <span class="st">''</span>)   <span class="cm"># 'Hello World!'</span>
+<span class="st">'aababc'</span>.<span class="fn">replace</span>(<span class="st">'a'</span>, <span class="st">''</span>)         <span class="cm"># 'bbc'</span>
+
+<span class="cm"># ── str.translate: 批量字符映射/删除 (高性能) ─────</span>
+<span class="cm"># 删除标点符号</span>
+<span class="kw">import</span> string
+table <span class="op">=</span> <span class="nb">str</span>.<span class="fn">maketrans</span>(<span class="st">''</span>, <span class="st">''</span>, string.punctuation)
+<span class="st">"Hello, World! It's great."</span>.<span class="fn">translate</span>(table)
+<span class="cm"># 'Hello World Its great'</span>
+
+<span class="cm"># 字符替换 + 删除组合</span>
+table2 <span class="op">=</span> <span class="nb">str</span>.<span class="fn">maketrans</span>({
+    <span class="st">'a'</span><span class="op">:</span> <span class="st">'@'</span>,   <span class="cm"># 替换</span>
+    <span class="st">'e'</span><span class="op">:</span> <span class="st">'3'</span>,   <span class="cm"># 替换</span>
+    <span class="st">'s'</span><span class="op">:</span> <span class="kw">None</span>, <span class="cm"># 删除</span>
+})
+<span class="st">'password'</span>.<span class="fn">translate</span>(table2)  <span class="cm"># 'p@word'  (s被删除, a→@)</span>
+
+<span class="cm"># ── re.sub: 正则匹配删除 ───────────────────────────</span>
+<span class="cm"># 删除 HTML 标签</span>
+html <span class="op">=</span> <span class="st">'&lt;h1&gt;Title&lt;/h1&gt; &lt;p&gt;Content&lt;/p&gt;'</span>
+text <span class="op">=</span> re.<span class="fn">sub</span>(<span class="st">r'&lt;[^&gt;]+&gt;'</span>, <span class="st">''</span>, html)   <span class="cm"># 'Title Content'</span>
+
+<span class="cm"># 删除非ASCII字符</span>
+mixed <span class="op">=</span> <span class="st">"Hello\x00\x01World\xff"</span>
+clean <span class="op">=</span> re.<span class="fn">sub</span>(<span class="st">r'[^\x20-\x7E]'</span>, <span class="st">''</span>, mixed)  <span class="cm"># 'HelloWorld'</span>
+
+<span class="cm"># 压缩多个空白为单个空格</span>
+re.<span class="fn">sub</span>(<span class="st">r'\s+'</span>, <span class="st">' '</span>, <span class="st">"  foo  bar\tbaz  "</span>).<span class="fn">strip</span>()
+<span class="cm"># 'foo bar baz'</span></pre>
+        </div>
+
+        <table class="method-table">
+          <thead>
+            <tr><th>方法</th><th>适用场景</th><th>时间复杂度</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>strip/lstrip/rstrip</code></td>
+              <td>首尾字符去除</td>
+              <td>O(k) k=去除字符数</td>
+            </tr>
+            <tr>
+              <td><code>str.replace(old, new)</code></td>
+              <td>固定子串替换/删除</td>
+              <td>O(n)</td>
+            </tr>
+            <tr>
+              <td><code>str.translate(table)</code></td>
+              <td>批量单字符映射/删除</td>
+              <td>O(n) <span style="color:var(--accent)">最快</span></td>
+            </tr>
+            <tr>
+              <td><code>re.sub(pattern, '', s)</code></td>
+              <td>复杂模式匹配删除</td>
+              <td>O(n) 常量因子较大</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box info-tip">
+          <div class="box-label">💡 选择策略</div>
+          批量删除/替换<strong>单个字符</strong>时，<code>translate()</code> 是最快选择，因为它在 C 层用查找表实现，一次遍历完成所有映射。
+          多字符子串替换用 <code>replace()</code>，模式匹配用 <code>re.sub()</code>。
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Active nav highlighting on scroll
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('.section[id]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navItems.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+
+  // Smooth scroll
+  navItems.forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
