@@ -1,4 +1,0 @@
-python-frontmatter
-markdown
-python-dotenv
-pytest
