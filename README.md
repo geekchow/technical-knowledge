@@ -286,15 +286,16 @@ _Java, Python, JavaScript and programming paradigms_
 
 **Python**
 
+- [算法题笔记：最长回文子串、Z 字形变换与合并有序链表](languages/python/algorithm-notes-palindrome-zigzag-merge-lists.md)
 - [How to debug Python with VS Code?](languages/python/Debug-Python-With-VS-Code.md)
 - [jupyter notebook (notebook)](languages/python/jupyter-notebook.ipynb)
 - [postgresql bulk update with python](languages/python/postgresql-bulk-update.md)
 - [Python 3 进阶复习手册](languages/python/python-advance.md)
 - [requests` pip package](languages/python/python-requests.md)
+- [Python threading.Semaphore 机制详解](languages/python/python-threading-semaphore.md)
 - [Python 切片 (Slice) 详解](languages/python/slice.md)
-- [Why Use uv for Python](languages/python/Why-Use-uv-for-Python.md)
-- [解释 python3 的 threading.Semaphore 机制](languages/python/解释-python3-的-threading.Semaphore-机制.md)
 - [subprocess shell (notebook)](languages/python/subprocess-shell.ipynb)
+- [Why Use uv for Python](languages/python/Why-Use-uv-for-Python.md)
 
 **Python › argparse**
 
