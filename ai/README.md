@@ -24,6 +24,7 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 
 - [AI 核心概念梳理：LLM / Prompt / Agent / RAG / MCP / Skill / Context / Harness](concepts/AI核心概念梳理-LLM-Prompt-Agent-RAG-MCP-Skill-Context-Harness.md)
 - [LLM 量化版本 是什么版本](concepts/LLM-量化版本-是什么版本.md)
+- [为什么大量公司上了 RAG，却很少真正做成？](concepts/why-rag-projects-fail.zh.md) · [Why So Many Companies Adopt RAG, and So Few Actually Succeed](concepts/why-rag-projects-fail.en.md)
 
 **LLM Fundamentals** — 全景指南，按 00 → 07 顺序阅读
 
