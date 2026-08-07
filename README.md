@@ -447,6 +447,8 @@ _Docker, Git, VS Code and self-hosted services_
 **Git**
 
 - [Git Aliases Reference Guide](tools/git/git-aliases-guide.md)
+- [Git, Finally Understood: A Snapshot Database and a Handful of Pointers](tools/git/git-mental-model-snapshots-pointers.en.md)
+- [把 Git 想清楚：快照数据库 + 一堆指针](tools/git/git-mental-model-snapshots-pointers.zh.md)
 - [git push hanging](tools/git/git-push-hanging.md)
 
 **VS Code**

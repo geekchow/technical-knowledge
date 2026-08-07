@@ -13,6 +13,8 @@ Docker, Git, VS Code and self-hosted services.
 **Git**
 
 - [Git Aliases Reference Guide](git/git-aliases-guide.md)
+- [Git, Finally Understood: A Snapshot Database and a Handful of Pointers](git/git-mental-model-snapshots-pointers.en.md)
+- [把 Git 想清楚：快照数据库 + 一堆指针](git/git-mental-model-snapshots-pointers.zh.md)
 - [git push hanging](git/git-push-hanging.md)
 
 **VS Code**
