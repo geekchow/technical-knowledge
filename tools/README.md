@@ -16,6 +16,7 @@ Docker, Git, VS Code and self-hosted services.
 - [Git, Finally Understood: A Snapshot Database and a Handful of Pointers](git/git-mental-model-snapshots-pointers.en.md)
 - [把 Git 想清楚：快照数据库 + 一堆指针](git/git-mental-model-snapshots-pointers.zh.md)
 - [git push hanging](git/git-push-hanging.md)
+- [Git Tags in the Release Process: Lightweight, Annotated, and Signed](git/git-tags-in-the-release-process.en.md)
 
 **VS Code**
 
