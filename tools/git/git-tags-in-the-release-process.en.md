@@ -1,6 +1,7 @@
 # Git Tags in the Release Process: Lightweight, Annotated, and Signed
 
 > Written up from the study note at `raw/git-tags.md`, extended with the release-engineering practices that make tags actually useful: naming, CI triggers, verification in the pipeline, tag protection, and hotfix/rollback handling.
+> Chinese version: [git-tags-in-the-release-process.zh.md](./git-tags-in-the-release-process.zh.md)
 > Related note in this directory: [git-mental-model-snapshots-pointers.en.md](./git-mental-model-snapshots-pointers.en.md)
 
 ## Abbreviations

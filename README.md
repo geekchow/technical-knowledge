@@ -16,7 +16,7 @@ article that references them.
 | [Web](./web/) | Front-end frameworks and markup — 3 articles |
 | [Data & ML](./data-ml/) | Data preparation, notebooks, deep learning, local LLMs — 19 articles |
 | [Security](./security/) | TLS/HTTPS, authentication, mobile app hardening — 10 articles |
-| [Tools](./tools/) | Docker, Git, VS Code and self-hosted services — 9 articles |
+| [Tools](./tools/) | Docker, Git, VS Code and self-hosted services — 10 articles |
 
 Outside the categories, [`docs/`](./docs/) holds the backlog plus any plans and specs, and
 [`raw/`](./raw/README.md) holds the unpolished study notes that the published article series are
@@ -451,6 +451,7 @@ _Docker, Git, VS Code and self-hosted services_
 - [把 Git 想清楚：快照数据库 + 一堆指针](tools/git/git-mental-model-snapshots-pointers.zh.md)
 - [git push hanging](tools/git/git-push-hanging.md)
 - [Git Tags in the Release Process: Lightweight, Annotated, and Signed](tools/git/git-tags-in-the-release-process.en.md)
+- [Git 标签与发布流程：轻量标签、附注标签与签名标签](tools/git/git-tags-in-the-release-process.zh.md)
 
 **VS Code**
 

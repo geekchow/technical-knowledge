@@ -17,6 +17,7 @@ Docker, Git, VS Code and self-hosted services.
 - [把 Git 想清楚：快照数据库 + 一堆指针](git/git-mental-model-snapshots-pointers.zh.md)
 - [git push hanging](git/git-push-hanging.md)
 - [Git Tags in the Release Process: Lightweight, Annotated, and Signed](git/git-tags-in-the-release-process.en.md)
+- [Git 标签与发布流程：轻量标签、附注标签与签名标签](git/git-tags-in-the-release-process.zh.md)
 
 **VS Code**
 
