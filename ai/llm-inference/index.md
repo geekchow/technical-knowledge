@@ -6,7 +6,7 @@ Publish-ready article pairs, each extended from a study note in the repo-root [`
 directory. Every topic has a parallel Chinese (`.zh.md`) and English (`.en.md`) version — the English
 one is a parallel rewrite, not a literal translation.
 
-Foundations for this series live in the sibling topic [LLM 全景指南](../llm-fundamentals/00-overview.md).
+Foundations for this series live in the sibling topic [LLM 全景指南](../llm-fundamentals/index.md).
 
 ## Articles & CSDN Publish Status
 
