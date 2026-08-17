@@ -28,11 +28,11 @@
 
 ```mermaid
 flowchart LR
-    RAW["原始互联网文本<br/>CommonCrawl · 代码 · 书籍 · 论文<br/>（PB 级）"] --> CLEAN["数据管线<br/>去重 · 质量过滤 · 配比 · 去毒"]
-    CLEAN --> PT["① 预训练<br/>目标：预测下一个 token<br/>万亿级 token · 数万 GPU · 数月<br/><b>99% 的算力在这里</b>"]
+    RAW["原始互联网文本<br/>CommonCrawl · 代码<br/>书籍 · 论文<br/>（PB 级）"] --> CLEAN["数据管线<br/>去重 · 质量过滤<br/>配比 · 去毒"]
+    CLEAN --> PT["① 预训练<br/>目标：预测下一个 token<br/>万亿级 token<br/>数万 GPU · 数月<br/><b>99% 的算力在这里</b>"]
     PT --> BASE["基座模型 base<br/>只会续写，不会帮忙"]
     BASE --> SFT["② SFT 监督微调<br/>数万~百万条指令-回答示范"]
-    SFT --> RL["③ 偏好优化<br/>RLHF / DPO（推理模型再加 RLVR）"]
+    SFT --> RL["③ 偏好优化<br/>RLHF / DPO<br/>（推理模型再加 RLVR）"]
     RL --> FINAL["对话模型 Instruct/Chat<br/>你实际用到的那个"]
 
     style PT fill:#e8f0fe

@@ -34,7 +34,7 @@ flowchart LR
     P["Prompt tokens<br/>（你的输入）"] --> PF["<b>Prefill 预填充</b><br/>一次并行前向吃下全部输入<br/>算力受限 · 决定 TTFT"]
     PF --> KV[("KV Cache<br/>历史 token 的 K/V")]
     PF --> T1["第 1 个输出 token"]
-    T1 --> DC["<b>Decode 解码循环</b><br/>每步读一遍全部权重 + 全部 KV Cache<br/><b>带宽受限</b> · 决定 TPOT"]
+    T1 --> DC["<b>Decode 解码循环</b><br/>每步读一遍全部权重<br/>+ 全部 KV Cache<br/><b>带宽受限</b> · 决定 TPOT"]
     KV <--> DC
     DC --> OUT["逐 token 流式输出"]
 

@@ -98,17 +98,17 @@ flowchart LR
 ```mermaid
 flowchart TB
     subgraph 上层["上层：应用 —— 把 LLM 当作'语言能力的电源插座'"]
-        APP["Chat 产品 · Agent · RAG 系统 · 编码助手 · 工作流自动化"]
+        APP["Chat 产品 · Agent<br/>RAG 系统 · 编码助手<br/>工作流自动化"]
     end
     subgraph 本层["本层：模型"]
         CLOSED["闭源模型<br/>GPT · Claude · Gemini<br/>（只出租 API 访问权）"]
-        OPEN["开源模型<br/>Llama · Qwen · DeepSeek · Mistral · Gemma<br/>（权重文件可下载）"]
-        SMALL["轻量亲戚<br/>Embedding 模型 · Reranker · 专用小模型"]
+        OPEN["开源模型<br/>Llama · Qwen · DeepSeek<br/>Mistral · Gemma<br/>（权重文件可下载）"]
+        SMALL["轻量亲戚<br/>Embedding 模型<br/>Reranker · 专用小模型"]
     end
     subgraph 下层["下层：基础设施"]
-        ENG["推理引擎：vLLM · SGLang · TensorRT-LLM · llama.cpp / ollama"]
-        FW["训练框架：PyTorch · JAX · Megatron"]
-        HW["硬件：GPU / TPU 集群 · 高带宽显存 HBM"]
+        ENG["推理引擎<br/>vLLM · SGLang<br/>TensorRT-LLM<br/>llama.cpp / ollama"]
+        FW["训练框架<br/>PyTorch · JAX · Megatron"]
+        HW["硬件<br/>GPU / TPU 集群<br/>高带宽显存 HBM"]
     end
     APP --> CLOSED & OPEN & SMALL
     CLOSED & OPEN --> ENG --> HW

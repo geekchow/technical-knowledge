@@ -53,9 +53,9 @@ graph LR
 
 ```mermaid
 flowchart LR
-    C["📋 Context Window\n（System Prompt\n+ 历史对话\n+ 用户输入\n+ 工具返回\n+ RAG检索结果）"]
-    F["🧠 LLM\nf(context)"]
-    T["🔤 Next Token\n（循环输出）"]
+    C["📋 Context Window<br/>（System Prompt<br/>+ 历史对话<br/>+ 用户输入<br/>+ 工具返回<br/>+ RAG检索结果）"]
+    F["🧠 LLM<br/>f(context)"]
+    T["🔤 Next Token<br/>（循环输出）"]
 
     C -->|输入| F -->|输出| T
     T -->|追加到 Context| C
@@ -73,10 +73,10 @@ flowchart LR
 
 ```mermaid
 graph LR
-    P["Prompt\n基础输入"]
-    PE["Prompt Engineering\n系统优化输入"]
-    CE["Context Engineering\n管理整个上下文窗口"]
-    HE["Harness Engineering\n构建可靠 Agent 系统"]
+    P["Prompt<br/>基础输入"]
+    PE["Prompt Engineering<br/>系统优化输入"]
+    CE["Context Engineering<br/>管理整个上下文窗口"]
+    HE["Harness Engineering<br/>构建可靠 Agent 系统"]
 
     P -->|"方法论化"| PE -->|"扩展范围"| CE -->|"工程化落地"| HE
 
@@ -121,11 +121,11 @@ sequenceDiagram
 ```mermaid
 graph TB
     subgraph ST["⚡ 短期记忆（Short-term Memory）"]
-        CW["Context Window\n会话期间有效\n受 Token 限制"]
+        CW["Context Window<br/>会话期间有效<br/>受 Token 限制"]
     end
     subgraph LT["🗄️ 长期记忆（Long-term Memory）= RAG"]
         KB["知识库 / 文档"]
-        VDB["向量数据库\n（Embedding 存储）"]
+        VDB["向量数据库<br/>（Embedding 存储）"]
         RET["检索器（Retriever）"]
     end
 
@@ -165,7 +165,7 @@ flowchart LR
 
     subgraph GENERATE["💬 生成阶段"]
         direction TB
-        G1["组装 Context\n(问题 + 检索结果 + System Prompt)"]
+        G1["组装 Context<br/>(问题 + 检索结果<br/>+ System Prompt)"]
         G2[LLM 推理生成]
         G3[最终答案]
         G1 --> G2 --> G3
@@ -186,16 +186,16 @@ flowchart LR
 ```mermaid
 graph LR
     subgraph AGENT["Agent 侧"]
-        AC["MCP Client\n（内嵌于 Agent）"]
+        AC["MCP Client<br/>（内嵌于 Agent）"]
     end
     subgraph PROTO["标准协议层"]
-        MP["MCP Protocol\nJSON-RPC over\nStdio / SSE / HTTP"]
+        MP["MCP Protocol<br/>JSON-RPC over<br/>Stdio / SSE / HTTP"]
     end
     subgraph SERVERS["工具服务侧"]
-        S1["MCP Server\n文件系统"]
-        S2["MCP Server\nWeb 搜索"]
-        S3["MCP Server\n数据库"]
-        S4["MCP Server\n自定义 API"]
+        S1["MCP Server<br/>文件系统"]
+        S2["MCP Server<br/>Web 搜索"]
+        S3["MCP Server<br/>数据库"]
+        S4["MCP Server<br/>自定义 API"]
     end
 
     AC <-->|"标准协议"| MP
@@ -221,7 +221,7 @@ sequenceDiagram
     participant Agent
     participant Tool as Tool/MCP Server
 
-    LLM->>Agent: 输出 Function Call\n{name, arguments}
+    LLM->>Agent: 输出 Function Call<br/>{name, arguments}
     Agent->>Tool: 执行工具调用
     Tool-->>Agent: 返回结果 Observation
     Agent->>LLM: 将 Observation 追加到 Context
@@ -235,11 +235,11 @@ sequenceDiagram
 ```mermaid
 graph TB
     SK["🎯 Skill（技能模块）"]
-    SP["System Prompt\n角色定义 + 任务描述"]
-    TL["Tools\n可用工具列表"]
-    LG["Logic Flow\n内部逻辑/步骤"]
-    EX["Examples\nFew-shot 示例"]
-    CT["Context Rules\n上下文管理策略"]
+    SP["System Prompt<br/>角色定义 + 任务描述"]
+    TL["Tools<br/>可用工具列表"]
+    LG["Logic Flow<br/>内部逻辑/步骤"]
+    EX["Examples<br/>Few-shot 示例"]
+    CT["Context Rules<br/>上下文管理策略"]
 
     SK --> SP
     SK --> TL
@@ -256,7 +256,7 @@ graph TB
 
 ```mermaid
 mindmap
-  root((Harness\nEngineering))
+  root((Harness<br/>Engineering))
     Eval 评估
       基准测试
       人工标注
@@ -285,24 +285,24 @@ mindmap
 
 ```mermaid
 graph TD
-    LLM["🧠 LLM\n大语言模型"]
+    LLM["🧠 LLM<br/>大语言模型"]
 
-    CTX["📋 Context Window\n上下文窗口"]
+    CTX["📋 Context Window<br/>上下文窗口"]
     PE["✍️ Prompt Engineering"]
     CE["🔧 Context Engineering"]
 
-    MEM_S["⚡ 短期记忆\nContext 内"]
-    MEM_L["🗄️ 长期记忆\nRAG"]
+    MEM_S["⚡ 短期记忆<br/>Context 内"]
+    MEM_L["🗄️ 长期记忆<br/>RAG"]
 
-    TOOL["🔨 Tool\n工具调用"]
-    MCP["🔌 MCP\n标准协议"]
-    CLI["💻 CLI\n命令行替代"]
+    TOOL["🔨 Tool<br/>工具调用"]
+    MCP["🔌 MCP<br/>标准协议"]
+    CLI["💻 CLI<br/>命令行替代"]
 
-    WF["📊 Workflow\n固定流程"]
-    AGENT["🤖 AI Agent\n自主决策"]
-    SKILL["🎯 Skill\n能力封装"]
+    WF["📊 Workflow<br/>固定流程"]
+    AGENT["🤖 AI Agent<br/>自主决策"]
+    SKILL["🎯 Skill<br/>能力封装"]
 
-    HE["🛡️ Harness Engineering\n可靠性工程"]
+    HE["🛡️ Harness Engineering<br/>可靠性工程"]
 
     CTX -->|"输入给"| LLM
     PE -->|"优化"| CTX

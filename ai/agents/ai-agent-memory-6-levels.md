@@ -346,7 +346,7 @@ RAG 是**每次重新发现**，Wiki 是**一次编译、持续复利**。
 ```mermaid
 graph TD
     S["📄 Raw Sources（原始素材）<br/>PDF / 文章 / 笔记<br/>不可变，LLM 只读"]
-    W["📚 The Wiki（维基）<br/>摘要页 / 实体页 / 概念页 / 交叉引用<br/>LLM 完全拥有并维护"]
+    W["📚 The Wiki（维基）<br/>摘要页 / 实体页<br/>概念页 / 交叉引用<br/>LLM 完全拥有并维护"]
     C["📐 The Schema（规范）<br/>CLAUDE.md / AGENTS.md<br/>目录约定 + 命名 + 工作流"]
 
     S -->|ingest| W

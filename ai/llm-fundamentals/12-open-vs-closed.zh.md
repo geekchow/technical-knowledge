@@ -27,7 +27,7 @@
 
 ```mermaid
 flowchart TB
-    W["训练完成的权重文件<br/>（safetensors，几十 GB~1 TB）"] --> Q{"公开这个文件吗？"}
+    W["训练完成的权重文件<br/>（safetensors<br/>几十 GB~1 TB）"] --> Q{"公开这个文件吗？"}
     Q -->|是| O["<b>开源生态</b><br/>HuggingFace 下载<br/>→ vLLM / ollama 自部署<br/>→ 可微调 / 蒸馏 / 量化"]
     Q -->|否| C["<b>闭源生态</b><br/>API 合约<br/>→ 按 token 计费<br/>→ 厂商负责推理集群与升级"]
     O --> U1["能力可复现、数据自持<br/>运维与算力自负"]
