@@ -85,6 +85,7 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 - [AgileAlliance](practices/AgileAlliance.md)
 - [Git Branching Strategies: Common Models, Trade-offs, and Choosing One for Correlated API Releases](practices/branching-strategy.md)
 - [Multiple Mac mini share memory](practices/Multiple-Mac-mini-share-memory.md)
+- [Release Management for a Shared Codebase Serving 20 Markets](practices/multi-market-release-management.md)
 
 **Shell**
 
