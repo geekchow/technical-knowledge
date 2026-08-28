@@ -1,6 +1,6 @@
 # AI
 
-LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
+LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, model routing.
 
 [← Back to index](../README.md)
 
@@ -26,6 +26,20 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 - [LLM 量化版本 是什么版本](concepts/LLM-量化版本-是什么版本.md)
 - [为什么大量公司上了 RAG，却很少真正做成？](concepts/why-rag-projects-fail.zh.md) · [Why So Many Companies Adopt RAG, and So Few Actually Succeed](concepts/why-rag-projects-fail.en.md)
 
+**DeepSeek Harness** — 十二篇中文系列，见 [series index](deepseek-harness/index.md)
+
+- [01 · 为什么需要 harness：模型再强，也不会自己去读文件](deepseek-harness/01-why.zh.md)
+- [02 · DeepSeek Harness 是什么：定义、边界与生态位置](deepseek-harness/02-what.zh.md)
+- [03 · 概念地图：八个概念、八个角色、一个运行示例](deepseek-harness/03-concept-map.zh.md)
+- [04 · Cordis 内核：为什么「一切皆插件」不是口号](deepseek-harness/04-cordis.zh.md)
+- [05 · 组装层：Profile、Bundle、Patch 与 Agent Preset](deepseek-harness/05-composition.zh.md)
+- [06 · 会话日志：唯一真相源，以及「模型可见即已记录」](deepseek-harness/06-session-log.zh.md)
+- [07 · Agent Loop：一个 turn 到底发生了什么](deepseek-harness/07-agent-loop.zh.md)
+- [08 · 系统提示装配：模型看见的前缀是被「拼」出来的](deepseek-harness/08-system-prompt.zh.md)
+- [09 · LLM 接缝：把厂商协议关进一个可替换的盒子](deepseek-harness/09-llm-adapter.zh.md)
+- [10 · 工具注册表与执行管线：一次工具调用要过五道关](deepseek-harness/10-tools.zh.md)
+- [11 · 能力接缝：文件、命令、沙箱、审批、子代理](deepseek-harness/11-capability-seams.zh.md)
+- [12 · 完整重演：一句话请求的完整旅程 + 动手练习](deepseek-harness/12-walkthrough.zh.md)
 **LLM Fundamentals** — 十三篇中文系列，见 [series index](llm-fundamentals/index.md)
 
 - [01 · 为什么会有 LLM：一个任务一个模型的时代是怎么结束的](llm-fundamentals/01-why.zh.md)
@@ -56,6 +70,18 @@ LLM fundamentals and inference, Claude Code, prompting, agents, model routing.
 - [How to user deeprouter api](model-routing/deeprouter.md)
 - [OpenRouter Auto Router vs Model Fallbacks](model-routing/OpenRouter-Auto-Router-vs-Model-Fallbacks.md)
 - [OpenRouter](model-routing/openrouter.md)
+
+**Multimodal** — 十篇中文系列，见 [series index](multimodal/index.md)
+
+- [01 · 为什么需要多模态：纯文本 LLM 撞上的四堵墙](multimodal/01-why.zh.md)
+- [02 · 多模态 LLM 是什么：定义、边界与生态位置](multimodal/02-what.zh.md)
+- [03 · 概念地图：七个概念、五个角色、一个运行示例](multimodal/03-concept-map.zh.md)
+- [04 · 视觉编码器：像素如何变成语义](multimodal/04-vision-encoder.zh.md)
+- [05 · 对齐投影器：最小也最关键的模块](multimodal/05-projector.zh.md)
+- [06 · LLM 主干与融合策略：前缀拼接 vs 交叉注意力](multimodal/06-llm-backbone-fusion.zh.md)
+- [07 · 训练管线：三阶段如何把三个模块焊在一起](multimodal/07-training-pipeline.zh.md)
+- [08 · 模态解码器与 Any-to-Any](multimodal/08-any-to-any.zh.md)
+- [09 · 完整重演：一张截图的完整旅程 + 动手练习](multimodal/09-walkthrough.zh.md)
 
 **OpenClaw**
 
