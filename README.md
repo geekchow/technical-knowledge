@@ -8,7 +8,7 @@ article that references them.
 
 | Category | Contents |
 |---|---|
-| [AI](./ai/) | LLM fundamentals & inference, agent harness, Claude Code, prompting, agents, model routing — 67 articles |
+| [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 84 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 12 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 58 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 35 articles |
@@ -126,6 +126,21 @@ _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 
 - [Superpowers — What It Does & How It Orchestrates Skills](ai/superpowers/superpowers-overview.md)
 - [Why superpowers](ai/superpowers/why-superpowers.md)
+
+**Transformer & Attention** — 十二篇中文系列，见 [series index](ai/transformer/index.md)
+
+- [01 · 为什么会有 Transformer：一句话必须一个词一个词地读，是怎么被打破的](ai/transformer/01-why.zh.md)
+- [02 · Transformer 到底是什么：定义、边界与生态位置](ai/transformer/02-what.zh.md)
+- [03 · 概念地图：八个概念、五个角色，一次摊开整张地图](ai/transformer/03-concept-map.zh.md)
+- [04 · 运行示例：一句话的完整旅程（浅层追踪）](ai/transformer/04-running-example.zh.md)
+- [05 · 嵌入层与位置编码器：从整数到「带位置感的向量」](ai/transformer/05-embedding-position.zh.md)
+- [06 · 注意力核心：QKV 与缩放点积](ai/transformer/06-attention-core.zh.md)
+- [07 · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md)
+- [08 · 工程变体：KV Cache、GQA/MQA/MLA 与 FlashAttention](ai/transformer/08-attention-variants.zh.md)
+- [09 · 前馈网络 FFN：那七成参数在干什么](ai/transformer/09-ffn.zh.md)
+- [10 · 残差与归一化：让 32 层不至于崩掉的那些胶水](ai/transformer/10-residual-norm.zh.md)
+- [11 · 输出头与采样器：从 4096 个数到一个汉字](ai/transformer/11-output-head.zh.md)
+- [12 · 完整重演：一句话如何变成「猫」+ 动手练习](ai/transformer/12-walkthrough.zh.md)
 
 **General**
 

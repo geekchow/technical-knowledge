@@ -8,6 +8,8 @@
 
 姊妹系列：[LLM 推理系列](../llm-inference/index.md) —— 本系列第 8 篇的工程侧展开（KV Cache、量化、Agentic 推理经济学）。
 
+姊妹系列：[Transformer 与注意力机制](../transformer/index.md) —— 本系列第 4 篇的完整展开（注意力三连、FFN、残差与归一化、采样）。
+
 ---
 
 ## 一条主线：贯穿全篇的运行示例
