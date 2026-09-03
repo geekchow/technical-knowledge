@@ -317,6 +317,8 @@ _Java, Python, JavaScript and programming paradigms_
 
 **JavaScript**
 
+- [Bun: The All-in-One JavaScript Runtime and Toolkit](languages/javascript/bun-runtime-and-toolkit.en.md)
+- [Bun：把 JavaScript 工具链压缩成一个二进制](languages/javascript/bun-runtime-and-toolkit.zh.md)
 - [Reactive programming](languages/javascript/reactive-programming.md)
 
 **Paradigms**

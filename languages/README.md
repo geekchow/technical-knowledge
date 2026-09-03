@@ -24,6 +24,8 @@ Java, Python, JavaScript and programming paradigms.
 
 **JavaScript**
 
+- [Bun: The All-in-One JavaScript Runtime and Toolkit](javascript/bun-runtime-and-toolkit.en.md)
+- [Bun：把 JavaScript 工具链压缩成一个二进制](javascript/bun-runtime-and-toolkit.zh.md)
 - [Reactive programming](javascript/reactive-programming.md)
 
 **Paradigms**
