@@ -67,6 +67,7 @@ Content breakdown: ~195 `.md` (incl. 11 generated `README.md`), ~60 images (`.pn
 
 ## Git workflow
 - **Standing authorization: always commit and push when there are local changes.** Do not stop to ask for confirmation — finish the work, then `git add` the relevant files, commit with a descriptive message, and `git push` to `origin master`. This applies to normal note-writing and index regeneration.
+- **One article, one commit — commit as soon as an article is finished.** Do not leave a completed article uncommitted, and do not batch several articles into a single commit. The commit covers that article plus whatever moves with it: colocated assets it links, and any index regeneration it triggers.
 - Still ask first for anything destructive or history-rewriting: force pushes, `reset --hard`, amending pushed commits, branch deletion, or discarding uncommitted work you did not create.
 - Stage files by name rather than `git add -A`, and never commit secrets (see Gotchas).
 
