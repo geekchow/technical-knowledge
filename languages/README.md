@@ -26,7 +26,8 @@ Java, Python, JavaScript and programming paradigms.
 
 - [Bun: The All-in-One JavaScript Runtime and Toolkit](javascript/bun-runtime-and-toolkit.en.md)
 - [Bun：把 JavaScript 工具链压缩成一个二进制](javascript/bun-runtime-and-toolkit.zh.md)
-- [Reactive programming](javascript/reactive-programming.md)
+- [Reactive Programming with RxJS: Async as a Stream You Can Operate On](javascript/reactive-programming.en.md)
+- [RxJS 响应式编程：把异步当成一条可以操作的流](javascript/reactive-programming.zh.md)
 
 **Paradigms**
 
