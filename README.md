@@ -22,6 +22,13 @@ Outside the categories, [`docs/`](./docs/) holds the backlog plus any plans and 
 [`raw/`](./raw/README.md) holds the unpolished study notes that the published article series are
 derived from.
 
+Two kinds of content live outside the category tree:
+- [`technical-repos.md`](./technical-repos.md) — the **pointer index into every companion "explanation repo"**
+  (a topic's article/series packed together with its runnable code in its own repository):
+  `micro-service-auth`, `O11y-Micro-Service`, `mcp-explain`, `blue-green-eks-fargate-alb`.
+- [`docs/`](./docs/) — the backlog plus any plans and specs; [`raw/`](./raw/README.md) — unpolished study notes
+  that the published article series are derived from.
+
 ## AI
 
 _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
