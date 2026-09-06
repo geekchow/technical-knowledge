@@ -83,6 +83,10 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 - [08 · 模态解码器与 Any-to-Any](multimodal/08-any-to-any.zh.md)
 - [09 · 完整重演：一张截图的完整旅程 + 动手练习](multimodal/09-walkthrough.zh.md)
 
+**Hermes**
+
+- [Hermes Agent 接入飞书：三个坑与排查方法](hermes/feishu-integration-troubleshooting.md)
+
 **OpenClaw**
 
 - [openclaw token](openclaw/openclaw-token.md)
