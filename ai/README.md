@@ -86,6 +86,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 **Hermes**
 
 - [Hermes Agent 接入飞书：三个坑与排查方法](hermes/feishu-integration-troubleshooting.md)
+- [Hermes Agent 接入 Discord：一次没有踩坑的配置](hermes/discord-setup.md)
 
 **OpenClaw**
 
