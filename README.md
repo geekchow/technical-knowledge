@@ -10,7 +10,7 @@ article that references them.
 |---|---|
 | [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 84 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 12 articles |
-| [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 58 articles |
+| [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 35 articles |
 | [Mobile](./mobile/) | iOS and Android build, packaging, CloudKit and App Store review — 17 articles |
 | [Web](./web/) | Front-end frameworks and markup — 3 articles |
@@ -294,6 +294,7 @@ _CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability_
 - [network tools](devops/shell/network-tools.md)
 - [Permission of file in Bash](devops/shell/permission.md)
 - [tree — 列目录并排除指定子目录](devops/shell/tree.md)
+- [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md)
 - [zsh](devops/shell/zsh.md)
 
 **General**

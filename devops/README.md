@@ -96,6 +96,7 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 - [network tools](shell/network-tools.md)
 - [Permission of file in Bash](shell/permission.md)
 - [tree — 列目录并排除指定子目录](shell/tree.md)
+- [TTY, PTY, and Non-TTY Shell Sessions](shell/tty-pty-and-non-tty-sessions.md)
 - [zsh](shell/zsh.md)
 
 **General**
