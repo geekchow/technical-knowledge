@@ -35,6 +35,7 @@ _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 
 **Agents**
 
+- [把 Claude Code 接进 Agent 编排框架：ACP 集成的四个反直觉发现](ai/agents/acp-coding-agent-integration.md)
 - [AI Agent 记忆的 6 个层级：从 CLAUDE.md 到「统一大脑」](ai/agents/ai-agent-memory-6-levels.md)
 - [Build an AI Assistant with LangGraph, Vercel, and Next.js: Use Gmail as a Tool Securely](ai/agents/Build-an-AI-Assistant-with-LangGraph-Vercel-and-Next.js-Use-Gmail-as-a-Tool-Securely.md)
 
