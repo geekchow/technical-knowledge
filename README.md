@@ -11,7 +11,7 @@ article that references them.
 | [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 84 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 12 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
-| [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 35 articles |
+| [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 36 articles |
 | [Mobile](./mobile/) | iOS and Android build, packaging, CloudKit and App Store review — 17 articles |
 | [Web](./web/) | Front-end frameworks and markup — 3 articles |
 | [Data & ML](./data-ml/) | Data preparation, notebooks, deep learning, local LLMs — 19 articles |
@@ -350,6 +350,7 @@ _Java, Python, JavaScript and programming paradigms_
 - [Python threading.Semaphore 机制详解](languages/python/python-threading-semaphore.md)
 - [Python 切片 (Slice) 详解](languages/python/slice.md)
 - [subprocess shell (notebook)](languages/python/subprocess-shell.ipynb)
+- [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md)
 - [Why Use uv for Python](languages/python/Why-Use-uv-for-Python.md)
 
 **Python › argparse**

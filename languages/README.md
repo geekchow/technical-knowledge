@@ -48,6 +48,7 @@ Java, Python, JavaScript and programming paradigms.
 - [Python threading.Semaphore 机制详解](python/python-threading-semaphore.md)
 - [Python 切片 (Slice) 详解](python/slice.md)
 - [subprocess shell (notebook)](python/subprocess-shell.ipynb)
+- [uv：用一个工具替换整条 Python 工具链](python/uv-python-package-manager.zh.md)
 - [Why Use uv for Python](python/Why-Use-uv-for-Python.md)
 
 **Python › argparse**
