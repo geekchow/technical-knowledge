@@ -4,6 +4,8 @@ Personal technical knowledge base — Markdown articles grouped into nine top-le
 Each category holds topic subdirectories; images, notebooks and code samples live next to the
 article that references them.
 
+📅 **[最近更新 / Latest Articles](./LATEST.md)** — 按加入时间倒序的最新文章索引（由 `scripts/gen-latest-index.sh` 生成）。
+
 ## Categories
 
 | Category | Contents |
