@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-11（HEAD `55b3fa5`）
+> 生成时间：2026-09-11（HEAD `7e0f67a`）
 
 ## 最近改动 / Recently added or updated
 
@@ -25,7 +25,7 @@
 
 ### 2026-09-11 — 1 篇
 
-**add RECENT.md shortcut index + generator, reflect in CLAUDE.md** (`eb10f29`)
+**consolidate RECENT.md into LATEST.md — one recency index, one generator** (`7e0f67a`)
 
 - `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 
