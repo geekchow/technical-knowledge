@@ -139,24 +139,28 @@ flowchart TB
 五个概念撑起整个内核：插件即服务、上下文即服务仓库、`inject` 声明依赖、类型化事件、注册即可撤销效果。`emit`/`waterfall`/`parallel`/`serial` 四种派发模式各自的语义；waterfall 的 `next()` 为什么是 around 中间件；以及"没有特权核心可打补丁"这句话的实际后果。
 
 - [x] [04-cordis.zh.md](04-cordis.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165008406>
 
 **05 · 组装层：Profile、Bundle、Patch 与 Agent Preset**
 
 启动时的插件树是从空列表叠出来的：bundle 层 → profile 补丁 → home 补丁 → `--patch` 覆盖层。`dsh --dump-config` 为什么是这个项目最该先跑的命令；**宿主平面 vs 代理平面**这条分界线（谁能拥有注册表、谁只能拥有工具）；一个 preset 为什么必须待在带 `isolate` 的 group 里。
 
 - [x] [05-composition.zh.md](05-composition.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165008424>
 
 **06 · 会话日志：唯一真相源，以及"模型可见即已记录"**
 
 `SessionEvent` 事件表逐条读；消息历史是**派生**出来的而不是存下来的；`turn/*`、`step/*`、`user/message`、`assistant/chunk`、`assistant/message`、`tool/call`、`tool/result` 各自记什么；为什么连原始流式分片都要落盘；以及那条运行时不变量：任何进入模型请求的东西都必须能从日志重建。
 
 - [x] [06-session-log.zh.md](06-session-log.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165008437>
 
 **07 · Agent Loop：一个 turn 到底发生了什么**
 
 turn 与 step 的精确定义；inbox 的两条队列（`next-turn` / `next-step`）与 `followup`/`steer`/`inject` 三个别名；`agent/pre-step` 这个"决定模型看见什么"的 waterfall；工具调用的并发调度（barrier 与滚动池）；取消、错误恢复与压缩重试如何在同一条时间线上共存。
 
 - [x] [07-agent-loop.zh.md](07-agent-loop.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165008448>
 
 **08 · 系统提示装配：模型看见的前缀是被"拼"出来的**
 
