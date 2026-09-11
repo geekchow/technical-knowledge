@@ -2,24 +2,30 @@
 
 Shortcut index of the most recently added or updated documents, newest first. Use this to jump back into whatever you were last working on; use [README.md](README.md) when you want the full tree by category.
 
-*Generated from git history on 2026-09-11 (HEAD `c726edb`), covering the last 365 days. `NEW` = added in that commit, `UPD` = updated.*
+*Generated from git history on 2026-09-11 (HEAD `a12a97a`), covering the last 365 days. `NEW` = added in that commit, `UPD` = updated.*
 
 ## At a glance — 10 most recent
 
 | Date | | Document | Category |
 |---|---|---|---|
+| 2026-09-11 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |
 | 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |
 | 2026-09-06 | `NEW` | [Hermes Agent 接入 Discord：一次没有踩坑的配置](ai/hermes/discord-setup.md) | AI / hermes |
 | 2026-09-06 | `NEW` | [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) | AI / hermes |
 | 2026-09-05 | `NEW` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |
 | 2026-09-05 | `NEW` | [OpenClaw 2026.8.2 升级与加固实录](ai/openclaw/upgrade-and-hardening-2026.8.2.md) | AI / openclaw |
-| 2026-09-05 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |
 | 2026-09-05 | `NEW` | [把 Claude Code 接进 Agent 编排框架：ACP 集成的四个反直觉发现](ai/agents/acp-coding-agent-integration.md) | AI / agents |
 | 2026-09-05 | `NEW` | [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) | Languages / javascript |
 | 2026-09-05 | `NEW` | [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) | Languages / javascript |
 | 2026-09-03 | `NEW` | [Bun: The All-in-One JavaScript Runtime and Toolkit](languages/javascript/bun-runtime-and-toolkit.en.md) | Languages / javascript |
 
 ## Full timeline
+
+### 2026-09-11 — 1 doc
+
+**add RECENT.md shortcut index + generator, reflect in CLAUDE.md** (`a12a97a`)
+
+- `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 
 ### 2026-09-07 — 1 doc
 
@@ -37,7 +43,7 @@ Shortcut index of the most recently added or updated documents, newest first. Us
 
 - `NEW` [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) — *AI / hermes*
 
-### 2026-09-05 — 6 docs
+### 2026-09-05 — 5 docs
 
 **Add technical-repos.md: pointer index to all companion explanation repos + link it from README** (`7c79737`)
 
@@ -49,7 +55,6 @@ Shortcut index of the most recently added or updated documents, newest first. Us
 
 **add ACP coding-agent integration article and per-article commit rule** (`c634b5a`)
 
-- `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 - `NEW` [把 Claude Code 接进 Agent 编排框架：ACP 集成的四个反直觉发现](ai/agents/acp-coding-agent-integration.md) — *AI / agents*
 
 **replace reactive-programming stub with full RxJS article (en/zh)** (`101abf5`)
