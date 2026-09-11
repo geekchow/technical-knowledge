@@ -1,0 +1,12 @@
+{
+  "_note": "DeepSeek Harness 系列 CSDN 发布映射。源 md (technical-knowledge/ai/deepseek-harness) -> 已发布文章。2026-09-11 前缀修复后校正为真实文章 id（此前 repo 记录陈旧 id 已废弃）。",
+  "articles": {
+    "01-why.zh.md": {"articleId": "164873889", "url": "https://blog.csdn.net/PhilZhou/article/details/164873889"},
+    "02-what.zh.md": {"articleId": "164874010", "url": "https://blog.csdn.net/PhilZhou/article/details/164874010"},
+    "03-concept-map.zh.md": {"articleId": "164874165", "url": "https://blog.csdn.net/PhilZhou/article/details/164874165"},
+    "04-cordis.zh.md": {"articleId": "165008406", "url": "https://blog.csdn.net/PhilZhou/article/details/165008406"},
+    "05-composition.zh.md": {"articleId": "165008424", "url": "https://blog.csdn.net/PhilZhou/article/details/165008424"},
+    "06-session-log.zh.md": {"articleId": "165008437", "url": "https://blog.csdn.net/PhilZhou/article/details/165008437"},
+    "07-agent-loop.zh.md": {"articleId": "165008448", "url": "https://blog.csdn.net/PhilZhou/article/details/165008448"}
+  }
+}

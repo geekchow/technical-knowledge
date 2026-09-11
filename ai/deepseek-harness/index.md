@@ -116,21 +116,21 @@ flowchart TB
 模型交付的只有 token，可 Agent 需要的是"看环境、动手、还能接着干"；2023—2025 年这层壳是怎么长出来的、又是怎么被焊死在各家产品里的；为什么"换一个模型/换一个沙箱/换一个循环"这三件事在闭源产品里都做不到；以及评测复现这个被低估的痛点。
 
 - [x] [01-why.zh.md](01-why.zh.md) — 中文版
-- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165003543>
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/164873889>
 
 **02 · DeepSeek Harness 是什么：定义、边界与生态位置**
 
 一句话定义拆解；"Everything is a plugin. Every run is traceable." 两句设计信条各自换来什么；它**不是**模型、不是 IDE、不是又一个 Agent 编排 SDK；与 Claude Code / Codex / LangGraph / MCP 的关系（它甚至可以把前两者当子代理调用）；四个 preset 的定位。
 
 - [x] [02-what.zh.md](02-what.zh.md) — 中文版
-- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165003817>
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/164874010>
 
 **03 · 概念地图：八个概念、八个角色、一个运行示例**
 
 插件与上下文、服务与可撤销效果、类型化事件、Profile/Bundle、Agent Preset、会话日志、Turn/Step、能力接缝——八个概念按依赖顺序串起来；八个关键角色各自的"唯一职责 / 知道什么 / 刻意不做什么"；协作总览图；以及贯穿全系列的运行示例的完整定义与 12 步浅层追踪。
 
 - [x] [03-concept-map.zh.md](03-concept-map.zh.md) — 中文版
-- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165004247>
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/164874165>
 
 ### 第二部分 · 拆开八个角色
 
