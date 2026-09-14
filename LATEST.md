@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-14（HEAD `278ef0a`）
+> 生成时间：2026-09-14（HEAD `6cd7541`）
 
 ## 最近改动 / Recently added or updated
 
@@ -25,7 +25,7 @@
 
 ### 2026-09-14 — 1 篇
 
-**Add article: Hidden Reasoning Tokens Truncate Structured JSON Output** (`278ef0a`)
+**Add article: Hidden Reasoning Tokens Truncate Structured JSON Output** (`6e84ecb`)
 
 - `NEW` [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) — *AI / model-routing*
 
