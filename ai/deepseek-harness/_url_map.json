@@ -7,6 +7,9 @@
     "04-cordis.zh.md": {"articleId": "165008406", "url": "https://blog.csdn.net/PhilZhou/article/details/165008406"},
     "05-composition.zh.md": {"articleId": "165008424", "url": "https://blog.csdn.net/PhilZhou/article/details/165008424"},
     "06-session-log.zh.md": {"articleId": "165008437", "url": "https://blog.csdn.net/PhilZhou/article/details/165008437"},
-    "07-agent-loop.zh.md": {"articleId": "165008448", "url": "https://blog.csdn.net/PhilZhou/article/details/165008448"}
+    "07-agent-loop.zh.md": {"articleId": "165008448", "url": "https://blog.csdn.net/PhilZhou/article/details/165008448"},
+    "08-system-prompt.zh.md": {"articleId": "165308205", "url": "https://blog.csdn.net/PhilZhou/article/details/165308205"},
+    "09-llm-adapter.zh.md": {"articleId": "165308538", "url": "https://blog.csdn.net/PhilZhou/article/details/165308538"},
+    "10-tools.zh.md": {"articleId": "165308757", "url": "https://blog.csdn.net/PhilZhou/article/details/165308757"}
   }
 }
