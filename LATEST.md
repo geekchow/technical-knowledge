@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-11（HEAD `7e0f67a`）
+> 生成时间：2026-09-14（HEAD `278ef0a`）
 
 ## 最近改动 / Recently added or updated
 
@@ -12,6 +12,8 @@
 
 | 日期 | | 文档 | 分类 |
 |---|---|---|---|
+| 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |
+| 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |
 | 2026-09-11 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |
 | 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |
 | 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |
@@ -20,8 +22,18 @@
 | 2026-09-06 | `NEW` | [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) | AI / hermes |
 | 2026-09-05 | `NEW` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |
 | 2026-09-05 | `NEW` | [OpenClaw 2026.8.2 升级与加固实录](ai/openclaw/upgrade-and-hardening-2026.8.2.md) | AI / openclaw |
-| 2026-09-05 | `NEW` | [把 Claude Code 接进 Agent 编排框架：ACP 集成的四个反直觉发现](ai/agents/acp-coding-agent-integration.md) | AI / agents |
-| 2026-09-05 | `NEW` | [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) | Languages / javascript |
+
+### 2026-09-14 — 1 篇
+
+**Add article: Hidden Reasoning Tokens Truncate Structured JSON Output** (`278ef0a`)
+
+- `NEW` [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) — *AI / model-routing*
+
+### 2026-09-12 — 1 篇
+
+**docs(ai/hermes): 驱动交互式 Agent 的六个坑（cmux-delegate）** (`875afab`)
+
+- `NEW` [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) — *AI / hermes*
 
 ### 2026-09-11 — 1 篇
 
@@ -93,18 +105,16 @@
 - `NEW` [深度篇 ②-B · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md) — *AI / transformer*
 - *…此次提交还有 5 篇 — `git show --stat 30e8057`*
 
-### 2026-08-28 — 4 篇
+### 2026-08-28 — 2 篇
 
 **add multimodal and deekseek harness serials.** (`e2483c9`)
 
 - `NEW` [为什么需要 harness：模型再强，也不会自己去读文件](ai/deepseek-harness/01-why.zh.md) — *AI / deepseek-harness*
 - `NEW` [DeepSeek Harness 是什么：定义、边界与生态位置](ai/deepseek-harness/02-what.zh.md) — *AI / deepseek-harness*
-- `NEW` [概念地图：八个概念、八个角色、一个运行示例](ai/deepseek-harness/03-concept-map.zh.md) — *AI / deepseek-harness*
-- `NEW` [Cordis 内核：为什么"一切皆插件"不是口号](ai/deepseek-harness/04-cordis.zh.md) — *AI / deepseek-harness*
 
-*另有 90 条更早的改动未列出（见下方完整目录）。*
+*另有 92 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 251 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 253 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -112,6 +122,8 @@
 
 ### 2026-09
 
+- `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
+- `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
 - `2026-09-09` · **languages** — [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md)
 - `2026-09-09` · **docs** — [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md)
 - `2026-09-07` · **devops** — [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md)
