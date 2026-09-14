@@ -10,7 +10,7 @@ article that references them.
 
 | Category | Contents |
 |---|---|
-| [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 84 articles |
+| [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 85 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 12 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 36 articles |
@@ -99,6 +99,7 @@ _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 
 **Model Routing**
 
+- [Hidden Reasoning Tokens Truncate Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - [How to user deeprouter api](ai/model-routing/deeprouter.md)
 - [OpenRouter Auto Router vs Model Fallbacks](ai/model-routing/OpenRouter-Auto-Router-vs-Model-Fallbacks.md)
 - [OpenRouter](ai/model-routing/openrouter.md)

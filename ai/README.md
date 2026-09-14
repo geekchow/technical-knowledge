@@ -68,6 +68,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 
 **Model Routing**
 
+- [Hidden Reasoning Tokens Truncate Structured JSON Output](model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - [How to user deeprouter api](model-routing/deeprouter.md)
 - [OpenRouter Auto Router vs Model Fallbacks](model-routing/OpenRouter-Auto-Router-vs-Model-Fallbacks.md)
 - [OpenRouter](model-routing/openrouter.md)
