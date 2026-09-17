@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-14（HEAD `6cd7541`）
+> 生成时间：2026-09-17（HEAD `1d0887d`）
 
 ## 最近改动 / Recently added or updated
 
@@ -12,16 +12,25 @@
 
 | 日期 | | 文档 | 分类 |
 |---|---|---|---|
+| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability |
+| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java |
+| 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java |
+| 2026-09-17 | `NEW` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) | Web / frontend |
 | 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |
 | 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |
 | 2026-09-11 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |
 | 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |
 | 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |
 | 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |
-| 2026-09-06 | `NEW` | [Hermes Agent 接入 Discord：一次没有踩坑的配置](ai/hermes/discord-setup.md) | AI / hermes |
-| 2026-09-06 | `NEW` | [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) | AI / hermes |
-| 2026-09-05 | `NEW` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |
-| 2026-09-05 | `NEW` | [OpenClaw 2026.8.2 升级与加固实录](ai/openclaw/upgrade-and-hardening-2026.8.2.md) | AI / openclaw |
+
+### 2026-09-17 — 4 篇
+
+**docs: add 4 weekly-learning articles from Jira KAN-157~161 (Spring Boot startup, CountDownLatch, Tealium/Sentry user behaviour, Playwright)** (`1d0887d`)
+
+- `NEW` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability*
+- `NEW` [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) — *Languages / java*
+- `NEW` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) — *Languages / java*
+- `NEW` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) — *Web / frontend*
 
 ### 2026-09-14 — 1 篇
 
@@ -86,7 +95,7 @@
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
 - `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-### 2026-09-03 — 15 篇
+### 2026-09-03 — 13 篇
 
 **add bun.sh article (en/zh) and git workflow convention** (`cd62b50`)
 
@@ -103,18 +112,11 @@
 - `NEW` [深度篇 ① · 嵌入层与位置编码器：从整数到"带位置感的向量"](ai/transformer/05-embedding-position.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-A · 注意力核心：QKV 与缩放点积](ai/transformer/06-attention-core.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-B · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md) — *AI / transformer*
-- *…此次提交还有 5 篇 — `git show --stat 30e8057`*
+- *…此次提交还有 3 篇 — `git show --stat 30e8057`*
 
-### 2026-08-28 — 2 篇
+*另有 96 条更早的改动未列出（见下方完整目录）。*
 
-**add multimodal and deekseek harness serials.** (`e2483c9`)
-
-- `NEW` [为什么需要 harness：模型再强，也不会自己去读文件](ai/deepseek-harness/01-why.zh.md) — *AI / deepseek-harness*
-- `NEW` [DeepSeek Harness 是什么：定义、边界与生态位置](ai/deepseek-harness/02-what.zh.md) — *AI / deepseek-harness*
-
-*另有 92 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 253 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 257 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -122,6 +124,10 @@
 
 ### 2026-09
 
+- `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md)
+- `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md)
+- `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md)
+- `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md)
 - `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
 - `2026-09-09` · **languages** — [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md)
