@@ -19,6 +19,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 - [iOS UI design for AI-powered dictionary app](claude-code/iOS-UI-design-for-AI-powered-dictionary-app.md)
 - [One Layer vs Two Layers: Claude Skill Structure](claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](claude-code/skill.md)
+- [How Playwright Works with Claude Code](claude-code/playwright-with-claude-code.md)
 - [Claude Skills Marketplace](claude-code/skills-marketplace.md)
 
 **Concepts**

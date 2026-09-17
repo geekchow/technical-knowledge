@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-17（HEAD `1d0887d`）
+> 生成时间：2026-09-17（HEAD `71b105e`）
 
 ## 最近改动 / Recently added or updated
 
@@ -116,7 +116,7 @@
 
 *另有 96 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 257 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 258 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -495,6 +495,10 @@
 - `2020-06-21` · **devops** — [Make Jenkins pipeline in `configuration as infrastructure` way with job-dsl-plugin](devops/jenkins/job-dsl-plugin-usage.md)
 - `2020-06-10` · **mobile** — [What an ipa package contains, and the relationship among them?](mobile/ios/ipa-introduction.md)
 - `2020-06-10` · **mobile** — [iOS Mobile App Development Guide: Best Practices for Building iPhone Mobile Apps](mobile/ios/best-way-to-build-ios-app/best-way-to-buid-ios-app.md)
+
+### 0000-00
+
+- `0000-00-00` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
 
 ---
 
