@@ -3,25 +3,32 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-17（HEAD `71b105e`）
+> 生成时间：2026-09-18（HEAD `99d4e4c`）
+> 📢 = 已发布到 CSDN（共 12 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
 回答「我最近动过什么」。`NEW` = 新增，`UPD` = 修改；按改动时间倒序。
 已忽略 `README.md`/`index.md` 索引更新与纯目录移动，只列真正的文章改动。
 
-| 日期 | | 文档 | 分类 |
-|---|---|---|---|
-| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability |
-| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java |
-| 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java |
-| 2026-09-17 | `NEW` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) | Web / frontend |
-| 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |
-| 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |
-| 2026-09-11 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |
-| 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |
-| 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |
-| 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |
+| 日期 | | 文档 | 分类 | CSDN |
+|---|---|---|---|---|
+| 2026-09-18 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |  |
+| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability |  |
+| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java |  |
+| 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java |  |
+| 2026-09-17 | `NEW` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) | Web / frontend |  |
+| 2026-09-15 | `NEW` | [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) | AI / claude-code |  |
+| 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |  |
+| 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |  |
+| 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |  |
+| 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |  |
+
+### 2026-09-18 — 1 篇
+
+**mark CSDN-published articles in LATEST.md** (`99d4e4c`)
+
+- `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 
 ### 2026-09-17 — 4 篇
 
@@ -31,6 +38,12 @@
 - `NEW` [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) — *Languages / java*
 - `NEW` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) — *Languages / java*
 - `NEW` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) — *Web / frontend*
+
+### 2026-09-15 — 1 篇
+
+**add article: how Playwright works with Claude Code** (`55a781b`)
+
+- `NEW` [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) — *AI / claude-code*
 
 ### 2026-09-14 — 1 篇
 
@@ -43,12 +56,6 @@
 **docs(ai/hermes): 驱动交互式 Agent 的六个坑（cmux-delegate）** (`875afab`)
 
 - `NEW` [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) — *AI / hermes*
-
-### 2026-09-11 — 1 篇
-
-**consolidate RECENT.md into LATEST.md — one recency index, one generator** (`7e0f67a`)
-
-- `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 
 ### 2026-09-09 — 2 篇
 
@@ -95,7 +102,7 @@
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
 - `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-### 2026-09-03 — 13 篇
+### 2026-09-03 — 12 篇
 
 **add bun.sh article (en/zh) and git workflow convention** (`cd62b50`)
 
@@ -112,9 +119,9 @@
 - `NEW` [深度篇 ① · 嵌入层与位置编码器：从整数到"带位置感的向量"](ai/transformer/05-embedding-position.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-A · 注意力核心：QKV 与缩放点积](ai/transformer/06-attention-core.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-B · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md) — *AI / transformer*
-- *…此次提交还有 3 篇 — `git show --stat 30e8057`*
+- *…此次提交还有 2 篇 — `git show --stat 30e8057`*
 
-*另有 96 条更早的改动未列出（见下方完整目录）。*
+*另有 97 条更早的改动未列出（见下方完整目录）。*
 
 ## 全部文章 · 按加入时间 / All articles by date added（共 258 篇）
 
@@ -128,6 +135,7 @@
 - `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md)
 - `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md)
 - `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md)
+- `2026-09-15` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
 - `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
 - `2026-09-09` · **languages** — [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md)
@@ -166,18 +174,18 @@
 - `2026-08-28` · **ai** — [概念地图：七个概念、五个角色、一个运行示例](ai/multimodal/03-concept-map.zh.md)
 - `2026-08-28` · **ai** — [多模态 LLM 是什么：定义、边界与生态位置](ai/multimodal/02-what.zh.md)
 - `2026-08-28` · **ai** — [为什么需要多模态：纯文本 LLM 撞上的四堵墙](ai/multimodal/01-why.zh.md)
-- `2026-08-28` · **ai** — [完整重演：一句话请求的完整旅程 + 动手练习](ai/deepseek-harness/12-walkthrough.zh.md)
-- `2026-08-28` · **ai** — [能力接缝：文件、命令、沙箱、审批、子代理](ai/deepseek-harness/11-capability-seams.zh.md)
-- `2026-08-28` · **ai** — [工具注册表与执行管线：一次工具调用要过五道关](ai/deepseek-harness/10-tools.zh.md)
-- `2026-08-28` · **ai** — [LLM 接缝：把"厂商协议"关进一个可替换的盒子](ai/deepseek-harness/09-llm-adapter.zh.md)
-- `2026-08-28` · **ai** — [系统提示装配：模型看见的前缀是被"拼"出来的](ai/deepseek-harness/08-system-prompt.zh.md)
-- `2026-08-28` · **ai** — [Agent Loop：一个 turn 到底发生了什么](ai/deepseek-harness/07-agent-loop.zh.md)
-- `2026-08-28` · **ai** — [会话日志：唯一真相源，以及"模型可见即已记录"](ai/deepseek-harness/06-session-log.zh.md)
-- `2026-08-28` · **ai** — [组装层：Profile、Bundle、Patch 与 Agent Preset](ai/deepseek-harness/05-composition.zh.md)
-- `2026-08-28` · **ai** — [Cordis 内核：为什么"一切皆插件"不是口号](ai/deepseek-harness/04-cordis.zh.md)
-- `2026-08-28` · **ai** — [概念地图：八个概念、八个角色、一个运行示例](ai/deepseek-harness/03-concept-map.zh.md)
-- `2026-08-28` · **ai** — [DeepSeek Harness 是什么：定义、边界与生态位置](ai/deepseek-harness/02-what.zh.md)
-- `2026-08-28` · **ai** — [为什么需要 harness：模型再强，也不会自己去读文件](ai/deepseek-harness/01-why.zh.md)
+- `2026-08-28` · **ai** — [完整重演：一句话请求的完整旅程 + 动手练习](ai/deepseek-harness/12-walkthrough.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165430269)
+- `2026-08-28` · **ai** — [能力接缝：文件、命令、沙箱、审批、子代理](ai/deepseek-harness/11-capability-seams.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165430133)
+- `2026-08-28` · **ai** — [工具注册表与执行管线：一次工具调用要过五道关](ai/deepseek-harness/10-tools.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165308757)
+- `2026-08-28` · **ai** — [LLM 接缝：把"厂商协议"关进一个可替换的盒子](ai/deepseek-harness/09-llm-adapter.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165308538)
+- `2026-08-28` · **ai** — [系统提示装配：模型看见的前缀是被"拼"出来的](ai/deepseek-harness/08-system-prompt.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165308205)
+- `2026-08-28` · **ai** — [Agent Loop：一个 turn 到底发生了什么](ai/deepseek-harness/07-agent-loop.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165008448)
+- `2026-08-28` · **ai** — [会话日志：唯一真相源，以及"模型可见即已记录"](ai/deepseek-harness/06-session-log.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165008437)
+- `2026-08-28` · **ai** — [组装层：Profile、Bundle、Patch 与 Agent Preset](ai/deepseek-harness/05-composition.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165008424)
+- `2026-08-28` · **ai** — [Cordis 内核：为什么"一切皆插件"不是口号](ai/deepseek-harness/04-cordis.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165008406)
+- `2026-08-28` · **ai** — [概念地图：八个概念、八个角色、一个运行示例](ai/deepseek-harness/03-concept-map.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/164874165)
+- `2026-08-28` · **ai** — [DeepSeek Harness 是什么：定义、边界与生态位置](ai/deepseek-harness/02-what.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/164874010)
+- `2026-08-28` · **ai** — [为什么需要 harness：模型再强，也不会自己去读文件](ai/deepseek-harness/01-why.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/164873889)
 - `2026-08-17` · **ai** — [完整重演：带着全部深度重跑运行示例](ai/llm-fundamentals/13-walkthrough.zh.md)
 - `2026-08-17` · **ai** — [开源 vs 闭源：同一份权重，两种交付](ai/llm-fundamentals/12-open-vs-closed.zh.md)
 - `2026-08-17` · **ai** — [幻觉的机制：为什么它编得如此流畅](ai/llm-fundamentals/11-hallucination.zh.md)
@@ -496,10 +504,6 @@
 - `2020-06-10` · **mobile** — [What an ipa package contains, and the relationship among them?](mobile/ios/ipa-introduction.md)
 - `2020-06-10` · **mobile** — [iOS Mobile App Development Guide: Best Practices for Building iPhone Mobile Apps](mobile/ios/best-way-to-build-ios-app/best-way-to-buid-ios-app.md)
 
-### 0000-00
-
-- `0000-00-00` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
-
 ---
 
 ## 重新生成 / Regenerating
@@ -510,3 +514,7 @@ python3 scripts/gen-latest.py --recent 60    # 列出更多改动
 ```
 
 生成器读取的是**已提交**的 git 历史，因此请在文章提交落地之后再运行。
+
+📢 标记来自仓库里已有的发布记录，生成器不会自行判断：优先读各目录下的
+`_url_map.json`，其次读系列 `index.md` 里的 `CSDN 已发布：<url>` 行。
+**发布到 CSDN 后先把 URL 记进 `_url_map.json`，再重新生成本页** —— 不要手工编辑本文件。

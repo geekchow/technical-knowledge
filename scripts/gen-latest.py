@@ -9,6 +9,9 @@ Two sections, answering two different questions:
      Every article dated by when it FIRST entered git history, traced through
      renames with `git log --follow`, grouped by month.
 
+Articles already published to CSDN are marked 📢 with a link to the live post.
+That state is read, never invented — see csdn_index() for the sources.
+
 Usage:  python3 scripts/gen-latest.py [--recent N] [--collapse N]
 
 Deliberately excluded from section 1 so it stays a shortcut, not a changelog:
@@ -16,6 +19,7 @@ generated README.md / index.md churn, and pure renames (a file moved without
 content changes is not a doc event).
 """
 import argparse
+import json
 import os
 import re
 import subprocess
@@ -81,6 +85,79 @@ def is_content(path):
 
 
 # --------------------------------------------------------------------------
+# CSDN publish state — read from the repo, never invented
+# --------------------------------------------------------------------------
+URL_MAP_NAME = "_url_map.json"
+PUBLISHED_RE = re.compile(r"CSDN\s*已发布[：:]\s*<?(https?://[^\s>)]+)>?")
+LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+\.(?:md|ipynb))\)")
+
+
+def _read_url_map(map_path):
+    """Yield (repo-relative path, url) from one _url_map.json.
+
+    Two shapes are supported, both already in use:
+      * {"articles": {"01-why.zh.md": {"url": ...}}}  — keys relative to the map's dir
+      * [{"src": "ai/x/y.md", "url": ...}, ...]       — src relative to the repo root
+    """
+    try:
+        with open(map_path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError):
+        return
+    base = os.path.dirname(map_path)
+    entries = data.get("articles", data) if isinstance(data, dict) else data
+    if isinstance(entries, dict):
+        items = entries.items()
+    elif isinstance(entries, list):
+        items = [(e.get("src"), e) for e in entries if isinstance(e, dict)]
+    else:
+        return
+    for key, val in items:
+        if not isinstance(val, dict):
+            continue
+        url = val.get("url")
+        src = val.get("src") or key
+        if not url or not src:
+            continue
+        full = src if os.path.isabs(src) else os.path.join(base, src)
+        if not os.path.exists(full):                      # repo-root-relative form
+            full = os.path.join(REPO, src)
+        if os.path.exists(full):
+            yield os.path.relpath(full, REPO), url
+
+
+def csdn_index():
+    """Map repo-relative article path -> published CSDN URL."""
+    pub = {}
+    for root, dirs, files in os.walk(REPO):
+        dirs[:] = [d for d in dirs if d not in {".git", "node_modules"}]
+        if URL_MAP_NAME in files:
+            pub.update(_read_url_map(os.path.join(root, URL_MAP_NAME)))
+        # legacy fallback: "- [x] CSDN 已发布：<url>" lines under an article entry
+        if "index.md" in files:
+            path = os.path.join(root, "index.md")
+            last = None
+            try:
+                lines = open(path, encoding="utf-8").read().splitlines()
+            except OSError:
+                continue
+            for line in lines:
+                m = LINK_RE.search(line)
+                if m and "CSDN" not in line:
+                    cand = os.path.normpath(os.path.join(root, m.group(1)))
+                    last = os.path.relpath(cand, REPO) if os.path.exists(cand) else None
+                p = PUBLISHED_RE.search(line)
+                if p and last:
+                    pub.setdefault(last, p.group(1))
+    return pub
+
+
+def badge(path, pub):
+    url = pub.get(path)
+    return f" · [📢 CSDN]({url})" if url else ""
+
+
+# --------------------------------------------------------------------------
 # Section 1 — recent activity
 # --------------------------------------------------------------------------
 def recent_events():
@@ -125,7 +202,7 @@ def catalogue():
 
 
 # --------------------------------------------------------------------------
-def render(events, rows, recent_limit, collapse):
+def render(events, rows, pub, recent_limit, collapse):
     listed = list(events.items())[:recent_limit]
     omitted = len(events) - len(listed)
     by_date = OrderedDict()
@@ -140,6 +217,7 @@ def render(events, rows, recent_limit, collapse):
     o.append("")
     o.append("> 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。")
     o.append(f"> 生成时间：{date.today().isoformat()}（HEAD `{head_sha}`）")
+    o.append(f"> 📢 = 已发布到 CSDN（共 {sum(1 for r in rows if r[1] in pub)} 篇），链接指向线上文章。")
     o.append("")
 
     # ---- Section 1 ----
@@ -148,12 +226,14 @@ def render(events, rows, recent_limit, collapse):
     o.append("回答「我最近动过什么」。`NEW` = 新增，`UPD` = 修改；按改动时间倒序。")
     o.append("已忽略 `README.md`/`index.md` 索引更新与纯目录移动，只列真正的文章改动。")
     o.append("")
-    o.append("| 日期 | | 文档 | 分类 |")
-    o.append("|---|---|---|---|")
+    o.append("| 日期 | | 文档 | 分类 | CSDN |")
+    o.append("|---|---|---|---|---|")
     flat = [(d, st, p) for d, commits in by_date.items()
             for _s, items in commits.values() for st, p in items]
     for d, status, path in flat[:10]:
-        o.append(f"| {d} | `{status}` | [{title_of(path)}]({path}) | {category_of(path)} |")
+        live = f"[📢]({pub[path]})" if path in pub else ""
+        o.append(f"| {d} | `{status}` | [{title_of(path)}]({path}) "
+                 f"| {category_of(path)} | {live} |")
     o.append("")
     for d, commits in by_date.items():
         total = sum(len(items) for _s, items in commits.values())
@@ -163,7 +243,8 @@ def render(events, rows, recent_limit, collapse):
             o.append(f"**{subj}** (`{sha}`)")
             o.append("")
             for status, path in items[:collapse]:
-                o.append(f"- `{status}` [{title_of(path)}]({path}) — *{category_of(path)}*")
+                o.append(f"- `{status}` [{title_of(path)}]({path}) "
+                         f"— *{category_of(path)}*{badge(path, pub)}")
             extra = len(items) - collapse
             if extra > 0:
                 o.append(f"- *…此次提交还有 {extra} 篇 — `git show --stat {sha}`*")
@@ -186,7 +267,8 @@ def render(events, rows, recent_limit, collapse):
             o.append("")
             o.append(f"### {month}")
             o.append("")
-        o.append(f"- `{d}` · **{top_level(path)}** — [{title_of(path)}]({path})")
+        o.append(f"- `{d}` · **{top_level(path)}** — [{title_of(path)}]({path})"
+                 f"{badge(path, pub)}")
     o.append("")
 
     o.append("---")
@@ -199,6 +281,11 @@ def render(events, rows, recent_limit, collapse):
     o.append("```")
     o.append("")
     o.append("生成器读取的是**已提交**的 git 历史，因此请在文章提交落地之后再运行。")
+    o.append("")
+    o.append("📢 标记来自仓库里已有的发布记录，生成器不会自行判断：优先读各目录下的")
+    o.append("`_url_map.json`，其次读系列 `index.md` 里的 `CSDN 已发布：<url>` 行。")
+    o.append("**发布到 CSDN 后先把 URL 记进 `_url_map.json`，再重新生成本页**"
+             " —— 不要手工编辑本文件。")
     return "\n".join(o) + "\n"
 
 
@@ -210,11 +297,12 @@ def main():
                     help="max files shown per commit before collapsing (default 8)")
     args = ap.parse_args()
 
-    events, rows = recent_events(), catalogue()
+    events, rows, pub = recent_events(), catalogue(), csdn_index()
     with open(os.path.join(REPO, "LATEST.md"), "w", encoding="utf-8") as fh:
-        fh.write(render(events, rows, args.recent, args.collapse))
+        fh.write(render(events, rows, pub, args.recent, args.collapse))
+    published = sum(1 for r in rows if r[1] in pub)
     print(f"wrote LATEST.md — {min(len(events), args.recent)} recent changes, "
-          f"{len(rows)} articles catalogued")
+          f"{len(rows)} articles catalogued, {published} marked published on CSDN")
 
 
 if __name__ == "__main__":
