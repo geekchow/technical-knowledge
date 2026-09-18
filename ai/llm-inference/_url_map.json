@@ -1,0 +1,50 @@
+{
+  "_note": "LLM 推理系列 CSDN 发布映射。2026-09-18 通过公开文章列表 (blog.csdn.net/PhilZhou/article/list) 逐条标题比对回填，共 9 篇。未发布：agentic-cpu-demand.en.md、post-training.en.md、fp16-int4-quantization.en.md —— 其中 agentic-cpu-demand.en.md 此前在 index.md 中被误勾为已发布。",
+  "articles": {
+    "llm-inference-process.zh.md": {
+      "articleId": "163218507",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163218507",
+      "title": "一次 LLM 推理的完整旅程：从你按下回车到最后一个字吐出"
+    },
+    "llm-inference-process.en.md": {
+      "articleId": "163218538",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163218538",
+      "title": "The Full Journey of an LLM Inference Request: From Enter Key to Last Token"
+    },
+    "kv-cache.zh.md": {
+      "articleId": "163251631",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163251631",
+      "title": "KV Cache 完全解析：大模型推理提速的第一功臣"
+    },
+    "kv-cache.en.md": {
+      "articleId": "163251651",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163251651",
+      "title": "KV Cache Explained: The Single Biggest Speedup in LLM Inference"
+    },
+    "chat-vs-agentic.zh.md": {
+      "articleId": "163278899",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163278899",
+      "title": "Chat 阶段 vs Agentic 阶段：当人被移出循环，推理经济学被彻底改写"
+    },
+    "chat-vs-agentic.en.md": {
+      "articleId": "163278924",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163278924",
+      "title": "Chat vs. Agentic: When the Human Leaves the Loop, Inference Economics Gets Rewritten"
+    },
+    "agentic-cpu-demand.zh.md": {
+      "articleId": "163322430",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163322430",
+      "title": "GPU 负责想，CPU 负责做：为什么 Agentic AI 让 CPU 需求暴涨"
+    },
+    "post-training.zh.md": {
+      "articleId": "163354557",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163354557",
+      "title": "会续写 ≠ 会帮忙：后训练为什么是大模型的“另一半灵魂“"
+    },
+    "fp16-int4-quantization.zh.md": {
+      "articleId": "163353647",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/163353647",
+      "title": "FP16 与 INT4 量化：把模型压缩 4 倍还能用，靠的是什么"
+    }
+  }
+}

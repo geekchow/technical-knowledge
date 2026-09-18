@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-18（HEAD `61af25a`）
-> 📢 = 已发布到 CSDN（共 12 篇），链接指向线上文章。
+> 生成时间：2026-09-18（HEAD `8510f99`）
+> 📢 = 已发布到 CSDN（共 21 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -26,7 +26,7 @@
 
 ### 2026-09-18 — 1 篇
 
-**fix overloaded checkbox meaning across the five series indexes** (`61af25a`)
+**backfill llm-inference CSDN URLs (9 verified, 1 old checkbox disproved)** (`8510f99`)
 
 - `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 
@@ -229,17 +229,17 @@
 - `2026-08-01` · **data-ml** — [Exploring LLMs with MLX and the Neural Accelerators in the M5 GPU](data-ml/llama/Exploring-LLMs-with-MLX-and-the-Neural-Accelerators-in-the-M5-GPU.md)
 - `2026-08-01` · **ai** — [如何用 AI 整理自己的思路](ai/prompting/how-to-use-ai.md)
 - `2026-08-01` · **ai** — [OpenRouter Auto Router vs Model Fallbacks](ai/model-routing/OpenRouter-Auto-Router-vs-Model-Fallbacks.md)
-- `2026-08-01` · **ai** — [会续写 ≠ 会帮忙：后训练为什么是大模型的"另一半灵魂"](ai/llm-inference/post-training.zh.md)
+- `2026-08-01` · **ai** — [会续写 ≠ 会帮忙：后训练为什么是大模型的"另一半灵魂"](ai/llm-inference/post-training.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163354557)
 - `2026-08-01` · **ai** — [Completing Text ≠ Being Helpful: Why Post-Training Is the Other Half of an LLM's Soul](ai/llm-inference/post-training.en.md)
-- `2026-08-01` · **ai** — [一次 LLM 推理的完整旅程：从你按下回车到最后一个字吐出](ai/llm-inference/llm-inference-process.zh.md)
-- `2026-08-01` · **ai** — [The Full Journey of an LLM Inference Request: From Enter Key to Last Token](ai/llm-inference/llm-inference-process.en.md)
-- `2026-08-01` · **ai** — [KV Cache 完全解析：大模型推理提速的第一功臣](ai/llm-inference/kv-cache.zh.md)
-- `2026-08-01` · **ai** — [KV Cache Explained: The Single Biggest Speedup in LLM Inference](ai/llm-inference/kv-cache.en.md)
-- `2026-08-01` · **ai** — [FP16 与 INT4 量化：把模型压缩 4 倍还能用，靠的是什么](ai/llm-inference/fp16-int4-quantization.zh.md)
+- `2026-08-01` · **ai** — [一次 LLM 推理的完整旅程：从你按下回车到最后一个字吐出](ai/llm-inference/llm-inference-process.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163218507)
+- `2026-08-01` · **ai** — [The Full Journey of an LLM Inference Request: From Enter Key to Last Token](ai/llm-inference/llm-inference-process.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163218538)
+- `2026-08-01` · **ai** — [KV Cache 完全解析：大模型推理提速的第一功臣](ai/llm-inference/kv-cache.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163251631)
+- `2026-08-01` · **ai** — [KV Cache Explained: The Single Biggest Speedup in LLM Inference](ai/llm-inference/kv-cache.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163251651)
+- `2026-08-01` · **ai** — [FP16 与 INT4 量化：把模型压缩 4 倍还能用，靠的是什么](ai/llm-inference/fp16-int4-quantization.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163353647)
 - `2026-08-01` · **ai** — [FP16 and INT4 Quantization: How to Shrink a Model 4× and Still Have It Work](ai/llm-inference/fp16-int4-quantization.en.md)
-- `2026-08-01` · **ai** — [Chat 阶段 vs Agentic 阶段：当人被移出循环，推理经济学被彻底改写](ai/llm-inference/chat-vs-agentic.zh.md)
-- `2026-08-01` · **ai** — [Chat vs. Agentic: When the Human Leaves the Loop, Inference Economics Gets Rewritten](ai/llm-inference/chat-vs-agentic.en.md)
-- `2026-08-01` · **ai** — [GPU 负责想，CPU 负责做：为什么 Agentic AI 让 CPU 需求暴涨](ai/llm-inference/agentic-cpu-demand.zh.md)
+- `2026-08-01` · **ai** — [Chat 阶段 vs Agentic 阶段：当人被移出循环，推理经济学被彻底改写](ai/llm-inference/chat-vs-agentic.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163278899)
+- `2026-08-01` · **ai** — [Chat vs. Agentic: When the Human Leaves the Loop, Inference Economics Gets Rewritten](ai/llm-inference/chat-vs-agentic.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163278924)
+- `2026-08-01` · **ai** — [GPU 负责想，CPU 负责做：为什么 Agentic AI 让 CPU 需求暴涨](ai/llm-inference/agentic-cpu-demand.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/163322430)
 - `2026-08-01` · **ai** — [GPUs Think, CPUs Do: Why Agentic AI Sends CPU Demand Soaring](ai/llm-inference/agentic-cpu-demand.en.md)
 - `2026-08-01` · **ai** — [LLM 量化版本 是什么版本](ai/concepts/LLM-量化版本-是什么版本.md)
 - `2026-08-01` · **ai** — [Claude Skills Marketplace](ai/claude-code/skills-marketplace.md)
