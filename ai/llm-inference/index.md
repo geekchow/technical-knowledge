@@ -8,7 +8,12 @@ one is a parallel rewrite, not a literal translation.
 
 Foundations for this series live in the sibling topic [LLM 全景指南](../llm-fundamentals/index.md).
 
-## Articles & CSDN Publish Status
+## Articles & Publish Status
+
+> **Legend**: `- [x] file — 中文版 / English` means **that language version is
+> written**. Only a separate `- [x] CSDN 已发布：<url>` line means **published to CSDN**.
+> The two are independent — written does not imply published, and the source of truth for
+> publish state is `_url_map.json`.
 
 ### 一次 LLM 推理的完整旅程 / The Full Journey of an LLM Inference Request
 
@@ -16,6 +21,7 @@ Prefill vs decode, TTFT/TPOT, continuous batching, and why API pricing works the
 
 - [x] [llm-inference-process.zh.md](llm-inference-process.zh.md) — 中文版
 - [x] [llm-inference-process.en.md](llm-inference-process.en.md) — English
+- [x] CSDN 已发布（中文版 + English）：URL 待补录
 
 ### KV Cache 完全解析 / KV Cache Explained
 
@@ -23,6 +29,7 @@ Q/K/V fundamentals, why only K/V is cached, the memory math, and the optimizatio
 
 - [x] [kv-cache.zh.md](kv-cache.zh.md) — 中文版
 - [x] [kv-cache.en.md](kv-cache.en.md) — English
+- [x] CSDN 已发布（中文版 + English）：URL 待补录
 
 ### Chat 阶段 vs Agentic 阶段 / Chat vs. Agentic
 
@@ -30,6 +37,7 @@ How the agentic paradigm rewrites inference economics: human out of the loop, in
 
 - [x] [chat-vs-agentic.zh.md](chat-vs-agentic.zh.md) — 中文版
 - [x] [chat-vs-agentic.en.md](chat-vs-agentic.en.md) — English
+- [x] CSDN 已发布（中文版 + English）：URL 待补录
 
 ### GPU 负责想，CPU 负责做 / GPUs Think, CPUs Do
 
@@ -37,21 +45,24 @@ Why agentic AI sends CPU demand soaring: tool execution, resident sandboxes, inf
 
 - [x] [agentic-cpu-demand.zh.md](agentic-cpu-demand.zh.md) — 中文版
 - [x] [agentic-cpu-demand.en.md](agentic-cpu-demand.en.md) — English
+- [x] CSDN 已发布（中文版 + English）：URL 待补录
 
 ### 会续写 ≠ 会帮忙 / Completing Text ≠ Being Helpful
 
 Why and how post-training matters: base model vs assistant, SFT/RLHF/DPO/RLVR as four generations of tools, and why post-training decides usability, differentiation, and failure modes. (Source: [`raw/base-model-vs-assistant.md`](../../raw/base-model-vs-assistant.md))
 
 - [x] [post-training.zh.md](post-training.zh.md) — 中文版
-- [ ] [post-training.en.md](post-training.en.md) — English
+- [x] [post-training.en.md](post-training.en.md) — English
+- [x] CSDN 已发布（仅中文版）：URL 待补录
 
 ### FP16 与 INT4 量化 / FP16 and INT4 Quantization
 
 How parameters are stored: floating-point formats, group-wise INT4 quantization mechanics, why 1/4 precision still works, and the memory + speed double win. (Source: [`raw/fp16-int4-quantization.md`](../../raw/fp16-int4-quantization.md))
 
 - [x] [fp16-int4-quantization.zh.md](fp16-int4-quantization.zh.md) — 中文版
-- [ ] [fp16-int4-quantization.en.md](fp16-int4-quantization.en.md) — English
+- [x] [fp16-int4-quantization.en.md](fp16-int4-quantization.en.md) — English
+- [x] CSDN 已发布（仅中文版）：URL 待补录
 
 ---
 
-*Check the box once the article is published to CSDN. Recommended reading order: inference process → KV Cache → Chat vs. Agentic → CPU demand → post-training → quantization.*
+*Checkboxes mark that a language version is **written**, not published; CSDN status is the separate 「CSDN 已发布」 line. Recommended reading order: inference process → KV Cache → Chat vs. Agentic → CPU demand → post-training → quantization.*

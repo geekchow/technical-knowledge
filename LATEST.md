@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-18（HEAD `99d4e4c`）
+> 生成时间：2026-09-18（HEAD `61af25a`）
 > 📢 = 已发布到 CSDN（共 12 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -26,7 +26,7 @@
 
 ### 2026-09-18 — 1 篇
 
-**mark CSDN-published articles in LATEST.md** (`99d4e4c`)
+**fix overloaded checkbox meaning across the five series indexes** (`61af25a`)
 
 - `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
 

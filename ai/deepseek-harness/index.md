@@ -107,7 +107,12 @@ flowchart TB
     S1 --> S2 --> S3
 ```
 
-## 文章列表与 CSDN 发布状态
+## 文章列表与发布状态
+
+> **图例**：`- [x] 文件名 — 中文版` 表示**该语言版本已写好**；
+> 只有单独的 `- [x] CSDN 已发布：<链接>` 一行才表示**已发布到 CSDN**。
+> 两者互相独立——写好不等于已发布，发布状态的真实来源是 `_url_map.json`。
+
 
 ### 第一部分 · 建立坐标系
 
@@ -167,24 +172,28 @@ turn 与 step 的精确定义；inbox 的两条队列（`next-turn` / `next-step
 `PromptSection` 的 `order` 约定（-100 身份、0 人格、100–199 工具指引）；`complete` 段落如何独占整个系统提示；`PromptContext` 为什么要和 section 分开——它关系到 KV Cache 命中率；工具 schema 如何在装配期被挑选、被 scope 遮蔽（shadowing）、被 restriction 过滤。
 
 - [x] [08-system-prompt.zh.md](08-system-prompt.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165308205>
 
 **09 · LLM 接缝：把"厂商协议"关进一个可替换的盒子**
 
 `LlmAdapter` 的适配器契约逐条读：usage 必须在 finish 之前、工具参数全程保持原始 JSON 字符串、两条错误路径一个失败类型、一次适配器调用就是一次厂商尝试；`llm/stream` waterfall 为什么在适配器查找之前；空回复为什么被判定为可重试错误；以及 replay 状态（推理链复用）的归属规则。
 
 - [x] [09-llm-adapter.zh.md](09-llm-adapter.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165308538>
 
 **10 · 工具注册表与执行管线：一次工具调用要过五道关**
 
 `ToolDefinition` 的字段分层（哪些给模型看、哪些绝不能泄漏进请求）；`pre-execute → 单调守卫 → execute → post-execute → finalizeContent → result` 五段管线各自能改什么；allow/deny/ask 三态决策与失败即拒绝；并发安全声明 `isConcurrencySafe`；Code Mode 下"模型直呼原生工具"为什么被直接拒绝。
 
 - [x] [10-tools.zh.md](10-tools.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165308757>
 
 **11 · 能力接缝：文件、命令、沙箱、审批、子代理**
 
 接缝的三个角色（服务定义 / 提供者 / 消费者）为什么缺一不可；一次 provider 替换如何把 Bash、PTY、LSP 一起搬到远程沙箱；`SandboxMode` 三档策略与"部分执行"这个诚实的事实；审批为什么是 fail-closed 的；子代理接缝如何把 Claude Code 和 Codex 变成可调用的孩子。
 
 - [x] [11-capability-seams.zh.md](11-capability-seams.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165430133>
 
 ### 第三部分 · 缝合
 
@@ -193,7 +202,8 @@ turn 与 step 的精确定义；inbox 的两条队列（`next-turn` / `next-step
 从你按下回车到它回出总结，一条连续时间线串起全部十一篇；随后是七个动手练习，每个验证一篇文章的一个具体论断；最后是一页速查卡片。
 
 - [x] [12-walkthrough.zh.md](12-walkthrough.zh.md) — 中文版
+- [x] CSDN 已发布：<https://blog.csdn.net/PhilZhou/article/details/165430269>
 
 ---
 
-*勾选框表示已完成中文稿。建议阅读顺序即编号顺序；只想知道"这东西值不值得看"的读者，读 01 + 02 即可；已经在做 Agent 框架的读者可以从 03 直接切入，再挑 04/07/10 三篇。*
+*勾选框表示该语言版本已写好（不等于已发布到 CSDN）；发布状态见条目下的「CSDN 已发布」行。 建议阅读顺序即编号顺序；只想知道"这东西值不值得看"的读者，读 01 + 02 即可；已经在做 Agent 框架的读者可以从 03 直接切入，再挑 04/07/10 三篇。*
