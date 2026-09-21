@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-21（HEAD `2e39c56`）
-> 📢 = 已发布到 CSDN（共 21 篇），链接指向线上文章。
+> 生成时间：2026-09-21（HEAD `3facf0e`）
+> 📢 = 已发布到 CSDN（共 23 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -13,8 +13,8 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability |  |
-| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java |  |
+| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
+| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
 | 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java |  |
 | 2026-09-17 | `NEW` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) | Web / frontend |  |
 | 2026-09-15 | `NEW` | [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) | AI / claude-code |  |
@@ -28,8 +28,8 @@
 
 **docs: add 4 weekly-learning articles from Jira KAN-157~161 (Spring Boot startup, CountDownLatch, Tealium/Sentry user behaviour, Playwright)** (`1d0887d`)
 
-- `NEW` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability*
-- `NEW` [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) — *Languages / java*
+- `NEW` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
+- `NEW` [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
 - `NEW` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) — *Languages / java*
 - `NEW` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) — *Web / frontend*
 
@@ -127,8 +127,8 @@
 
 - `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md)
 - `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md)
-- `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md)
-- `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md)
+- `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
+- `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
 - `2026-09-15` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
 - `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
