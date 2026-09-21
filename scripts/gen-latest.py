@@ -14,9 +14,10 @@ That state is read, never invented — see csdn_index() for the sources.
 
 Usage:  python3 scripts/gen-latest.py [--recent N] [--collapse N]
 
-Deliberately excluded from section 1 so it stays a shortcut, not a changelog:
-generated README.md / index.md churn, and pure renames (a file moved without
-content changes is not a doc event).
+Deliberately excluded so the file stays a shortcut, not a changelog:
+generated README.md / index.md churn, CLAUDE.md (a repo instruction file, not
+an article), and — in section 1 — pure renames, since a file moved without
+content changes is not a doc event.
 """
 import argparse
 import json
@@ -29,7 +30,10 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP_NAMES = {"README.md", "index.md", "LATEST.md"}
+# Never listed: generated indexes and repo instruction files. Matched by basename,
+# so a nested CLAUDE.md is skipped too — but an *article* whose title merely
+# mentions CLAUDE.md is unaffected.
+SKIP_NAMES = {"README.md", "index.md", "LATEST.md", "CLAUDE.md"}
 CONTENT_EXT = {".md", ".ipynb"}
 
 CATEGORY_LABELS = {

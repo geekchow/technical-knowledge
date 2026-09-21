@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-18（HEAD `8510f99`）
+> 生成时间：2026-09-21（HEAD `2e39c56`）
 > 📢 = 已发布到 CSDN（共 21 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,7 +13,6 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-09-18 | `UPD` | [CLAUDE.md](CLAUDE.md) | Root |  |
 | 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability |  |
 | 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java |  |
 | 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java |  |
@@ -23,12 +22,7 @@
 | 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |  |
 | 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |  |
 | 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |  |
-
-### 2026-09-18 — 1 篇
-
-**backfill llm-inference CSDN URLs (9 verified, 1 old checkbox disproved)** (`8510f99`)
-
-- `UPD` [CLAUDE.md](CLAUDE.md) — *Root*
+| 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |  |
 
 ### 2026-09-17 — 4 篇
 
@@ -102,7 +96,7 @@
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
 - `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-### 2026-09-03 — 12 篇
+### 2026-09-03 — 13 篇
 
 **add bun.sh article (en/zh) and git workflow convention** (`cd62b50`)
 
@@ -119,11 +113,11 @@
 - `NEW` [深度篇 ① · 嵌入层与位置编码器：从整数到"带位置感的向量"](ai/transformer/05-embedding-position.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-A · 注意力核心：QKV 与缩放点积](ai/transformer/06-attention-core.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-B · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md) — *AI / transformer*
-- *…此次提交还有 2 篇 — `git show --stat 30e8057`*
+- *…此次提交还有 3 篇 — `git show --stat 30e8057`*
 
-*另有 97 条更早的改动未列出（见下方完整目录）。*
+*另有 96 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 258 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 257 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -250,7 +244,6 @@
 ### 2026-07
 
 - `2026-07-29` · **devops** — [Instrumenting a Java Spring Boot Application on AWS EKS Fargate with Splunk Observability Cloud](devops/observability/splunk-o11y-eks-fargate-java-architecture.md)
-- `2026-07-29` · **root** — [CLAUDE.md](CLAUDE.md)
 - `2026-07-25` · **devops** — [ssl protocol conflict](devops/kubernetes/experience/ssl-protocol-conflict.md)
 - `2026-07-25` · **ai** — [AI Agent 记忆的 6 个层级：从 CLAUDE.md 到「统一大脑」](ai/agents/ai-agent-memory-6-levels.md)
 - `2026-07-23` · **cloud** — [AWS EKS Add-ons Explained](cloud/aws/eks/aws-eks-addon.md)
