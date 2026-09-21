@@ -1,8 +1,6 @@
 # User Behaviour Analysis With Tealium and Sentry
 
 > Source: Jira KAN-158 "User Behaviour Analysis", whose description names two tools — **Tealium** and **Sentry**.
-> A shorter Chinese summary sits in the
-> [weekly listing](../../languages/java/springboot/2026-09-17-weekly-listing-kan157-161.md).
 
 ## Abbreviations
 
@@ -145,7 +143,7 @@ sentry:
 Because the browser sends `sentry-trace` and `baggage` headers to targets in `tracePropagationTargets`, a slow
 click can be followed from the browser span into the controller span. How the servlet request reaches the
 controller is described in
-[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-kan157-springboot-startup.md).
+[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md).
 
 For infrastructure-level metrics and traces on the same kind of Java service, see
 [Splunk O11y on EKS Fargate (Java)](./splunk-o11y-eks-fargate-java-architecture.md) — Sentry complements it
@@ -178,7 +176,7 @@ sequenceDiagram
 - **Watch sampling and privacy.** Replay masks text and blocks media by default; keep it that way unless a
   review says otherwise, and scrub request data in `beforeSend` if needed.
 - **Test the instrumentation.** Tags silently break during refactors; E2E (End-to-End) tests can assert that the
-  Tealium and Sentry requests are actually sent — see [Playwright](../../web/frontend/2026-09-17-kan161-playwright.md).
+  Tealium and Sentry requests are actually sent — see [Playwright](../../web/frontend/2026-09-17-playwright-e2e-testing.md).
 
 ## Checklist
 

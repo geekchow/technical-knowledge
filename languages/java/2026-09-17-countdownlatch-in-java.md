@@ -3,7 +3,6 @@
 > Source: Jira KAN-159 and KAN-160, both titled "CountDownLatch in Java" (duplicates, handled as one article).
 > KAN-159 points to Baeldung's
 > [Guide to CountDownLatch in Java](https://www.baeldung.com/java-countdown-latch#usage-in-concurrent-programming).
-> A shorter Chinese summary sits in the [weekly listing](./springboot/2026-09-17-weekly-listing-kan157-161.md).
 
 ## Abbreviations
 
@@ -163,7 +162,7 @@ if (!completed) {
 ## A realistic use: parallel warm-up during Spring Boot startup
 
 An `ApplicationRunner` runs after Tomcat has started but before the application reports ready (see
-[Spring Boot Startup Lifecycle](./springboot/2026-09-17-kan157-springboot-startup.md)). Warming caches there in
+[Spring Boot Startup Lifecycle](./springboot/2026-09-17-springboot-startup-lifecycle.md)). Warming caches there in
 parallel, and failing startup if they don't finish in time, keeps a half-warm pod out of the load balancer.
 
 ```java

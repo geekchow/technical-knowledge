@@ -2,7 +2,6 @@
 
 > Source: Jira KAN-157 "Java SpringBoot Startup life cycle", which carried the English draft
 > *Spring Boot Application Hosting With Embedded Tomcat*. This article is the polished version of that draft.
-> A shorter Chinese summary sits in the [weekly listing](./2026-09-17-weekly-listing-kan157-161.md).
 
 ## Abbreviations
 
@@ -246,7 +245,7 @@ external catalog, and so on. `ApplicationReadyEvent` has **not** been published 
 "refusing traffic". A runner exception fails startup and closes the context, Tomcat included.
 
 Runners are a natural place to fan out warm-up work in parallel and wait for all of it; see
-[CountDownLatch in Java](../2026-09-17-kan159-160-countdownlatch.md).
+[CountDownLatch in Java](../2026-09-17-countdownlatch-in-java.md).
 
 ### 9. Scheduled jobs become active
 

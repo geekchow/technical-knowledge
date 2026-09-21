@@ -1,8 +1,6 @@
 # Playwright: Reliable End-to-End Testing for Web Apps
 
 > Source: Jira KAN-161 "Playwright" (no description on the ticket).
-> A shorter Chinese summary sits in the
-> [weekly listing](../../languages/java/springboot/2026-09-17-weekly-listing-kan157-161.md).
 
 ## Abbreviations
 
@@ -106,7 +104,7 @@ export default defineConfig({
 `webServer` starts the app before the tests and waits for `url` to respond. Pointing it at the readiness
 endpoint (rather than `/`) means tests start only once the Spring Boot app is really ready — runners finished,
 dependencies healthy. Why "port open" and "ready" differ is explained in
-[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-kan157-springboot-startup.md).
+[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md).
 
 ## Writing tests
 
@@ -183,7 +181,7 @@ the runner builds and tears it down. Combined with the POM (Page Object Model) t
 ## Testing the analytics and error instrumentation
 
 Tracking tags tend to break silently during refactors. E2E tests can assert that the requests described in
-[User Behaviour Analysis With Tealium and Sentry](../../devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md)
+[User Behaviour Analysis With Tealium and Sentry](../../devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md)
 are really sent.
 
 ```ts

@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-21（HEAD `7294f6b`）
+> 生成时间：2026-09-21（HEAD `be011bb`）
 > 📢 = 已发布到 CSDN（共 25 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,10 +13,10 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-09-17 | `NEW` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
-| 2026-09-17 | `NEW` | [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
-| 2026-09-17 | `NEW` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
-| 2026-09-17 | `NEW` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) | Web / frontend | [📢](https://blog.csdn.net/PhilZhou/article/details/166230034) |
+| 2026-09-21 | `UPD` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
+| 2026-09-21 | `UPD` | [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
+| 2026-09-21 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
+| 2026-09-21 | `UPD` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) | Web / frontend | [📢](https://blog.csdn.net/PhilZhou/article/details/166230034) |
 | 2026-09-15 | `NEW` | [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) | AI / claude-code |  |
 | 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |  |
 | 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |  |
@@ -24,14 +24,14 @@
 | 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |  |
 | 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |  |
 
-### 2026-09-17 — 4 篇
+### 2026-09-21 — 4 篇
 
-**docs: add 4 weekly-learning articles from Jira KAN-157~161 (Spring Boot startup, CountDownLatch, Tealium/Sentry user behaviour, Playwright)** (`1d0887d`)
+**rename Jira-derived articles to drop ticket ids; remove dead weekly-listing links** (`be011bb`)
 
-- `NEW` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
-- `NEW` [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
-- `NEW` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
-- `NEW` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
+- `UPD` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
+- `UPD` [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
+- `UPD` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
+- `UPD` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
 
 ### 2026-09-15 — 1 篇
 
@@ -125,10 +125,10 @@
 
 ### 2026-09
 
-- `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-kan161-playwright.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
-- `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-kan157-springboot-startup.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
-- `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-kan159-160-countdownlatch.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
-- `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-kan158-user-behaviour-analysis-tealium-sentry.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
+- `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
+- `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
+- `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
+- `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
 - `2026-09-15` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
 - `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
 - `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
