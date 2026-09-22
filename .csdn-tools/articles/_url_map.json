@@ -49,6 +49,27 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/165607211",
       "title": "TTY, PTY, and Non-TTY Shell Sessions",
       "published": "2026-09-16"
+    },
+    "agent-skill-and-mcp.md": {
+      "src": "ai/agents/agent-skill-and-mcp.md",
+      "articleId": "166362349",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166362349",
+      "title": "Agent、Skill 与 MCP：三层职责的边界在哪里",
+      "published": "2026-09-22"
+    },
+    "nginx-as-a-reverse-proxy.md": {
+      "src": "devops/networking/nginx-as-a-reverse-proxy.md",
+      "articleId": "166362418",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166362418",
+      "title": "Nginx as a Reverse Proxy",
+      "published": "2026-09-22"
+    },
+    "pki-for-user-and-device-authentication.md": {
+      "src": "security/auth/pki-for-user-and-device-authentication.md",
+      "articleId": "166362484",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166362484",
+      "title": "Public Key Infrastructure for User and Device Authentication",
+      "published": "2026-09-22"
     }
   }
 }

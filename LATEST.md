@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-22（HEAD `de4d59a`）
-> 📢 = 已发布到 CSDN（共 28 篇），链接指向线上文章。
+> 生成时间：2026-09-22（HEAD `647a8c8`）
+> 📢 = 已发布到 CSDN（共 31 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -13,9 +13,9 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-09-22 | `NEW` | [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) | Security / auth |  |
-| 2026-09-22 | `NEW` | [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) | DevOps / networking |  |
-| 2026-09-22 | `NEW` | [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) | AI / agents |  |
+| 2026-09-22 | `NEW` | [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) | Security / auth | [📢](https://blog.csdn.net/PhilZhou/article/details/166362484) |
+| 2026-09-22 | `NEW` | [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) | DevOps / networking | [📢](https://blog.csdn.net/PhilZhou/article/details/166362418) |
+| 2026-09-22 | `NEW` | [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) | AI / agents | [📢](https://blog.csdn.net/PhilZhou/article/details/166362349) |
 | 2026-09-21 | `UPD` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
 | 2026-09-21 | `UPD` | [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
 | 2026-09-21 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
@@ -28,15 +28,15 @@
 
 **add article: PKI for user and device authentication** (`de4d59a`)
 
-- `NEW` [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) — *Security / auth*
+- `NEW` [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) — *Security / auth* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362484)
 
 **add article: Nginx as a Reverse Proxy** (`1470cc5`)
 
-- `NEW` [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) — *DevOps / networking*
+- `NEW` [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) — *DevOps / networking* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362418)
 
 **add article: Agent、Skill 与 MCP —— 三层职责的边界** (`8dfc23a`)
 
-- `NEW` [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) — *AI / agents*
+- `NEW` [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) — *AI / agents* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362349)
 
 ### 2026-09-21 — 4 篇
 
@@ -138,9 +138,9 @@
 
 ### 2026-09
 
-- `2026-09-22` · **security** — [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md)
-- `2026-09-22` · **devops** — [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md)
-- `2026-09-22` · **ai** — [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md)
+- `2026-09-22` · **security** — [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362484)
+- `2026-09-22` · **devops** — [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362418)
+- `2026-09-22` · **ai** — [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362349)
 - `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
 - `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
 - `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
