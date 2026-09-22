@@ -28,6 +28,27 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/166230034",
       "title": "Playwright: Reliable End-to-End Testing for Web Apps",
       "published": "2026-09-21"
+    },
+    "Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md": {
+      "src": "ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md",
+      "articleId": "165606971",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/165606971",
+      "title": "Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output",
+      "published": "2026-09-16"
+    },
+    "uv-python-package-manager.zh.md": {
+      "src": "languages/python/uv-python-package-manager.zh.md",
+      "articleId": "165607110",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/165607110",
+      "title": "uv：用一个工具替换整条 Python 工具链",
+      "published": "2026-09-16"
+    },
+    "tty-pty-and-non-tty-sessions.md": {
+      "src": "devops/shell/tty-pty-and-non-tty-sessions.md",
+      "articleId": "165607211",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/165607211",
+      "title": "TTY, PTY, and Non-TTY Shell Sessions",
+      "published": "2026-09-16"
     }
   }
 }

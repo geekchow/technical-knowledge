@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-21（HEAD `be011bb`）
-> 📢 = 已发布到 CSDN（共 25 篇），链接指向线上文章。
+> 生成时间：2026-09-22（HEAD `0c6fa76`）
+> 📢 = 已发布到 CSDN（共 28 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -18,15 +18,15 @@
 | 2026-09-21 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
 | 2026-09-21 | `UPD` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) | Web / frontend | [📢](https://blog.csdn.net/PhilZhou/article/details/166230034) |
 | 2026-09-15 | `NEW` | [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) | AI / claude-code |  |
-| 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing |  |
+| 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing | [📢](https://blog.csdn.net/PhilZhou/article/details/165606971) |
 | 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |  |
-| 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python |  |
+| 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python | [📢](https://blog.csdn.net/PhilZhou/article/details/165607110) |
 | 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |  |
-| 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell |  |
+| 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell | [📢](https://blog.csdn.net/PhilZhou/article/details/165607211) |
 
 ### 2026-09-21 — 4 篇
 
-**rename Jira-derived articles to drop ticket ids; remove dead weekly-listing links** (`be011bb`)
+**rename Jira-derived articles to drop ticket ids; remove dead weekly-listing links** (`0c6fa76`)
 
 - `UPD` [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) — *DevOps / observability* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
 - `UPD` [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
@@ -43,7 +43,7 @@
 
 **Add article: Hidden Reasoning Tokens Truncate Structured JSON Output** (`6e84ecb`)
 
-- `NEW` [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) — *AI / model-routing*
+- `NEW` [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) — *AI / model-routing* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165606971)
 
 ### 2026-09-12 — 1 篇
 
@@ -55,7 +55,7 @@
 
 **docs(languages/python): uv 完整实践指南（KAN-153）** (`18d9a89`)
 
-- `NEW` [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) — *Languages / python*
+- `NEW` [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) — *Languages / python* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607110)
 
 **docs: Jira 待办梳理与 Top 5 建议（2026-09-09）** (`79be238`)
 
@@ -65,7 +65,7 @@
 
 **add tty pty explain article** (`c726edb`)
 
-- `NEW` [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) — *DevOps / shell*
+- `NEW` [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) — *DevOps / shell* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607211)
 
 ### 2026-09-06 — 2 篇
 
@@ -130,11 +130,11 @@
 - `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
 - `2026-09-17` · **devops** — [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882160)
 - `2026-09-15` · **ai** — [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
-- `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md)
+- `2026-09-14` · **ai** — [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165606971)
 - `2026-09-12` · **ai** — [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md)
-- `2026-09-09` · **languages** — [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md)
+- `2026-09-09` · **languages** — [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607110)
 - `2026-09-09` · **docs** — [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md)
-- `2026-09-07` · **devops** — [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md)
+- `2026-09-07` · **devops** — [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607211)
 - `2026-09-06` · **ai** — [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md)
 - `2026-09-06` · **ai** — [Hermes Agent 接入 Discord：一次没有踩坑的配置](ai/hermes/discord-setup.md)
 - `2026-09-05` · **root** — [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md)
