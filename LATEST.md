@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-22（HEAD `0c6fa76`）
+> 生成时间：2026-09-22（HEAD `de4d59a`）
 > 📢 = 已发布到 CSDN（共 28 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,9 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-09-22 | `NEW` | [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) | Security / auth |  |
+| 2026-09-22 | `NEW` | [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) | DevOps / networking |  |
+| 2026-09-22 | `NEW` | [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) | AI / agents |  |
 | 2026-09-21 | `UPD` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
 | 2026-09-21 | `UPD` | [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
 | 2026-09-21 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
@@ -20,9 +23,20 @@
 | 2026-09-15 | `NEW` | [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md) | AI / claude-code |  |
 | 2026-09-14 | `NEW` | [Hidden Reasoning Tokens Are Silently Truncating Your Structured JSON Output](ai/model-routing/Hidden-Reasoning-Tokens-Truncate-Structured-JSON-Output.md) | AI / model-routing | [📢](https://blog.csdn.net/PhilZhou/article/details/165606971) |
 | 2026-09-12 | `NEW` | [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) | AI / hermes |  |
-| 2026-09-09 | `NEW` | [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) | Languages / python | [📢](https://blog.csdn.net/PhilZhou/article/details/165607110) |
-| 2026-09-09 | `NEW` | [Jira 待办梳理与 Top 5 建议（2026-09-09）](docs/jira-backlog-review-2026-09-09.md) | Docs |  |
-| 2026-09-07 | `NEW` | [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) | DevOps / shell | [📢](https://blog.csdn.net/PhilZhou/article/details/165607211) |
+
+### 2026-09-22 — 3 篇
+
+**add article: PKI for user and device authentication** (`de4d59a`)
+
+- `NEW` [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md) — *Security / auth*
+
+**add article: Nginx as a Reverse Proxy** (`1470cc5`)
+
+- `NEW` [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md) — *DevOps / networking*
+
+**add article: Agent、Skill 与 MCP —— 三层职责的边界** (`8dfc23a`)
+
+- `NEW` [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) — *AI / agents*
 
 ### 2026-09-21 — 4 篇
 
@@ -96,7 +110,7 @@
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
 - `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-### 2026-09-03 — 13 篇
+### 2026-09-03 — 10 篇
 
 **add bun.sh article (en/zh) and git workflow convention** (`cd62b50`)
 
@@ -113,11 +127,10 @@
 - `NEW` [深度篇 ① · 嵌入层与位置编码器：从整数到"带位置感的向量"](ai/transformer/05-embedding-position.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-A · 注意力核心：QKV 与缩放点积](ai/transformer/06-attention-core.zh.md) — *AI / transformer*
 - `NEW` [深度篇 ②-B · 多头与因果掩码：并行的多种关系，与不许偷看的铁律](ai/transformer/07-multi-head-mask.zh.md) — *AI / transformer*
-- *…此次提交还有 3 篇 — `git show --stat 30e8057`*
 
-*另有 96 条更早的改动未列出（见下方完整目录）。*
+*另有 99 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 257 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 260 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -125,6 +138,9 @@
 
 ### 2026-09
 
+- `2026-09-22` · **security** — [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.md)
+- `2026-09-22` · **devops** — [Nginx as a Reverse Proxy](devops/networking/nginx-as-a-reverse-proxy.md)
+- `2026-09-22` · **ai** — [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md)
 - `2026-09-17` · **web** — [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
 - `2026-09-17` · **languages** — [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
 - `2026-09-17` · **languages** — [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
