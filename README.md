@@ -478,6 +478,7 @@ _TLS/HTTPS, authentication, mobile app hardening_
 
 **Auth**
 
+- [用 PKI 做用户与设备认证：把凭证从「共享秘密」换成「硬件私钥」](security/auth/pki-for-user-and-device-authentication.zh.md) · [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.en.md)
 - [JWT](security/auth/JWT.md)
 - [microservice security](security/auth/microservice-security.md)
 - [🏦 **1. High-Level Flow Overview**](security/auth/mobile_banking_auth.md)

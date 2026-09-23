@@ -64,8 +64,8 @@
       "title": "Nginx as a Reverse Proxy",
       "published": "2026-09-22"
     },
-    "pki-for-user-and-device-authentication.md": {
-      "src": "security/auth/pki-for-user-and-device-authentication.md",
+    "pki-for-user-and-device-authentication.en.md": {
+      "src": "security/auth/pki-for-user-and-device-authentication.en.md",
       "articleId": "166362484",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166362484",
       "title": "Public Key Infrastructure for User and Device Authentication",
