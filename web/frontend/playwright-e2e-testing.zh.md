@@ -101,7 +101,7 @@ export default defineConfig({
 });
 ```
 
-`webServer` 会在测试前拉起应用，并等 `url` 返回成功。**把它指向就绪探针而不是 `/`**，测试才会在应用真正可用之后才开始——runner 跑完了、依赖健康了。"端口通了"和"真的就绪了"为什么是两回事，见 [Spring Boot 启动生命周期](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.zh.md)。
+`webServer` 会在测试前拉起应用，并等 `url` 返回成功。**把它指向就绪探针而不是 `/`**，测试才会在应用真正可用之后才开始——runner 跑完了、依赖健康了。"端口通了"和"真的就绪了"为什么是两回事，见 [Spring Boot 启动生命周期](../../languages/java/springboot/springboot-startup-lifecycle.zh.md)。
 
 ## 五、写测试
 
@@ -178,7 +178,7 @@ Fixture 就是 Playwright 的依赖注入：测试声明自己要什么（`async
 
 ## 六、顺手把埋点和错误上报也测了
 
-埋点是**最容易在重构中悄悄失效**的东西——页面功能全对，只是事件不发了，而没人会立刻发现。E2E 测试可以直接断言这些请求真的发出去了（埋点本身见 [User Behaviour Analysis With Tealium and Sentry](../../devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md)）。
+埋点是**最容易在重构中悄悄失效**的东西——页面功能全对，只是事件不发了，而没人会立刻发现。E2E 测试可以直接断言这些请求真的发出去了（埋点本身见 [User Behaviour Analysis With Tealium and Sentry](../../devops/observability/user-behaviour-analysis-tealium-sentry.md)）。
 
 ```ts
 test("add to cart fires a Tealium event", async ({ page }) => {

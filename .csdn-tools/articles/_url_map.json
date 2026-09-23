@@ -1,29 +1,29 @@
 {
   "note": "Repo-level CSDN publish record for standalone articles that belong to no series directory. 'src' is repo-root-relative. scripts/gen-latest.py reads this and shows 📢 in LATEST.md.",
   "articles": {
-    "2026-09-17-user-behaviour-analysis-tealium-sentry.md": {
-      "src": "devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md",
+    "user-behaviour-analysis-tealium-sentry.md": {
+      "src": "devops/observability/user-behaviour-analysis-tealium-sentry.md",
       "articleId": "165882160",
       "url": "https://blog.csdn.net/PhilZhou/article/details/165882160",
       "title": "User Behaviour Analysis With Tealium and Sentry",
       "published": "2026-09-18"
     },
-    "2026-09-17-countdownlatch-in-java.en.md": {
-      "src": "languages/java/2026-09-17-countdownlatch-in-java.en.md",
+    "countdownlatch-in-java.en.md": {
+      "src": "languages/java/countdownlatch-in-java.en.md",
       "articleId": "165882240",
       "url": "https://blog.csdn.net/PhilZhou/article/details/165882240",
       "title": "CountDownLatch in Java",
       "published": "2026-09-18"
     },
-    "2026-09-17-springboot-startup-lifecycle.en.md": {
-      "src": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.en.md",
+    "springboot-startup-lifecycle.en.md": {
+      "src": "languages/java/springboot/springboot-startup-lifecycle.en.md",
       "articleId": "166229827",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166229827",
       "title": "Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat",
       "published": "2026-09-21"
     },
-    "2026-09-17-playwright-e2e-testing.en.md": {
-      "src": "web/frontend/2026-09-17-playwright-e2e-testing.en.md",
+    "playwright-e2e-testing.en.md": {
+      "src": "web/frontend/playwright-e2e-testing.en.md",
       "articleId": "166230034",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166230034",
       "title": "Playwright: Reliable End-to-End Testing for Web Apps",

@@ -225,7 +225,7 @@ refresh 完成后（Tomcat 已启动、`ContextRefreshedEvent` 已发布），Sp
 
 **此时 `ApplicationReadyEvent` 还没发布，就绪状态仍是"拒绝流量"。** runner 抛异常会导致启动失败并关闭上下文，Tomcat 一起关。
 
-runner 天然适合并行预热再统一等待，见 [CountDownLatch：Java 里最小的那个协调原语](../2026-09-17-countdownlatch-in-java.zh.md)。
+runner 天然适合并行预热再统一等待，见 [CountDownLatch：Java 里最小的那个协调原语](../countdownlatch-in-java.zh.md)。
 
 ### 9. 定时任务开始生效
 

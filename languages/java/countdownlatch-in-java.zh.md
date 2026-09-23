@@ -156,7 +156,7 @@ if (!completed) {
 
 ## 五、一个真实场景：Spring Boot 启动时并行预热
 
-`ApplicationRunner` 在 Tomcat 已经启动、但应用还没对外宣告就绪之前执行（详见 [Spring Boot 启动生命周期](./springboot/2026-09-17-springboot-startup-lifecycle.zh.md)）。在这里并行预热缓存，并且**预热不完就让启动失败**，可以避免一个"半热"的 Pod 被挂进负载均衡。
+`ApplicationRunner` 在 Tomcat 已经启动、但应用还没对外宣告就绪之前执行（详见 [Spring Boot 启动生命周期](./springboot/springboot-startup-lifecycle.zh.md)）。在这里并行预热缓存，并且**预热不完就让启动失败**，可以避免一个"半热"的 Pod 被挂进负载均衡。
 
 ```java
 @Component

@@ -242,7 +242,7 @@ external catalog, and so on. `ApplicationReadyEvent` has **not** been published 
 "refusing traffic". A runner exception fails startup and closes the context, Tomcat included.
 
 Runners are a natural place to fan out warm-up work in parallel and wait for all of it; see
-[CountDownLatch in Java](../2026-09-17-countdownlatch-in-java.en.md).
+[CountDownLatch in Java](../countdownlatch-in-java.en.md).
 
 ### 9. Scheduled jobs become active
 

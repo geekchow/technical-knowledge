@@ -15,7 +15,7 @@ Front-end frameworks and markup.
 
 **Frontend › Testing**
 
-- [Playwright：把端到端测试从「玄学」变回工程](frontend/2026-09-17-playwright-e2e-testing.zh.md) · [Playwright: Reliable End-to-End Testing for Web Apps](frontend/2026-09-17-playwright-e2e-testing.en.md)
+- [Playwright：把端到端测试从「玄学」变回工程](frontend/playwright-e2e-testing.zh.md) · [Playwright: Reliable End-to-End Testing for Web Apps](frontend/playwright-e2e-testing.en.md)
 
 **General**
 
