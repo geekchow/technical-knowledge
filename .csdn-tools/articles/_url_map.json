@@ -15,8 +15,8 @@
       "title": "CountDownLatch in Java",
       "published": "2026-09-18"
     },
-    "2026-09-17-springboot-startup-lifecycle.md": {
-      "src": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md",
+    "2026-09-17-springboot-startup-lifecycle.en.md": {
+      "src": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.en.md",
       "articleId": "166229827",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166229827",
       "title": "Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat",

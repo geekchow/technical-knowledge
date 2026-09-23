@@ -101,7 +101,7 @@ export default defineConfig({
 });
 ```
 
-`webServer` 会在测试前拉起应用，并等 `url` 返回成功。**把它指向就绪探针而不是 `/`**，测试才会在应用真正可用之后才开始——runner 跑完了、依赖健康了。"端口通了"和"真的就绪了"为什么是两回事，见 [Spring Boot 启动生命周期](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md)。
+`webServer` 会在测试前拉起应用，并等 `url` 返回成功。**把它指向就绪探针而不是 `/`**，测试才会在应用真正可用之后才开始——runner 跑完了、依赖健康了。"端口通了"和"真的就绪了"为什么是两回事，见 [Spring Boot 启动生命周期](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.zh.md)。
 
 ## 五、写测试
 

@@ -141,7 +141,7 @@ sentry:
 Because the browser sends `sentry-trace` and `baggage` headers to targets in `tracePropagationTargets`, a slow
 click can be followed from the browser span into the controller span. How the servlet request reaches the
 controller is described in
-[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md).
+[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.en.md).
 
 For infrastructure-level metrics and traces on the same kind of Java service, see
 [Splunk O11y on EKS Fargate (Java)](./splunk-o11y-eks-fargate-java-architecture.md) — Sentry complements it

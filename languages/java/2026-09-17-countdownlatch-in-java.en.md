@@ -158,7 +158,7 @@ if (!completed) {
 ## A realistic use: parallel warm-up during Spring Boot startup
 
 An `ApplicationRunner` runs after Tomcat has started but before the application reports ready (see
-[Spring Boot Startup Lifecycle](./springboot/2026-09-17-springboot-startup-lifecycle.md)). Warming caches there in
+[Spring Boot Startup Lifecycle](./springboot/2026-09-17-springboot-startup-lifecycle.en.md)). Warming caches there in
 parallel, and failing startup if they don't finish in time, keeps a half-warm pod out of the load balancer.
 
 ```java

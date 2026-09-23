@@ -9,7 +9,7 @@
       "jiraId": "KAN-157",
       "summary": "Java SpringBoot Startup life cycle",
       "title": "Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat",
-      "articlePath": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md",
+      "articlePath": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.en.md",
       "articleId": "166229827",
       "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/166229827",
       "status": "Done"

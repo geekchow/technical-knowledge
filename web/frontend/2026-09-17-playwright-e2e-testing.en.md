@@ -102,7 +102,7 @@ export default defineConfig({
 `webServer` starts the app before the tests and waits for `url` to respond. Pointing it at the readiness
 endpoint (rather than `/`) means tests start only once the Spring Boot app is really ready — runners finished,
 dependencies healthy. Why "port open" and "ready" differ is explained in
-[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md).
+[Spring Boot Startup Lifecycle](../../languages/java/springboot/2026-09-17-springboot-startup-lifecycle.en.md).
 
 ## Writing tests
 
