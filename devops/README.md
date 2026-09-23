@@ -70,6 +70,7 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 
 **Networking**
 
+- [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](networking/nginx-as-a-reverse-proxy.zh.md) · [Nginx as a Reverse Proxy](networking/nginx-as-a-reverse-proxy.en.md)
 - [forward reverse proxy](networking/forward_reverse_proxy.md)
 
 **Nexus**

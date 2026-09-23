@@ -57,8 +57,8 @@
       "title": "Agent、Skill 与 MCP：三层职责的边界在哪里",
       "published": "2026-09-22"
     },
-    "nginx-as-a-reverse-proxy.md": {
-      "src": "devops/networking/nginx-as-a-reverse-proxy.md",
+    "nginx-as-a-reverse-proxy.en.md": {
+      "src": "devops/networking/nginx-as-a-reverse-proxy.en.md",
       "articleId": "166362418",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166362418",
       "title": "Nginx as a Reverse Proxy",

@@ -316,7 +316,7 @@ server {
 }
 ```
 
-后端仍然必须检查 `X-Client-Verify == SUCCESS`，并且**只能经由这个终结点访问到**。一个监听在可路由地址、自身没有 mTLS 的后端，会让上面所有努力沦为装饰。反向代理本身的配置细节见 [Nginx 反向代理](../../devops/networking/nginx-as-a-reverse-proxy.md)。
+后端仍然必须检查 `X-Client-Verify == SUCCESS`，并且**只能经由这个终结点访问到**。一个监听在可路由地址、自身没有 mTLS 的后端，会让上面所有努力沦为装饰。反向代理本身的配置细节见 [Nginx 反向代理](../../devops/networking/nginx-as-a-reverse-proxy.zh.md)。
 
 ---
 
