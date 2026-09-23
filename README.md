@@ -312,6 +312,7 @@ _Java, Python, JavaScript and programming paradigms_
 
 **Java**
 
+- [CountDownLatch：Java 里最小的那个协调原语](languages/java/2026-09-17-countdownlatch-in-java.zh.md) · [CountDownLatch in Java](languages/java/2026-09-17-countdownlatch-in-java.en.md)
 - [IntelliJ Tips](languages/java/IntelliJ-tips.md)
 - [How install multiple java version on M1 chip Mac](languages/java/Mac-m1-multiple-java.md)
 - [trustStore keyStore](languages/java/trustStore-keyStore.md)
@@ -430,6 +431,10 @@ _Front-end frameworks and markup_
 **Frontend › HTML & CSS**
 
 - [html element span](web/frontend/html-css/span.md)
+
+**Frontend › Testing**
+
+- [Playwright：把端到端测试从「玄学」变回工程](web/frontend/2026-09-17-playwright-e2e-testing.zh.md) · [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/2026-09-17-playwright-e2e-testing.en.md)
 
 **General**
 

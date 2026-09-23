@@ -6,6 +6,7 @@ Java, Python, JavaScript and programming paradigms.
 
 **Java**
 
+- [CountDownLatch：Java 里最小的那个协调原语](java/2026-09-17-countdownlatch-in-java.zh.md) · [CountDownLatch in Java](java/2026-09-17-countdownlatch-in-java.en.md)
 - [IntelliJ Tips](java/IntelliJ-tips.md)
 - [How install multiple java version on M1 chip Mac](java/Mac-m1-multiple-java.md)
 - [trustStore keyStore](java/trustStore-keyStore.md)

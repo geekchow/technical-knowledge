@@ -22,8 +22,8 @@
       "title": "Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat",
       "published": "2026-09-21"
     },
-    "2026-09-17-playwright-e2e-testing.md": {
-      "src": "web/frontend/2026-09-17-playwright-e2e-testing.md",
+    "2026-09-17-playwright-e2e-testing.en.md": {
+      "src": "web/frontend/2026-09-17-playwright-e2e-testing.en.md",
       "articleId": "166230034",
       "url": "https://blog.csdn.net/PhilZhou/article/details/166230034",
       "title": "Playwright: Reliable End-to-End Testing for Web Apps",
