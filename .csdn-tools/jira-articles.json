@@ -1,0 +1,56 @@
+{
+  "note": "Single source of truth mapping Jira tickets to the articles derived from them. Article filenames and bodies deliberately carry no ticket id (see CLAUDE.md); the traceability lives here instead. 'articlePath' is repo-root-relative. CSDN publish state is kept separately in .csdn-tools/articles/_url_map.json — the urls here are a convenience copy and must match it.",
+  "jira": {
+    "site": "geek-chow.atlassian.net",
+    "project": "KAN"
+  },
+  "tickets": {
+    "KAN-157": {
+      "jiraId": "KAN-157",
+      "summary": "Java SpringBoot Startup life cycle",
+      "title": "Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat",
+      "articlePath": "languages/java/springboot/2026-09-17-springboot-startup-lifecycle.md",
+      "articleId": "166229827",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/166229827",
+      "status": "Done"
+    },
+    "KAN-158": {
+      "jiraId": "KAN-158",
+      "summary": "User Behaviour Analysis",
+      "title": "User Behaviour Analysis With Tealium and Sentry",
+      "articlePath": "devops/observability/2026-09-17-user-behaviour-analysis-tealium-sentry.md",
+      "articleId": "165882160",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/165882160",
+      "status": "Done"
+    },
+    "KAN-159": {
+      "jiraId": "KAN-159",
+      "summary": "CountDownLatch in Java",
+      "title": "CountDownLatch in Java",
+      "articlePath": "languages/java/2026-09-17-countdownlatch-in-java.md",
+      "articleId": "165882240",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/165882240",
+      "status": "Done",
+      "_note": "KAN-159 and KAN-160 are duplicates of the same subject and were handled as one article."
+    },
+    "KAN-160": {
+      "jiraId": "KAN-160",
+      "summary": "CountDownLatch in Java",
+      "title": "CountDownLatch in Java",
+      "articlePath": "languages/java/2026-09-17-countdownlatch-in-java.md",
+      "articleId": "165882240",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/165882240",
+      "status": "Done",
+      "_note": "Duplicate of KAN-159; both map to the same article."
+    },
+    "KAN-161": {
+      "jiraId": "KAN-161",
+      "summary": "Playwright",
+      "title": "Playwright: Reliable End-to-End Testing for Web Apps",
+      "articlePath": "web/frontend/2026-09-17-playwright-e2e-testing.md",
+      "articleId": "166230034",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/166230034",
+      "status": "Done"
+    }
+  }
+}

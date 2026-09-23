@@ -1,8 +1,5 @@
 # Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat
 
-> Source: Jira KAN-157 "Java SpringBoot Startup life cycle", which carried the English draft
-> *Spring Boot Application Hosting With Embedded Tomcat*. This article is the polished version of that draft.
-
 ## Abbreviations
 
 | Abbreviation | Full name |
@@ -386,7 +383,6 @@ context, Tomcat, Spring MVC, Kubernetes — turns "the app won't come up" into a
 
 ## References
 
-- Jira KAN-157 (geek-chow.atlassian.net)
 - [Spring Boot — Embedded Web Servers](https://docs.spring.io/spring-boot/reference/web/servlet.html)
 - [Spring Boot — The Executable Jar Format](https://docs.spring.io/spring-boot/specification/executable-jar/index.html)
 - [Spring Boot — Application Availability](https://docs.spring.io/spring-boot/reference/features/spring-application.html#features.spring-application.application-availability)

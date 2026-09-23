@@ -1,7 +1,5 @@
 # User Behaviour Analysis With Tealium and Sentry
 
-> Source: Jira KAN-158 "User Behaviour Analysis", whose description names two tools — **Tealium** and **Sentry**.
-
 ## Abbreviations
 
 | Abbreviation | Full name |
@@ -198,7 +196,6 @@ release tag, they turn "conversion dropped" into a specific, fixable defect.
 
 ## References
 
-- Jira KAN-158 (geek-chow.atlassian.net)
 - [Tealium Docs](https://docs.tealium.com/)
 - [Tealium — utag.js](https://docs.tealium.com/platforms/javascript/)
 - [Sentry — JavaScript SDK](https://docs.sentry.io/platforms/javascript/)

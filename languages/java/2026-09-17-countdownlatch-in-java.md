@@ -1,9 +1,5 @@
 # CountDownLatch in Java
 
-> Source: Jira KAN-159 and KAN-160, both titled "CountDownLatch in Java" (duplicates, handled as one article).
-> KAN-159 points to Baeldung's
-> [Guide to CountDownLatch in Java](https://www.baeldung.com/java-countdown-latch#usage-in-concurrent-programming).
-
 ## Abbreviations
 
 | Abbreviation | Full name |
@@ -245,7 +241,6 @@ success.
 
 ## References
 
-- Jira KAN-159, KAN-160 (geek-chow.atlassian.net)
 - [Baeldung — Guide to CountDownLatch in Java](https://www.baeldung.com/java-countdown-latch)
 - [Javadoc — `CountDownLatch` (Java 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CountDownLatch.html)
 - Brian Goetz et al., *Java Concurrency in Practice*, §5.5 Synchronizers

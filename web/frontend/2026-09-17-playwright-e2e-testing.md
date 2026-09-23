@@ -1,7 +1,5 @@
 # Playwright: Reliable End-to-End Testing for Web Apps
 
-> Source: Jira KAN-161 "Playwright" (no description on the ticket).
-
 ## Abbreviations
 
 | Abbreviation | Full name |
@@ -269,7 +267,6 @@ becomes the automated safety net for the whole path from startup to user behavio
 
 ## References
 
-- Jira KAN-161 (geek-chow.atlassian.net)
 - [Playwright — Getting started](https://playwright.dev/docs/intro)
 - [Playwright — Best practices](https://playwright.dev/docs/best-practices)
 - [Playwright — Authentication](https://playwright.dev/docs/auth)
