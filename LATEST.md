@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-09-23（HEAD `bac038b`）
-> 📢 = 已发布到 CSDN（共 31 篇），链接指向线上文章。
+> 生成时间：2026-09-23（HEAD `e4ab9ac`）
+> 📢 = 已发布到 CSDN（共 33 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -19,14 +19,14 @@
 | 2026-09-23 | `UPD` | [CountDownLatch in Java](languages/java/countdownlatch-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
 | 2026-09-23 | `UPD` | [CountDownLatch：Java 里最小的那个协调原语](languages/java/countdownlatch-in-java.zh.md) | Languages / java |  |
 | 2026-09-23 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/springboot-startup-lifecycle.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
-| 2026-09-23 | `UPD` | [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) | Languages / java |  |
+| 2026-09-23 | `UPD` | [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166489493) |
 | 2026-09-23 | `UPD` | [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/playwright-e2e-testing.en.md) | Web / frontend | [📢](https://blog.csdn.net/PhilZhou/article/details/166230034) |
-| 2026-09-23 | `UPD` | [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) | Web / frontend |  |
+| 2026-09-23 | `UPD` | [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) | Web / frontend | [📢](https://blog.csdn.net/PhilZhou/article/details/166489470) |
 | 2026-09-22 | `NEW` | [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) | AI / agents | [📢](https://blog.csdn.net/PhilZhou/article/details/166362349) |
 
 ### 2026-09-23 — 9 篇
 
-**add Chinese version of the Nginx reverse proxy article — bilingual set complete** (`bac038b`)
+**add Chinese version of the Nginx reverse proxy article — bilingual set complete** (`e4ab9ac`)
 
 - `NEW` [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md) — *DevOps / networking*
 - `UPD` [用 PKI 做用户与设备认证：把凭证从「共享秘密」换成「硬件私钥」](security/auth/pki-for-user-and-device-authentication.zh.md) — *Security / auth*
@@ -37,9 +37,9 @@
 - `UPD` [CountDownLatch in Java](languages/java/countdownlatch-in-java.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165882240)
 - `UPD` [CountDownLatch：Java 里最小的那个协调原语](languages/java/countdownlatch-in-java.zh.md) — *Languages / java*
 - `UPD` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/springboot-startup-lifecycle.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
-- `UPD` [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) — *Languages / java*
+- `UPD` [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489493)
 - `UPD` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/playwright-e2e-testing.en.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
-- `UPD` [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) — *Web / frontend*
+- `UPD` [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489470)
 
 ### 2026-09-22 — 1 篇
 
@@ -135,9 +135,9 @@
 
 ### 2026-09
 
-- `2026-09-23` · **web** — [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md)
+- `2026-09-23` · **web** — [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489470)
 - `2026-09-23` · **security** — [用 PKI 做用户与设备认证：把凭证从「共享秘密」换成「硬件私钥」](security/auth/pki-for-user-and-device-authentication.zh.md)
-- `2026-09-23` · **languages** — [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md)
+- `2026-09-23` · **languages** — [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489493)
 - `2026-09-23` · **languages** — [CountDownLatch：Java 里最小的那个协调原语](languages/java/countdownlatch-in-java.zh.md)
 - `2026-09-23` · **devops** — [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md)
 - `2026-09-22` · **security** — [Public Key Infrastructure for User and Device Authentication](security/auth/pki-for-user-and-device-authentication.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362484)

@@ -70,6 +70,20 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/166362484",
       "title": "Public Key Infrastructure for User and Device Authentication",
       "published": "2026-09-22"
+    },
+    "playwright-e2e-testing.zh.md": {
+      "src": "web/frontend/playwright-e2e-testing.zh.md",
+      "articleId": "166489470",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166489470",
+      "title": "Playwright：把端到端测试从「玄学」变回工程",
+      "published": "2026-09-23"
+    },
+    "springboot-startup-lifecycle.zh.md": {
+      "src": "languages/java/springboot/springboot-startup-lifecycle.zh.md",
+      "articleId": "166489493",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166489493",
+      "title": "Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的",
+      "published": "2026-09-23"
     }
   }
 }
