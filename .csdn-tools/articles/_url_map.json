@@ -98,6 +98,20 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/166575581",
       "title": "用 PKI 做用户与设备认证：把凭证从「共享秘密」换成「硬件私钥」",
       "published": "2026-09-24"
+    },
+    "reverse-proxy.zh.md": {
+      "src": "security/reverse-proxy/reverse-proxy.zh.md",
+      "articleId": "166894018",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166894018",
+      "title": "反向代理：从银行边缘网关到 AI 网关的第一性原理",
+      "published": "2026-09-25"
+    },
+    "reverse-proxy.en.md": {
+      "src": "security/reverse-proxy/reverse-proxy.en.md",
+      "articleId": "166894093",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/166894093",
+      "title": "Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway",
+      "published": "2026-09-25"
     }
   }
 }
