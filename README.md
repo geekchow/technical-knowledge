@@ -314,6 +314,7 @@ _Java, Python, JavaScript and programming paradigms_
 **Java**
 
 - [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) · [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/springboot-startup-lifecycle.en.md)
+- [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md)
 - [CountDownLatch：Java 里最小的那个协调原语](languages/java/countdownlatch-in-java.zh.md) · [CountDownLatch in Java](languages/java/countdownlatch-in-java.en.md)
 - [IntelliJ Tips](languages/java/IntelliJ-tips.md)
 - [How install multiple java version on M1 chip Mac](languages/java/Mac-m1-multiple-java.md)
