@@ -1,5 +1,4 @@
 {
-  "note": "Repo-level CSDN publish record for standalone articles that belong to no series directory. 'src' is repo-root-relative. scripts/gen-latest.py reads this and shows 📢 in LATEST.md.",
   "articles": {
     "user-behaviour-analysis-tealium-sentry.md": {
       "src": "devops/observability/user-behaviour-analysis-tealium-sentry.md",
@@ -112,6 +111,21 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/166894093",
       "title": "Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway",
       "published": "2026-09-25"
+    },
+    "note": "Repo-level CSDN publish record for standalone articles that belong to no series directory. 'src' is repo-root-relative. scripts/gen-latest.py reads this and shows 📢 in LATEST.md.",
+    "semaphores-and-monitors-in-java.zh.md": {
+      "src": "languages/java/semaphores-and-monitors-in-java.zh.md",
+      "articleId": "167175090",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/167175090",
+      "title": "从 PV 操作、管程到现代 Java 并发",
+      "published": "2026-10-06"
+    },
+    "semaphores-and-monitors-in-java.en.md": {
+      "src": "languages/java/semaphores-and-monitors-in-java.en.md",
+      "articleId": "167175108",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/167175108",
+      "title": "From PV Operations and Monitors to Modern Java Concurrency",
+      "published": "2026-10-06"
     }
   }
 }

@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-06（HEAD `ad73b6a`）
-> 📢 = 已发布到 CSDN（共 37 篇），链接指向线上文章。
+> 生成时间：2026-10-06（HEAD `97a3df9`）
+> 📢 = 已发布到 CSDN（共 39 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -13,8 +13,8 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java |  |
-| 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java |  |
+| 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
+| 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
 | 2026-09-30 | `NEW` | [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894093) |
 | 2026-09-30 | `NEW` | [反向代理：从银行边缘网关到 AI 网关的第一性原理](security/reverse-proxy/reverse-proxy.zh.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894018) |
 | 2026-09-23 | `NEW` | [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md) | DevOps / networking | [📢](https://blog.csdn.net/PhilZhou/article/details/166574545) |
@@ -28,11 +28,11 @@
 
 **add Chinese version of the PV operations and monitors article — bilingual set complete** (`ad73b6a`)
 
-- `NEW` [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) — *Languages / java*
+- `NEW` [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
 
 **add article: from PV operations and monitors to modern Java concurrency (English)** (`fb79e43`)
 
-- `NEW` [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) — *Languages / java*
+- `NEW` [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
 ### 2026-09-30 — 2 篇
 
@@ -148,8 +148,8 @@
 
 ### 2026-10
 
-- `2026-10-06` · **languages** — [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md)
-- `2026-10-06` · **languages** — [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md)
+- `2026-10-06` · **languages** — [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
+- `2026-10-06` · **languages** — [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
 ### 2026-09
 
