@@ -51,6 +51,7 @@ _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 - [One Layer vs Two Layers: Claude Skill Structure](ai/claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](ai/claude-code/skill.md)
 - [How Playwright Works with Claude Code](ai/claude-code/playwright-with-claude-code.md)
+- [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md)
 - [Claude Skills Marketplace](ai/claude-code/skills-marketplace.md)
 
 **Concepts**
