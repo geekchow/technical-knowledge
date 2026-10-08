@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-06（HEAD `97a3df9`）
+> 生成时间：2026-10-08（HEAD `aca40da`）
 > 📢 = 已发布到 CSDN（共 39 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-08 | `NEW` | [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md) | AI / claude-code |  |
 | 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
 | 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
 | 2026-09-30 | `NEW` | [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894093) |
@@ -22,7 +23,12 @@
 | 2026-09-23 | `UPD` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
 | 2026-09-23 | `UPD` | [CountDownLatch in Java](languages/java/countdownlatch-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/165882240) |
 | 2026-09-23 | `UPD` | [CountDownLatch：Java 里最小的那个协调原语](languages/java/countdownlatch-in-java.zh.md) | Languages / java |  |
-| 2026-09-23 | `UPD` | [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/springboot-startup-lifecycle.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/166229827) |
+
+### 2026-10-08 — 1 篇
+
+**add article comparing chrome-devtools-mcp and Playwright** (`aca40da`)
+
+- `NEW` [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md) — *AI / claude-code*
 
 ### 2026-10-06 — 2 篇
 
@@ -127,20 +133,16 @@
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
 - `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-### 2026-09-03 — 3 篇
+### 2026-09-03 — 2 篇
 
 **add bun.sh article (en/zh) and git workflow convention** (`cd62b50`)
 
 - `NEW` [Bun: The All-in-One JavaScript Runtime and Toolkit](languages/javascript/bun-runtime-and-toolkit.en.md) — *Languages / javascript*
 - `NEW` [Bun：把 JavaScript 工具链压缩成一个二进制](languages/javascript/bun-runtime-and-toolkit.zh.md) — *Languages / javascript*
 
-**add transformer artical** (`30e8057`)
+*另有 107 条更早的改动未列出（见下方完整目录）。*
 
-- `UPD` [Transformer 内部构造：那几十亿个参数到底排成什么样](ai/llm-fundamentals/04-transformer.zh.md) — *AI / llm-fundamentals*
-
-*另有 106 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 269 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 270 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -148,6 +150,7 @@
 
 ### 2026-10
 
+- `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md)
 - `2026-10-06` · **languages** — [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
 - `2026-10-06` · **languages** — [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
