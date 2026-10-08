@@ -20,7 +20,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 - [One Layer vs Two Layers: Claude Skill Structure](claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](claude-code/skill.md)
 - [How Playwright Works with Claude Code](claude-code/playwright-with-claude-code.md)
-- [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](claude-code/chrome-devtools-mcp-vs-playwright.md)
+- [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](claude-code/chrome-devtools-mcp-vs-playwright.zh.md) · [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](claude-code/chrome-devtools-mcp-vs-playwright.en.md)
 - [Claude Skills Marketplace](claude-code/skills-marketplace.md)
 
 **Concepts**
