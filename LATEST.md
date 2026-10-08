@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-08（HEAD `aca40da`）
+> 生成时间：2026-10-08（HEAD `882dd4e`）
 > 📢 = 已发布到 CSDN（共 39 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,7 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-10-08 | `NEW` | [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md) | AI / claude-code |  |
+| 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code |  |
 | 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
 | 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
 | 2026-09-30 | `NEW` | [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894093) |
@@ -26,9 +26,9 @@
 
 ### 2026-10-08 — 1 篇
 
-**add article comparing chrome-devtools-mcp and Playwright** (`aca40da`)
+**add Chinese version of the chrome-devtools-mcp vs Playwright article — bilingual set complete** (`882dd4e`)
 
-- `NEW` [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md) — *AI / claude-code*
+- `NEW` [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) — *AI / claude-code*
 
 ### 2026-10-06 — 2 篇
 
@@ -142,7 +142,7 @@
 
 *另有 107 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 270 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 271 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -150,7 +150,8 @@
 
 ### 2026-10
 
-- `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.md)
+- `2026-10-08` · **ai** — [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md)
+- `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md)
 - `2026-10-06` · **languages** — [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
 - `2026-10-06` · **languages** — [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
