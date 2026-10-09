@@ -126,6 +126,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/167175108",
       "title": "From PV Operations and Monitors to Modern Java Concurrency",
       "published": "2026-10-06"
+    },
+    "chrome-devtools-mcp-vs-playwright.zh.md": {
+      "src": "ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md",
+      "articleId": "167388470",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/167388470",
+      "title": "chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手",
+      "published": "2026-10-09"
     }
   }
 }
