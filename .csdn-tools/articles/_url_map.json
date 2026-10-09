@@ -133,6 +133,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/167388470",
       "title": "chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手",
       "published": "2026-10-09"
+    },
+    "chrome-devtools-mcp-vs-playwright.en.md": {
+      "src": "ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md",
+      "articleId": "167391569",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/167391569",
+      "title": "chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands",
+      "published": "2026-10-09"
     }
   }
 }

@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-09（HEAD `769402e`）
-> 📢 = 已发布到 CSDN（共 40 篇），链接指向线上文章。
+> 生成时间：2026-10-09（HEAD `3f3fafd`）
+> 📢 = 已发布到 CSDN（共 41 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -151,7 +151,7 @@
 ### 2026-10
 
 - `2026-10-08` · **ai** — [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167388470)
-- `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md)
+- `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167391569)
 - `2026-10-06` · **languages** — [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
 - `2026-10-06` · **languages** — [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
