@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-12（HEAD `0b03140`）
+> 生成时间：2026-10-12（HEAD `3af5fc5`）
 > 📢 = 已发布到 CSDN（共 41 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,7 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-10-12 | `UPD` | [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.md) | Cloud / aws |  |
+| 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws |  |
 | 2026-10-12 | `NEW` | [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md) | AI / hermes |  |
 | 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code | [📢](https://blog.csdn.net/PhilZhou/article/details/167388470) |
 | 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
@@ -26,9 +26,9 @@
 
 ### 2026-10-12 — 2 篇
 
-**public ALB article: are AWS public IPs real, and IGW vs home router** (`0b03140`)
+**add Chinese version of the public ALB + IGW article — bilingual set complete** (`3af5fc5`)
 
-- `UPD` [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.md) — *Cloud / aws*
+- `NEW` [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) — *Cloud / aws*
 
 **add article: turning Hermes into a project router for Claude Code via a pre_llm_call hook** (`9bab04b`)
 
@@ -145,7 +145,7 @@
 
 *另有 109 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 273 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 274 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -153,7 +153,8 @@
 
 ### 2026-10
 
-- `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.md)
+- `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md)
+- `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.en.md)
 - `2026-10-12` · **ai** — [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md)
 - `2026-10-08` · **ai** — [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167388470)
 - `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167391569)
