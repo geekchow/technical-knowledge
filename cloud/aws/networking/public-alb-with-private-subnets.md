@@ -393,7 +393,64 @@ You also cannot attach an Elastic IP to an ALB, by design. **If a client really 
 
 Otherwise, always use the DNS name, through a Route 53 alias record for your own domain.
 
-## 9. Conclusion
+## 9. Public vs. internal ALB, and can an internal ALB replace the public one?
+
+### 9.1 The only real difference: whether the nodes get public IPs
+
+Both are the same product, with the same features and pricing. The **scheme** you choose at creation (`internet-facing` or `internal`) decides one thing: whether the ALB's node ENIs get public IPs. Everything else follows from that.
+
+| | Internet-facing ALB | Internal ALB |
+|---|---|---|
+| Node ENIs | Private IP **+ public IP** | Private IP **only** |
+| DNS name resolves to | Public IPs | Private IPs (the name is publicly resolvable, but the addresses are not routable from the internet) |
+| Subnets | Must be public (route to IGW) | Any subnet, usually private |
+| Who can reach it | Anyone on the internet (subject to SG) | Only sources that can route to the VPC privately: same VPC, peered VPCs, Transit Gateway, VPN, Direct Connect |
+| Typical use | Public websites and APIs | Internal microservices, the app tier behind a web tier, corporate tools reached over VPN |
+| Can you switch later? | No: the scheme is fixed at creation; to change it you create a new ALB and move traffic over | Same |
+
+### 9.2 Why "the IGW handles outside traffic anyway" doesn't work
+
+This is the key misunderstanding. **The IGW is not a reverse proxy or a port-forwarder.** It does exactly one thing for inbound traffic: translate a public IP to the private IP of the **one ENI that public IP is associated with**. It has no configuration such as "send port 443 to 10.0.10.50", no listeners, no rules.
+
+An internal ALB's ENIs have no public IP, so the IGW has no mapping for them. There is no address on the internet that the IGW would translate into the internal ALB's private IP. Putting the internal ALB in a public subnet doesn't change this either: the scheme, not the subnet, decides whether its nodes get public IPs.
+
+```mermaid
+flowchart LR
+    U(["Internet user"]) -->|"54.x.x.x"| IGW["IGW: 1:1 table<br/>54.x.x.x to 10.0.0.25"]
+    IGW --> Pub["Internet-facing ALB<br/>10.0.0.25 + 54.x.x.x"]
+    U -.->|"no public address<br/>exists to send to"| Int["Internal ALB<br/>10.0.10.30 only"]
+```
+
+*This diagram answers: why the IGW can deliver traffic to an internet-facing ALB but has nothing to deliver to an internal one.*
+
+So **an internal ALB on its own cannot replace the public ALB.** Something with a public entry point has to sit in front of it.
+
+### 9.3 Designs that do put an internal ALB behind the internet
+
+These are legitimate, and in some cases better than a plain public ALB, because the ALB itself then has no public address at all:
+
+| Front door | How it reaches the internal ALB | When it fits |
+|---|---|---|
+| **CloudFront with a VPC origin** | CloudFront creates a service-managed ENI in your private subnet and talks to the internal ALB privately. The VPC must still have an IGW **attached** (AWS uses it to mark the VPC as able to receive internet traffic), but the traffic does not route through it, and no route table changes are needed. | Websites and APIs that benefit from a CDN, WAF and Shield at the edge; you want the ALB unreachable except through CloudFront |
+| **AWS Global Accelerator** | Supports internal ALBs as endpoints; clients hit two static anycast IPs | You need fixed IPs and global TCP acceleration |
+| **Internet-facing NLB → internal ALB** | NLB (with Elastic IPs) forwards to the ALB as an `alb`-type target | You need fixed regional IPs |
+| **API Gateway (HTTP API) with a VPC link** | API Gateway connects privately to the internal ALB | API-first workloads that want throttling, auth and usage plans at the gateway |
+
+```mermaid
+flowchart LR
+    U(["User"]) --> CF["CloudFront<br/>+ WAF"]
+    CF -->|"VPC origin:<br/>private ENI"| IALB["Internal ALB<br/>private subnet"]
+    IALB --> App["App targets<br/>private subnet"]
+```
+
+*This diagram answers: what the most common "internal ALB serving public users" design looks like.*
+
+### 9.4 Recommendation
+
+- **Keep the internet-facing ALB** if it serves the site directly and you don't need a CDN or fixed IPs. It is the simplest working design, and its SG chain already keeps the targets private.
+- **Move to CloudFront + VPC origin + internal ALB** if you want the ALB itself off the internet: one public entry point, WAF at the edge, and no way to bypass CloudFront to reach the ALB. Because the scheme cannot be changed, migrate by creating a new internal ALB, pointing a CloudFront VPC origin at it, switching DNS to CloudFront, then deleting the old public ALB.
+
+## 10. Conclusion
 
 - **The IGW is the door; the ALB is the receptionist.** The IGW only maps public IPs to private IPs for interfaces in public subnets. The ALB, sitting in those public subnets, is the only thing it lets the internet reach.
 - **The ALB bridges public and private by proxying, not routing.** It ends the user's connection and opens a new one to private IPs over the VPC `local` route, so the private subnets need neither public IPs nor an IGW route, and replies come back the same way.
@@ -408,4 +465,6 @@ For the wider VPC picture (route tables, NAT vs. IGW, endpoints, Transit Gateway
 - AWS: Application Load Balancers (scheme, subnets, availability zones) — <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html>
 - AWS: Security groups for your Application Load Balancer — <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-update-security-groups.html>
 - AWS: Troubleshoot your Application Load Balancers (HTTP 502/503/504) — <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html>
+- AWS: CloudFront VPC origins — <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-vpc-origins.html>
+- AWS: Global Accelerator endpoint requirements — <https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoints-caveats.html>
 - AWS Load Balancer Controller: subnet discovery — <https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/deploy/subnet_discovery/>
