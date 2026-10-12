@@ -92,6 +92,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 - [Hermes Agent 接入飞书：三个坑与排查方法](hermes/feishu-integration-troubleshooting.md)
 - [Hermes Agent 接入 Discord：一次没有踩坑的配置](hermes/discord-setup.md)
 - [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](hermes/cmux-delegate.md)
+- [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](hermes/feishu-project-router.md)
 
 **OpenClaw**
 
