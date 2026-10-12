@@ -393,6 +393,29 @@ You also cannot attach an Elastic IP to an ALB, by design. **If a client really 
 
 Otherwise, always use the DNS name, through a Route 53 alias record for your own domain.
 
+### 8.3 "But my EC2 instance's public IP works": it is the same mechanism
+
+An EC2 instance with a public IP and an internet-facing ALB node are reachable in **exactly the same way**. The ALB is not special here:
+
+- **The EC2 public IP is not on the instance either.** Run `ip addr` on the instance: you see only the private IP (`10.0.0.50`). The public IP is held by the IGW, which translates it 1:1 to that private IP, as for the ALB node. You can only read it from instance metadata (`curl http://169.254.169.254/latest/meta-data/public-ipv4`, with an IMDSv2 token).
+- **So "reachable via a public IP" always means "reachable via the IGW's translation".** For an EC2 instance, an ALB node or a NAT gateway alike, it needs all four of the following. Remove any one and the public IP stops answering:
+
+| Requirement | EC2 instance | Internet-facing ALB node |
+|---|---|---|
+| A public IP associated with the ENI | Auto-assigned or Elastic IP | Assigned by AWS because the scheme is `internet-facing` |
+| Subnet route `0.0.0.0/0 → igw` | You put it in a public subnet | You gave the ALB public subnets |
+| SG allows the port | Your instance SG | The ALB SG |
+| NACL allows it, both directions | Subnet NACL | Subnet NACL |
+
+The common counter-example proves the point: **an EC2 instance with a public IP in a private subnet** (no IGW route) is *not* reachable. Packets come in through the IGW, but the replies have no route back out, so the connection never completes.
+
+What really differs between the two cases is **who owns the IP**:
+
+- **EC2:** the IP belongs to your one instance. An Elastic IP stays fixed; you choose when it moves.
+- **ALB:** the IPs belong to nodes that AWS adds, replaces and removes. That is why the ALB's public IPs work today but aren't promised to keep working (section 8.2), and why you reach an ALB by its DNS name.
+
+And the **internal** ALB from section 9 is simply the equivalent of an EC2 instance **without** a public IP: there is nothing for the IGW to translate.
+
 ## 9. Public vs. internal ALB, and can an internal ALB replace the public one?
 
 ### 9.1 The only real difference: whether the nodes get public IPs
