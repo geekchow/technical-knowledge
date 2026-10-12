@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-12（HEAD `3af5fc5`）
+> 生成时间：2026-10-12（HEAD `223397c`）
 > 📢 = 已发布到 CSDN（共 41 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
