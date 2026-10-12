@@ -356,7 +356,44 @@ The controller finds the subnets by tag: public subnets need `kubernetes.io/role
 | Partner needs a fixed IP to allowlist | ALB IPs change | NLB with Elastic IPs in front, or AWS Global Accelerator |
 | ALB creation fails with not enough free IPs | ALB needs room to scale in each subnet | Use at least /27 public subnets with 8+ free IPs |
 
-## 8. Conclusion
+## 8. FAQ: why not just hit the ALB's public IP directly?
+
+The question mixes up two things, so it has two answers.
+
+### 8.1 "Directly" can never mean "without the IGW"
+
+An ALB node's public IP is **not configured on its network interface**. Inside the VPC, the node's ENI only has its private IP (`10.0.0.25`). The public IP (`54.x.x.x`) is a mapping held by the internet gateway, which rewrites the address on every packet in both directions (steps 3 and 7 of the packet walk).
+
+So the internet has no route to the ALB that skips the IGW: the public IP only works *because* the IGW translates it. Detach the IGW, or remove the `0.0.0.0/0 → igw` route from the ALB's subnets, and that public IP stops answering, even though the ALB itself is still running.
+
+```mermaid
+flowchart LR
+    U(["User"]) -->|"dst 54.x.x.x"| IGW["IGW<br/>54.x.x.x to 10.0.0.25"]
+    IGW -->|"dst 10.0.0.25"| ENI["ALB node ENI<br/>only knows 10.0.0.25"]
+    U -.->|"no such path:<br/>54.x.x.x is not on the ENI"| ENI
+```
+
+*This diagram answers: why every internet packet to the ALB has to go through the IGW.*
+
+### 8.2 Hard-coding the IP technically works, but you shouldn't rely on it
+
+If you resolve the ALB's DNS name (`dig web-public-123.ap-southeast-1.elb.amazonaws.com`) and send requests straight to one of those IPs, the request often **does** get through. It is still the wrong way to reach an ALB, for four reasons:
+
+| Problem | What happens |
+|---|---|
+| **The IPs change** | ALB nodes are replaced when the ALB scales, during maintenance, and when AZs change. AWS gives no notice and no guarantee. A hard-coded IP will stop working at some point, possibly by landing on another customer's load balancer. |
+| **One IP = one node in one AZ** | DNS returns one IP per AZ and removes unhealthy nodes. A fixed IP gives up that failover: if that node or AZ has a problem, the client has nowhere else to go. |
+| **TLS breaks** | With `https://54.x.x.x`, the client sends no hostname (SNI, Server Name Indication), so the ALB returns its default certificate, issued for `www.example.com` rather than for an IP. Browsers show a certificate error. |
+| **Host-based routing misses** | Requests carry `Host: 54.x.x.x`, so listener rules that match `www.example.com` do not apply, and the request falls through to the default action (often a fixed `404`). |
+
+You also cannot attach an Elastic IP to an ALB, by design. **If a client really needs a fixed IP** (a partner's firewall allowlist, for example), put one of these in front:
+
+- **NLB with Elastic IPs** (one static IP per AZ), forwarding to the ALB as an `alb`-type target.
+- **AWS Global Accelerator**: two static anycast IPs in front of the ALB, plus routing over the AWS backbone.
+
+Otherwise, always use the DNS name, through a Route 53 alias record for your own domain.
+
+## 9. Conclusion
 
 - **The IGW is the door; the ALB is the receptionist.** The IGW only maps public IPs to private IPs for interfaces in public subnets. The ALB, sitting in those public subnets, is the only thing it lets the internet reach.
 - **The ALB bridges public and private by proxying, not routing.** It ends the user's connection and opens a new one to private IPs over the VPC `local` route, so the private subnets need neither public IPs nor an IGW route, and replies come back the same way.
