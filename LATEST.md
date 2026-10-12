@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-12（HEAD `d95db72`）
+> 生成时间：2026-10-12（HEAD `b4ca716`）
 > 📢 = 已发布到 CSDN（共 41 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -26,7 +26,7 @@
 
 ### 2026-10-12 — 2 篇
 
-**public ALB article: compare internet-facing vs internal ALB and fronting options** (`d95db72`)
+**public ALB article: explain ALB public IPs via the EC2 public IP analogy** (`b4ca716`)
 
 - `UPD` [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.md) — *Cloud / aws*
 
