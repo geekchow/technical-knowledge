@@ -416,6 +416,44 @@ What really differs between the two cases is **who owns the IP**:
 
 And the **internal** ALB from section 9 is simply the equivalent of an EC2 instance **without** a public IP: there is nothing for the IGW to translate.
 
+### 8.4 Are AWS public IPs "virtual"? Is the IGW just a home router?
+
+Half right. It helps to separate **what the address is** from **where it is attached**.
+
+**The addresses are real.** An AWS public IPv4 address (auto-assigned or Elastic IP) is a globally routable address from blocks AWS owns (or you bring with BYOIP, Bring Your Own IP), announced to the internet by AWS over BGP (Border Gateway Protocol), just as an ISP announces its blocks. Anyone on the internet can route to it. AWS bills for it as a scarce resource ($0.005 per IP per hour since February 2024). Nothing about it is virtual.
+
+**What is unusual is where it is attached.** It is not configured on the instance's network card; it lives in the IGW's 1:1 translation table. On-premises you can put a public IP directly on a server's NIC; in a VPC you never can for IPv4.
+
+**The home-router analogy fits in one way and misleads in three:**
+
+| | Home router (ISP) | AWS Internet Gateway | AWS NAT gateway |
+|---|---|---|---|
+| Is it the only way out to the internet? | Yes | Yes, it is the VPC's internet edge | Uses the IGW itself |
+| Mapping | **Many-to-one** (NAPT, Network Address and Port Translation): the whole house shares one public IP, distinguished by port | **One-to-one**: each public IP maps to exactly one private IP, all ports | **Many-to-one**, like the home router |
+| Inbound connections | Blocked unless you configure port forwarding | Work automatically for any ENI with a public IP (SGs and NACLs still apply) | Never: outbound only |
+| Configuration | Port forwards, DMZ | None: no rules, no ports, no capacity to size | Placement and routes only |
+| IPv6 | Usually no translation; addresses sit on the devices | **No translation**: the IPv6 address *is* on the ENI; the IGW just routes it | Not used for IPv6 (use an egress-only IGW instead) |
+
+So the closer analogy for the **IGW** is an enterprise firewall doing **static 1:1 NAT**, or a home router with *every* device in DMZ mode, each on its own public IP. The thing that really behaves like your home router is the **NAT gateway**: many private hosts sharing one public IP, outbound only.
+
+```mermaid
+flowchart LR
+    subgraph Home["Home router: many-to-one"]
+        H1["Laptop 192.168.1.10"] --> R["Router<br/>1 public IP<br/>NAPT by port"]
+        H2["Phone 192.168.1.11"] --> R
+    end
+    subgraph VPC["IGW: one-to-one"]
+        E1["EC2 10.0.0.50"] <--> G["IGW<br/>3.1.1.1 to 10.0.0.50<br/>3.1.1.2 to 10.0.0.25"]
+        A1["ALB node 10.0.0.25"] <--> G
+    end
+    R --> Net(["Internet"])
+    G <--> Net
+```
+
+*This diagram answers: how the IGW's translation differs from a home router's.*
+
+In short: **every IPv4 path between a VPC and the internet goes through the IGW, which is like a router; but the IGW maps each public IP to one host and lets inbound traffic in, which a home router does not.**
+
 ## 9. Public vs. internal ALB, and can an internal ALB replace the public one?
 
 ### 9.1 The only real difference: whether the nodes get public IPs
