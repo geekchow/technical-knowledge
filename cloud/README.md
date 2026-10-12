@@ -35,6 +35,7 @@ AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS.
 **AWS › Networking**
 
 - [A Practical Tour of AWS Networking: VPCs, Subnets, Gateways, and More](aws/networking/AWS-Network.md)
+- [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](aws/networking/public-alb-with-private-subnets.md)
 - [OSI 7-Layer Model in the Context of AWS](aws/networking/network-layer.md)
 
 **AWS › Step Functions**
