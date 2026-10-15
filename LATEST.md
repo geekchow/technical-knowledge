@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-12（HEAD `223397c`）
+> 生成时间：2026-10-15（HEAD `7a91fb5`）
 > 📢 = 已发布到 CSDN（共 41 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws |  |
 | 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws |  |
 | 2026-10-12 | `NEW` | [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md) | AI / hermes |  |
 | 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code | [📢](https://blog.csdn.net/PhilZhou/article/details/167388470) |
@@ -22,7 +23,12 @@
 | 2026-09-30 | `NEW` | [反向代理：从银行边缘网关到 AI 网关的第一性原理](security/reverse-proxy/reverse-proxy.zh.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894018) |
 | 2026-09-23 | `NEW` | [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md) | DevOps / networking | [📢](https://blog.csdn.net/PhilZhou/article/details/166574545) |
 | 2026-09-23 | `UPD` | [用 PKI 做用户与设备认证：把凭证从「共享秘密」换成「硬件私钥」](security/auth/pki-for-user-and-device-authentication.zh.md) | Security / auth | [📢](https://blog.csdn.net/PhilZhou/article/details/166575581) |
-| 2026-09-23 | `UPD` | [User Behaviour Analysis With Tealium and Sentry](devops/observability/user-behaviour-analysis-tealium-sentry.md) | DevOps / observability | [📢](https://blog.csdn.net/PhilZhou/article/details/165882160) |
+
+### 2026-10-15 — 1 篇
+
+**Add note: AWS Lambda and connection-bound backends (CloudHSM, databases)** (`38bf364`)
+
+- `NEW` [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) — *Cloud / aws*
 
 ### 2026-10-12 — 2 篇
 
@@ -124,7 +130,7 @@
 
 - `NEW` [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) — *AI / hermes*
 
-### 2026-09-05 — 5 篇
+### 2026-09-05 — 4 篇
 
 **Add technical-repos.md: pointer index to all companion explanation repos + link it from README** (`7c79737`)
 
@@ -141,11 +147,10 @@
 **replace reactive-programming stub with full RxJS article (en/zh)** (`101abf5`)
 
 - `NEW` [Reactive Programming with RxJS: Async as a Stream You Can Operate On](languages/javascript/reactive-programming.en.md) — *Languages / javascript*
-- `NEW` [RxJS 响应式编程：把异步当成一条可以操作的流](languages/javascript/reactive-programming.zh.md) — *Languages / javascript*
 
-*另有 109 条更早的改动未列出（见下方完整目录）。*
+*另有 110 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 274 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 275 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -153,6 +158,7 @@
 
 ### 2026-10
 
+- `2026-10-15` · **cloud** — [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md)
 - `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md)
 - `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.en.md)
 - `2026-10-12` · **ai** — [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md)
