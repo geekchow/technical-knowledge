@@ -11,7 +11,7 @@ article that references them.
 | Category | Contents |
 |---|---|
 | [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 91 articles |
-| [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 12 articles |
+| [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS — 13 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 36 articles |
 | [Mobile](./mobile/) | iOS and Android build, packaging, CloudKit and App Store review — 17 articles |
@@ -188,6 +188,7 @@ _AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS_
 
 **AWS › Lambda**
 
+- [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md)
 - [how cloudwatch log structure](cloud/aws/lambda/how-cloudwatch-log-structure.md)
 - [sample](cloud/aws/lambda/sample.md)
 

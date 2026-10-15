@@ -29,6 +29,7 @@ AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS.
 
 **AWS › Lambda**
 
+- [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](aws/lambda/lambda-connection-exhaustion.md)
 - [how cloudwatch log structure](aws/lambda/how-cloudwatch-log-structure.md)
 - [sample](aws/lambda/sample.md)
 
