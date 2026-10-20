@@ -51,6 +51,13 @@
       "articleId": "166230034",
       "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/166230034",
       "status": "Done"
+    },
+    "KAN-165": {
+      "jiraId": "KAN-165",
+      "summary": "Building & using Jenkins shared library",
+      "title": "Building and Using a Jenkins Shared Library",
+      "articlePath": "devops/jenkins/jenkins-shared-library.en.md",
+      "status": "To Do"
     }
   }
 }

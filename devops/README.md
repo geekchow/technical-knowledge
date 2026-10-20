@@ -23,6 +23,7 @@ CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability.
 - [How to release a Jenkins Plugin to Jenkins-CI artifactory?](jenkins/How-to-release-a-jenkins-plugin.md)
 - [how to operation jenkins via api](jenkins/jenkins-api.md)
 - [Jenkins 2 Pipeline definition (Configuration as Code)](jenkins/Jenkins-pipeline.md)
+- [Building and Using a Jenkins Shared Library](jenkins/jenkins-shared-library.en.md)
 - [Jenkins Tips](jenkins/jenkins-tips.md)
 - [Make Jenkins pipeline in `configuration as infrastructure` way with job-dsl-plugin](jenkins/job-dsl-plugin-usage.md)
 - [pipeline code snippet](jenkins/pipeline-code-snippet.md)
