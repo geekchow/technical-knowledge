@@ -140,6 +140,20 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/167391569",
       "title": "chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands",
       "published": "2026-10-09"
+    },
+    "jenkins-shared-library.en.md": {
+      "src": "devops/jenkins/jenkins-shared-library.en.md",
+      "articleId": "168648279",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/168648279",
+      "title": "Building and Using a Jenkins Shared Library",
+      "published": "2026-10-21"
+    },
+    "lambda-connection-exhaustion.md": {
+      "src": "cloud/aws/lambda/lambda-connection-exhaustion.md",
+      "articleId": "168648309",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/168648309",
+      "title": "AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)",
+      "published": "2026-10-21"
     }
   }
 }
