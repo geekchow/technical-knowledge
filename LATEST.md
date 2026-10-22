@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-22（HEAD `8ded7d7`）
+> 生成时间：2026-10-22（HEAD `66c9cb8`）
 > 📢 = 已发布到 CSDN（共 44 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,9 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-22 | `NEW` | [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) | Languages / java |  |
+| 2026-10-22 | `NEW` | [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) | Languages / java |  |
+| 2026-10-22 | `UPD` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |  |
 | 2026-10-20 | `NEW` | [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) | DevOps / jenkins | [📢](https://blog.csdn.net/PhilZhou/article/details/168648279) |
 | 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168648309) |
 | 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168758338) |
@@ -20,9 +23,17 @@
 | 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code | [📢](https://blog.csdn.net/PhilZhou/article/details/167388470) |
 | 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
 | 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
-| 2026-09-30 | `NEW` | [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894093) |
-| 2026-09-30 | `NEW` | [反向代理：从银行边缘网关到 AI 网关的第一性原理](security/reverse-proxy/reverse-proxy.zh.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894018) |
-| 2026-09-23 | `NEW` | [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md) | DevOps / networking | [📢](https://blog.csdn.net/PhilZhou/article/details/166574545) |
+
+### 2026-10-22 — 3 篇
+
+**Add bilingual article: integrating Swagger/OpenAPI into Spring Boot with springdoc** (`658d65d`)
+
+- `NEW` [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) — *Languages / java*
+- `NEW` [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) — *Languages / java*
+
+**Add aws-lambda-guide to the companion repo index** (`4b072f5`)
+
+- `UPD` [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) — *Root*
 
 ### 2026-10-20 — 1 篇
 
@@ -136,23 +147,9 @@
 
 - `NEW` [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) — *AI / hermes*
 
-### 2026-09-05 — 3 篇
+*另有 113 条更早的改动未列出（见下方完整目录）。*
 
-**Add technical-repos.md: pointer index to all companion explanation repos + link it from README** (`7c79737`)
-
-- `NEW` [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) — *Root*
-
-**add OpenClaw 2026.8.2 upgrade and hardening record** (`7863827`)
-
-- `NEW` [OpenClaw 2026.8.2 升级与加固实录](ai/openclaw/upgrade-and-hardening-2026.8.2.md) — *AI / openclaw*
-
-**add ACP coding-agent integration article and per-article commit rule** (`c634b5a`)
-
-- `NEW` [把 Claude Code 接进 Agent 编排框架：ACP 集成的四个反直觉发现](ai/agents/acp-coding-agent-integration.md) — *AI / agents*
-
-*另有 111 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 276 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 278 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -160,6 +157,8 @@
 
 ### 2026-10
 
+- `2026-10-22` · **languages** — [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md)
+- `2026-10-22` · **languages** — [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md)
 - `2026-10-20` · **devops** — [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648279)
 - `2026-10-15` · **cloud** — [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648309)
 - `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758338)
