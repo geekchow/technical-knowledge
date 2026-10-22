@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-21（HEAD `dbc4f08`）
+> 生成时间：2026-10-22（HEAD `4b072f5`）
 > 📢 = 已发布到 CSDN（共 43 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-22 | `UPD` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |  |
 | 2026-10-20 | `NEW` | [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) | DevOps / jenkins | [📢](https://blog.csdn.net/PhilZhou/article/details/168648279) |
 | 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168648309) |
 | 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws |  |
@@ -22,7 +23,12 @@
 | 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
 | 2026-09-30 | `NEW` | [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894093) |
 | 2026-09-30 | `NEW` | [反向代理：从银行边缘网关到 AI 网关的第一性原理](security/reverse-proxy/reverse-proxy.zh.md) | Security / reverse-proxy | [📢](https://blog.csdn.net/PhilZhou/article/details/166894018) |
-| 2026-09-23 | `NEW` | [Nginx 做反向代理：角色、实现，以及那些会咬人的默认值](devops/networking/nginx-as-a-reverse-proxy.zh.md) | DevOps / networking | [📢](https://blog.csdn.net/PhilZhou/article/details/166574545) |
+
+### 2026-10-22 — 1 篇
+
+**Add aws-lambda-guide to the companion repo index** (`4b072f5`)
+
+- `UPD` [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) — *Root*
 
 ### 2026-10-20 — 1 篇
 
@@ -136,11 +142,7 @@
 
 - `NEW` [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) — *AI / hermes*
 
-### 2026-09-05 — 3 篇
-
-**Add technical-repos.md: pointer index to all companion explanation repos + link it from README** (`7c79737`)
-
-- `NEW` [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) — *Root*
+### 2026-09-05 — 2 篇
 
 **add OpenClaw 2026.8.2 upgrade and hardening record** (`7863827`)
 
