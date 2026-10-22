@@ -13,6 +13,7 @@ repository instead of inside this KB. This page is the pointer index into all of
 | [O11y-Micro-Service](https://github.com/geekchow/O11y-Micro-Service) | 微服务可观测性 Observability | EN | `blog/00-index.md` | OTel · Tempo · Prometheus · Loki · Grafana |
 | [mcp-explain](https://github.com/geekchow/mcp-explain) | MCP（Model Context Protocol）学习指南 | 中 / EN | `mcp-guide-zh/00-overview.md` · `mcp-guide/00-overview.md` | 可运行 MCP server (orders-db) |
 | [blue-green-eks-fargate-alb](https://github.com/geekchow/blue-green-eks-fargate-alb) | EKS Fargate 上蓝绿发布 | 中 / EN | `blog/blue-green-eks-fargate-alb.zh.md` · `.en.md` | Terraform + K8s ingress + ALB |
+| [aws-lambda-guide](https://github.com/geekchow/aws-lambda-guide) | AWS Lambda 心智模型：版本、别名、预置并发、并发与限流 | 中 / EN | `aws-lambda-guide-cn/00-overview.md` · `aws-lambda-guide/00-overview.md` | 纯文章 + AWS CLI 实验；CSDN 中英双专栏 |
 
 ---
 
@@ -94,6 +95,41 @@ MCP（Model Context Protocol，模型上下文协议）教学包：Why → What 
 
 - **Terraform**: [`terraform/`](https://github.com/geekchow/blue-green-eks-fargate-alb/tree/main/terraform) — VPC, EKS + Fargate profiles, LB controller, ACM, alarms
 - **K8s**: [`k8s/base/`](https://github.com/geekchow/blue-green-eks-fargate-alb/tree/main/k8s/base) · [`k8s/legs/`](https://github.com/geekchow/blue-green-eks-fargate-alb/tree/main/k8s/legs) · [`k8s/components/`](https://github.com/geekchow/blue-green-eks-fargate-alb/tree/main/k8s/components)
+
+---
+
+## 5. aws-lambda-guide — AWS Lambda 心智模型学习指南（中英双语）
+
+AWS Lambda 教学包，按 cognitive-mental-model 结构编写：Why → What → 概念地图 → 贯穿示例 → 逐组件深潜 → 完整走查。贯穿示例是网店 ShopFast 的 `checkout` 函数：周四通过 `prod` 别名（Alias）把 v7 金丝雀发布到 v8，黑五开售前把预置并发（PC，Provisioned Concurrency）提到 400，随后经历溢出冷启动与 429 限流。另有一篇深潜讲 CloudHSM（Hardware Security Module，硬件安全模块）与数据库为何会被 Lambda 先耗尽连接数。纯文章仓库，没有可运行代码；动手实验在 07 篇，用 AWS CLI（Command Line Interface，命令行接口）完成。
+
+**GitHub:** <https://github.com/geekchow/aws-lambda-guide>
+
+| 语言 | 索引入口 | CSDN 专栏 |
+|---|---|---|
+| 中文（14 篇） | [`aws-lambda-guide-cn/00-overview.md`](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/00-overview.md) | 「AWS Lambda 概念与实操」· [专栏目录](https://blog.csdn.net/PhilZhou/article/details/167903856) |
+| English (14 parts) | [`aws-lambda-guide/00-overview.md`](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/00-overview.md) | "AWS Lambda Mental Model ｜ EN" · [series index](https://blog.csdn.net/PhilZhou/article/details/168332647) |
+
+全部 14 篇的中英文 GitHub 源文件与 CSDN 文章：
+
+| # | 中文 | English |
+|---|---|---|
+| 00 | AWS Lambda 心智模型学习指南：总览、思维导图与阅读路线（专栏目录）<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/00-overview.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/167903856) | AWS Lambda Mental-Model Guide: Overview, Mind Map and Reading Path (Series Index)<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/00-overview.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168332647) |
+| 01 | 为什么需要 AWS Lambda：闲置成本、容量规划与原地部署之痛<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/01-why.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/167904027) | Why AWS Lambda: Idle Cost, Capacity Planning and Risky In-Place Deploys<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/01-why.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168332721) |
+| 02 | AWS Lambda 是什么：一句话定义、边界与生态位置<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/02-what.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168011530) | What AWS Lambda Is: Definition, Boundaries and Ecosystem Position<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/02-what.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168332807) |
+| 03 | AWS Lambda 概念地图：6 个核心概念与 6 个关键组件如何协作<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/03-concept-map.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168014670) | AWS Lambda Concept Map: 6 Core Concepts and 6 Key Components<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/03-concept-map.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168332886) |
+| 04 | AWS Lambda 贯穿示例：ShopFast 黑五一周的金丝雀发布、预置并发与限流<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/04-running-example.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168014816) | AWS Lambda Running Example: ShopFast Black Friday Canary, Warm Pools and Throttling<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/04-running-example.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168332972) |
+| 05.1 | AWS Lambda 版本（Version）详解：$LATEST、不可变快照与限定 ARN<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/01-versions.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/167903000) | AWS Lambda Versions Explained: $LATEST, Immutable Snapshots and Qualified ARNs<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/01-versions.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168412256) |
+| 05.2 | AWS Lambda 别名（Alias）详解：加权路由、金丝雀发布与秒级回滚<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/02-aliases.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/167903182) | AWS Lambda Aliases Explained: Weighted Routing, Canary Deploys and Instant Rollback<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/02-aliases.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168412680) |
+| 05.3 | AWS Lambda 预置并发（Provisioned Concurrency）详解：冷启动、溢出、自动扩缩与成本<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/03-provisioned-concurrency.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168014951) | AWS Lambda Provisioned Concurrency: Cold Starts, Spillover, Auto Scaling and Cost<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/03-provisioned-concurrency.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168413067) |
+| 05.4 | AWS Lambda 调用前端与并发详解：准入控制、并发计算、预留并发与 429 限流<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/04-invoke-frontend-and-concurrency.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168101808) | AWS Lambda Concurrency and Throttling: Admission, Reserved Concurrency and 429s<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/04-invoke-frontend-and-concurrency.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168413462) |
+| 05.5 | AWS Lambda 分配与放置服务详解：如何找到热环境或创建新环境<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/05-assignment-and-placement.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168102231) | AWS Lambda Assignment and Placement: Finding a Warm Environment or Creating One<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/05-assignment-and-placement.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168413846) |
+| 05.6 | AWS Lambda 执行环境详解：Firecracker 微虚拟机、Init/Invoke/Shutdown 与冻结解冻<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/06-execution-environment.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168102648) | AWS Lambda Execution Environment: Firecracker microVM, Init/Invoke/Shutdown, Freeze<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/06-execution-environment.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168537029) |
+| 05.7 | AWS Lambda 连接数耗尽：CloudHSM 与数据库连接上限、RDS Proxy 及解法<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/05-deep-dives/07-connection-bound-backends.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168103062) | AWS Lambda Connection Exhaustion: CloudHSM and Database Limits, RDS Proxy and Fixes<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/05-deep-dives/07-connection-bound-backends.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168537361) |
+| 06 | AWS Lambda 完整走查：ShopFast 黑五端到端重放，从金丝雀发布到预置并发、溢出与限流<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/06-walkthrough.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168229909) | AWS Lambda Full Walkthrough: ShopFast Black Friday End to End, Canary to Throttling<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/06-walkthrough.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168537670) |
+| 07 | AWS Lambda 自测题与动手实验：用 AWS CLI 验证版本、别名、预置并发与冷启动<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide-cn/07-next-steps.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168230188) | AWS Lambda Self-Test and Hands-On Lab: Verify Versions, Aliases and PC with the AWS CLI<br/>[GitHub](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/07-next-steps.md) · [CSDN](https://blog.csdn.net/PhilZhou/article/details/168537967) |
+
+- **架构图源**: [`diagrams/lambda-architecture.drawio`](https://github.com/geekchow/aws-lambda-guide/blob/main/aws-lambda-guide/diagrams/lambda-architecture.drawio)（用 draw.io / diagrams.net 打开）
+- **本库相关笔记**: [AWS Lambda and Connection-Bound Backends](cloud/aws/lambda/lambda-connection-exhaustion.md)，是 05.7 篇的独立长文版本
 
 ---
 
