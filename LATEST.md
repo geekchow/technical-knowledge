@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-22（HEAD `658d65d`）
-> 📢 = 已发布到 CSDN（共 43 篇），链接指向线上文章。
+> 生成时间：2026-10-22（HEAD `b1ddd86`）
+> 📢 = 已发布到 CSDN（共 45 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -13,8 +13,8 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-10-22 | `NEW` | [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) | Languages / java |  |
-| 2026-10-22 | `NEW` | [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) | Languages / java |  |
+| 2026-10-22 | `NEW` | [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758708) |
+| 2026-10-22 | `NEW` | [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758658) |
 | 2026-10-22 | `UPD` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |  |
 | 2026-10-20 | `NEW` | [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) | DevOps / jenkins | [📢](https://blog.csdn.net/PhilZhou/article/details/168648279) |
 | 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168648309) |
@@ -28,8 +28,8 @@
 
 **Add bilingual article: integrating Swagger/OpenAPI into Spring Boot with springdoc** (`658d65d`)
 
-- `NEW` [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) — *Languages / java*
-- `NEW` [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) — *Languages / java*
+- `NEW` [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758708)
+- `NEW` [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758658)
 
 **Add aws-lambda-guide to the companion repo index** (`4b072f5`)
 
@@ -157,8 +157,8 @@
 
 ### 2026-10
 
-- `2026-10-22` · **languages** — [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md)
-- `2026-10-22` · **languages** — [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md)
+- `2026-10-22` · **languages** — [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758658)
+- `2026-10-22` · **languages** — [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758708)
 - `2026-10-20` · **devops** — [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648279)
 - `2026-10-15` · **cloud** — [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648309)
 - `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md)
