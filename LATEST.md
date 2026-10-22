@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-21（HEAD `dbc4f08`）
-> 📢 = 已发布到 CSDN（共 43 篇），链接指向线上文章。
+> 生成时间：2026-10-22（HEAD `8ded7d7`）
+> 📢 = 已发布到 CSDN（共 44 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | 2026-10-20 | `NEW` | [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) | DevOps / jenkins | [📢](https://blog.csdn.net/PhilZhou/article/details/168648279) |
 | 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168648309) |
-| 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws |  |
+| 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168758338) |
 | 2026-10-12 | `NEW` | [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md) | AI / hermes |  |
 | 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code | [📢](https://blog.csdn.net/PhilZhou/article/details/167388470) |
 | 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
@@ -40,7 +40,7 @@
 
 **add Chinese version of the public ALB + IGW article — bilingual set complete** (`3af5fc5`)
 
-- `NEW` [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) — *Cloud / aws*
+- `NEW` [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) — *Cloud / aws* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758338)
 
 **add article: turning Hermes into a project router for Claude Code via a pre_llm_call hook** (`9bab04b`)
 
@@ -162,7 +162,7 @@
 
 - `2026-10-20` · **devops** — [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648279)
 - `2026-10-15` · **cloud** — [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648309)
-- `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md)
+- `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758338)
 - `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.en.md)
 - `2026-10-12` · **ai** — [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md)
 - `2026-10-08` · **ai** — [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167388470)
