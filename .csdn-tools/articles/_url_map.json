@@ -155,6 +155,20 @@
       "title": "AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)",
       "published": "2026-10-21"
     },
+    "languages/java/springboot/springboot-openapi-swagger.zh.md": {
+      "src": "languages/java/springboot/springboot-openapi-swagger.zh.md",
+      "articleId": "168758658",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/168758658",
+      "title": "Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档",
+      "published": "2026-10-22"
+    },
+    "languages/java/springboot/springboot-openapi-swagger.en.md": {
+      "src": "languages/java/springboot/springboot-openapi-swagger.en.md",
+      "articleId": "168758708",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/168758708",
+      "title": "Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi",
+      "published": "2026-10-22"
+    },
     "public-alb-with-private-subnets.zh.md": {
       "src": "cloud/aws/networking/public-alb-with-private-subnets.zh.md",
       "articleId": "168758338",
