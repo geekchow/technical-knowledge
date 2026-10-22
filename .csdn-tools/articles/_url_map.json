@@ -154,6 +154,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/168648309",
       "title": "AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)",
       "published": "2026-10-21"
+    },
+    "public-alb-with-private-subnets.zh.md": {
+      "src": "cloud/aws/networking/public-alb-with-private-subnets.zh.md",
+      "articleId": "168758338",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/168758338",
+      "title": "用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户",
+      "published": "2026-10-22"
     }
   }
 }
