@@ -58,6 +58,13 @@
       "title": "Building and Using a Jenkins Shared Library",
       "articlePath": "devops/jenkins/jenkins-shared-library.en.md",
       "status": "To Do"
+    },
+    "KAN-167": {
+      "jiraId": "KAN-167",
+      "summary": "OpenAPI/Swagger SpringBoot Controller",
+      "title": "Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi",
+      "articlePath": "languages/java/springboot/springboot-openapi-swagger.en.md",
+      "status": "To Do"
     }
   }
 }
