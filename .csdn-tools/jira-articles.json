@@ -64,7 +64,9 @@
       "summary": "OpenAPI/Swagger SpringBoot Controller",
       "title": "Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi",
       "articlePath": "languages/java/springboot/springboot-openapi-swagger.en.md",
-      "status": "To Do"
+      "status": "To Do",
+      "articleId": "168758708",
+      "csdnUrl": "https://blog.csdn.net/PhilZhou/article/details/168758708"
     }
   }
 }
