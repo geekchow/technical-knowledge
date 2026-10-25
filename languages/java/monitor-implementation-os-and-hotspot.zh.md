@@ -1,5 +1,7 @@
 # 管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器
 
+*English version: [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](./monitor-implementation-os-and-hotspot.en.md)*
+
 姊妹篇 [从 PV 操作、管程到现代 Java 并发](./semaphores-and-monitors-in-java.zh.md) 讲的是**管程是什么**：共享数据 + 过程 + 隐式互斥 + 条件变量，以及 Hoare / Mesa 两种唤醒语义。本文只回答下一个问题：**它是怎么做出来的**——从一条 CPU 原子指令开始，经过 Linux 内核的等待队列和 futex，一直到 HotSpot 里 `synchronized` 背后的对象头和 `ObjectMonitor`。
 
 ## 缩写对照表

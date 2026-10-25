@@ -175,6 +175,20 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/168758338",
       "title": "用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户",
       "published": "2026-10-22"
+    },
+    "monitor-implementation-os-and-hotspot.zh.md": {
+      "src": "languages/java/monitor-implementation-os-and-hotspot.zh.md",
+      "articleId": "169057877",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169057877",
+      "title": "管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器",
+      "published": "2026-10-25"
+    },
+    "monitor-implementation-os-and-hotspot.en.md": {
+      "src": "languages/java/monitor-implementation-os-and-hotspot.en.md",
+      "articleId": "169058025",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169058025",
+      "title": "How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor",
+      "published": "2026-10-25"
     }
   }
 }

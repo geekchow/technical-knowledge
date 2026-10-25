@@ -6,7 +6,7 @@ Java, Python, JavaScript and programming paradigms.
 
 **Java**
 
-- [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](java/monitor-implementation-os-and-hotspot.zh.md)
+- [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](java/monitor-implementation-os-and-hotspot.zh.md) · [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](java/monitor-implementation-os-and-hotspot.en.md)
 - [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](java/springboot/springboot-openapi-swagger.zh.md) · [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](java/springboot/springboot-openapi-swagger.en.md)
 - [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](java/springboot/springboot-startup-lifecycle.zh.md) · [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](java/springboot/springboot-startup-lifecycle.en.md)
 - [从 PV 操作、管程到现代 Java 并发](java/semaphores-and-monitors-in-java.zh.md) · [From PV Operations and Monitors to Modern Java Concurrency](java/semaphores-and-monitors-in-java.en.md)
