@@ -207,7 +207,7 @@ class MonitorBuffer<T> {
 
 Java 偏离纯粹管程的地方：**封装不是强制的**。字段可以在 `synchronized` 之外被读写，任何外部代码都可以 `synchronized (yourObject)` 来插一脚。Brinch Hansen 本人在 1999 年的文章 *Java's Insecure Parallelism* 里专门批评过这一点。编译器本该替你守的纪律，现在得自己守：被保护的状态一律 `private`，公共类优先用私有锁对象而不是 `this`。
 
-在 JVM（Java Virtual Machine，Java 虚拟机）底层，HotSpot 把锁状态放在对象头里，只有发生竞争时才"膨胀"为完整的 `ObjectMonitor`（由 OS 阻塞原语支撑）；无竞争时加锁只是一次 CAS。（老的单线程快速路径"偏向锁"已由 JEP 374 在 JDK 15 中废弃并默认关闭。）
+在 JVM（Java Virtual Machine，Java 虚拟机）底层，HotSpot 把锁状态放在对象头里，只有发生竞争时才"膨胀"为完整的 `ObjectMonitor`（由 OS 阻塞原语支撑）；无竞争时加锁只是一次 CAS。（老的单线程快速路径"偏向锁"已由 JEP 374 在 JDK 15 中废弃并默认关闭，JDK 18 起实现被移除。）Mark Word 的位布局、锁的膨胀与收缩、`ObjectMonitor` 内部的队列，以及它一路落到 futex 的过程，见 [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](./monitor-implementation-os-and-hotspot.zh.md)。
 
 ### 3.2 显式管程：`ReentrantLock` + `Condition`
 
@@ -322,7 +322,7 @@ class RateLimitedClient {
 | `S.value` | `volatile int state` |
 | P/V 的原子性 | 对 `state` 做 CAS |
 | `S.queue` | CLH（Craig, Landin and Hagersten）风格的 FIFO 等待队列 |
-| `block()` / `wakeup()` | `LockSupport.park()` / `unpark()` → OS 原语（Linux 上是 futex） |
+| `block()` / `wakeup()` | `LockSupport.park()` / `unpark()` → `pthread_mutex` / `pthread_cond`（Linux 上由 glibc 落到 futex） |
 
 每个同步器只需定义 `state` 的含义：许可数（`Semaphore`）、重入次数（`ReentrantLock`）、剩余计数（`CountDownLatch`，见 [CountDownLatch：Java 里最小的那个协调原语](./countdownlatch-in-java.zh.md)）。排队、挂起、唤醒的逻辑只写一次。
 
@@ -358,7 +358,7 @@ HotSpot 的平台线程与 OS 线程是 1:1 的，所以 `acquire()` 或 `wait()
 | 条件变量 | `wait/notify`（每对象一个）或 `Condition`（每锁多个） | |
 | Mesa 语义 | 以上两者 | 永远写 `while (!cond) wait/await` |
 | 记录型信号量的内部结构 | AQS `state` + 队列 + `park/unpark` | |
-| 进程阻塞 / 唤醒 | `LockSupport.park/unpark` → futex | 虚拟线程改为由 JVM 卸载 |
+| 进程阻塞 / 唤醒 | `LockSupport.park/unpark` → pthread → futex | 虚拟线程改为由 JVM 卸载 |
 | 生产者—消费者 | `BlockingQueue` | |
 | 读者—写者 | `ReentrantReadWriteLock` | |
 
@@ -407,3 +407,4 @@ flowchart TD
 - Doug Lea, "The java.util.concurrent Synchronizer Framework", 2004。
 - JEP 374（废弃并禁用偏向锁）、JEP 444（虚拟线程）、JEP 491（虚拟线程同步不再钉住）。
 - 姊妹篇：[CountDownLatch：Java 里最小的那个协调原语](./countdownlatch-in-java.zh.md)。
+- 实现篇：[管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](./monitor-implementation-os-and-hotspot.zh.md)。

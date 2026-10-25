@@ -208,7 +208,7 @@ Two rules fall straight out of the theory:
 
 Where Java departs from the pure monitor: encapsulation is **not enforced**. Fields can be read outside `synchronized`, and any outside code can `synchronized (yourObject)` and interfere. Brinch Hansen himself criticised this in *Java's Insecure Parallelism* (1999). The discipline the compiler would have enforced is now yours: keep the guarded state `private`, and prefer a private lock object over `this` for public classes.
 
-Under the hood, HotSpot keeps lock state in the object header and only "inflates" to a full `ObjectMonitor` (backed by OS blocking) under contention; uncontended locking is a CAS. (Biased locking, the old fast-path for single-thread ownership, was deprecated and disabled by default in JDK 15 via JEP 374.)
+Under the hood, HotSpot keeps lock state in the object header and only "inflates" to a full `ObjectMonitor` (backed by OS blocking) under contention; uncontended locking is a CAS. (Biased locking, the old fast-path for single-thread ownership, was deprecated and disabled by default in JDK 15 via JEP 374, and its implementation was removed in JDK 18.) For the mark-word layout, inflation and deflation, the queues inside `ObjectMonitor` and the path down to futex, see the Chinese companion article [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](./monitor-implementation-os-and-hotspot.zh.md).
 
 ### 3.2 The explicit monitor: `ReentrantLock` + `Condition`
 
@@ -323,7 +323,7 @@ Two properties are inherited directly from Dijkstra's definition and surprise pe
 | `S.value` | `volatile int state` |
 | Atomic P/V | CAS on `state` |
 | `S.queue` | A CLH-style FIFO queue of waiting threads |
-| `block()` / `wakeup()` | `LockSupport.park()` / `unpark()` → OS primitives (futex on Linux) |
+| `block()` / `wakeup()` | `LockSupport.park()` / `unpark()` → `pthread_mutex` / `pthread_cond` (which glibc builds on futex on Linux) |
 
 Each synchronizer only decides what `state` means: permits (`Semaphore`), hold count (`ReentrantLock`), remaining count (`CountDownLatch` — see [CountDownLatch in Java](./countdownlatch-in-java.en.md)). The queueing, parking and wake-up logic is written once.
 
@@ -359,7 +359,7 @@ With `ArrayBlockingQueue`, the entire producer–consumer above becomes `queue.p
 | Condition variable | `wait/notify` (one per object) or `Condition` (many per lock) | |
 | Mesa semantics | Both of the above | Always `while (!cond) wait/await` |
 | Record semaphore internals | AQS `state` + queue + `park/unpark` | |
-| Process blocking/wake-up | `LockSupport.park/unpark` → futex | Virtual threads: JVM unmounts instead |
+| Process blocking/wake-up | `LockSupport.park/unpark` → pthread → futex | Virtual threads: JVM unmounts instead |
 | Producer–consumer | `BlockingQueue` | |
 | Readers–writers | `ReentrantReadWriteLock` | |
 
@@ -408,3 +408,4 @@ flowchart TD
 - Doug Lea, "The java.util.concurrent Synchronizer Framework", 2004.
 - JEP 374 (Deprecate and Disable Biased Locking), JEP 444 (Virtual Threads), JEP 491 (Synchronize Virtual Threads without Pinning).
 - Sibling article: [CountDownLatch in Java](./countdownlatch-in-java.en.md).
+- Implementation deep-dive (Chinese): [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](./monitor-implementation-os-and-hotspot.zh.md).
