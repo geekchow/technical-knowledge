@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-22（HEAD `151088e`）
+> 生成时间：2026-10-25（HEAD `2b6be34`）
 > 📢 = 已发布到 CSDN（共 46 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,9 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-25 | `NEW` | [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) | Languages / java |  |
+| 2026-10-25 | `UPD` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
+| 2026-10-25 | `UPD` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
 | 2026-10-22 | `NEW` | [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758708) |
 | 2026-10-22 | `NEW` | [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758658) |
 | 2026-10-22 | `UPD` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |  |
@@ -20,9 +23,14 @@
 | 2026-10-15 | `NEW` | [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168648309) |
 | 2026-10-12 | `NEW` | [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/168758338) |
 | 2026-10-12 | `NEW` | [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md) | AI / hermes |  |
-| 2026-10-08 | `NEW` | [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) | AI / claude-code | [📢](https://blog.csdn.net/PhilZhou/article/details/167388470) |
-| 2026-10-06 | `NEW` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
-| 2026-10-06 | `NEW` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
+
+### 2026-10-25 — 3 篇
+
+**Add article: how monitors are implemented, from the OS kernel to HotSpot ObjectMonitor** (`2b6be34`)
+
+- `NEW` [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) — *Languages / java*
+- `UPD` [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
+- `UPD` [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
 
 ### 2026-10-22 — 3 篇
 
@@ -62,16 +70,6 @@
 **add Chinese version of the chrome-devtools-mcp vs Playwright article — bilingual set complete** (`882dd4e`)
 
 - `NEW` [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) — *AI / claude-code* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167388470)
-
-### 2026-10-06 — 2 篇
-
-**add Chinese version of the PV operations and monitors article — bilingual set complete** (`ad73b6a`)
-
-- `NEW` [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175090)
-
-**add article: from PV operations and monitors to modern Java concurrency (English)** (`fb79e43`)
-
-- `NEW` [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167175108)
 
 ### 2026-09-30 — 2 篇
 
@@ -137,19 +135,15 @@
 
 - `NEW` [TTY, PTY, and Non-TTY Shell Sessions](devops/shell/tty-pty-and-non-tty-sessions.md) — *DevOps / shell* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607211)
 
-### 2026-09-06 — 2 篇
+### 2026-09-06 — 1 篇
 
 **docs(ai/hermes): Discord 接入流程与三处易混淆的凭证** (`9a19a21`)
 
 - `NEW` [Hermes Agent 接入 Discord：一次没有踩坑的配置](ai/hermes/discord-setup.md) — *AI / hermes*
 
-**docs(ai/hermes): 飞书接入的三个坑与排查方法** (`e45db4f`)
+*另有 114 条更早的改动未列出（见下方完整目录）。*
 
-- `NEW` [Hermes Agent 接入飞书：三个坑与排查方法](ai/hermes/feishu-integration-troubleshooting.md) — *AI / hermes*
-
-*另有 113 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 278 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 279 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -157,6 +151,7 @@
 
 ### 2026-10
 
+- `2026-10-25` · **languages** — [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md)
 - `2026-10-22` · **languages** — [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758658)
 - `2026-10-22` · **languages** — [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758708)
 - `2026-10-20` · **devops** — [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648279)
