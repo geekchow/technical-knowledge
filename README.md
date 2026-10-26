@@ -410,6 +410,7 @@ _iOS and Android build, packaging and architecture_
 - [CloudKit multi-device synchronization](mobile/ios/CloudKit-multi-device-synchronization.md)
 - [CloudKit Schema Deploy UI](mobile/ios/CloudKit-Schema-Deploy-UI.md)
 - [iOS certificate and provisioning profile planning](mobile/ios/iOS-certificate-and-provisioning-profile-planning.md)
+- [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) · [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md)
 - [What an ipa package contains, and the relationship among them?](mobile/ios/ipa-introduction.md)
 - [UIKit view preview in iOS development](mobile/ios/UIKit-view-preview-in-iOS-development.md)
 - [What do Workspace, Project , Target, Scheme, Build Settings, Configurations, Build Phases mean regarding iOS development?](mobile/ios/xcode-basic-concept.md)
