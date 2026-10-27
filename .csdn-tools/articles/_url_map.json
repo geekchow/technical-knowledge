@@ -189,6 +189,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/169058025",
       "title": "How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor",
       "published": "2026-10-25"
+    },
+    "mobile/ios/inspect-ios-network-traffic.zh.md": {
+      "src": "mobile/ios/inspect-ios-network-traffic.zh.md",
+      "articleId": "169231342",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169231342",
+      "title": "iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选",
+      "published": "2026-10-27"
     }
   }
 }

@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-26（HEAD `4228d95`）
-> 📢 = 已发布到 CSDN（共 48 篇），链接指向线上文章。
+> 生成时间：2026-10-27（HEAD `03952d0`）
+> 📢 = 已发布到 CSDN（共 49 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -14,7 +14,7 @@
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
 | 2026-10-26 | `NEW` | [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md) | Mobile / ios |  |
-| 2026-10-26 | `NEW` | [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) | Mobile / ios |  |
+| 2026-10-26 | `NEW` | [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) | Mobile / ios | [📢](https://blog.csdn.net/PhilZhou/article/details/169231342) |
 | 2026-10-25 | `NEW` | [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169058025) |
 | 2026-10-25 | `UPD` | [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169057877) |
 | 2026-10-25 | `UPD` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
@@ -29,7 +29,7 @@
 **Add bilingual article: inspecting an iOS app's network traffic** (`4228d95`)
 
 - `NEW` [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md) — *Mobile / ios*
-- `NEW` [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) — *Mobile / ios*
+- `NEW` [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) — *Mobile / ios* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169231342)
 
 ### 2026-10-25 — 4 篇
 
@@ -146,7 +146,7 @@
 
 ### 2026-10
 
-- `2026-10-26` · **mobile** — [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md)
+- `2026-10-26` · **mobile** — [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169231342)
 - `2026-10-26` · **mobile** — [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md)
 - `2026-10-25` · **languages** — [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169057877)
 - `2026-10-25` · **languages** — [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169058025)
