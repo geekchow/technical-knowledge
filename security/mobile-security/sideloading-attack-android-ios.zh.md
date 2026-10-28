@@ -1,5 +1,7 @@
 # 移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护
 
+*English version: [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](./sideloading-attack-android-ios.en.md)*
+
 侧载（sideloading）本身不是漏洞，而是一个**被刻意留下的信任例外**。本文从"操作系统凭什么决定一段代码能不能装、能不能跑"这个第一性问题出发，分别拆开 Android 和 iOS 的安装信任链，看攻击者如何利用这个例外，最后落到银行类 App 的防护设计。
 
 本文只讲机制与防御，不提供可直接落地的利用步骤。
