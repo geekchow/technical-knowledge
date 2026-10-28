@@ -494,6 +494,7 @@ _TLS/HTTPS, authentication, mobile app hardening_
 
 **Mobile Security**
 
+- [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md)
 - [Mobile App Certificate Pinning: Underlying Principle and a Swift Example](security/mobile-security/Cert-Pinning-Swift.md)
 - [Certificate pinning](security/mobile-security/cert-pinning.md)
 - [How Charles Proxy Works: From HTTP Proxy to HTTPS MITM Traffic Inspection](security/mobile-security/Charles-network-sniff.md)
