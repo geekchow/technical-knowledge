@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-27（HEAD `03952d0`）
+> 生成时间：2026-10-28（HEAD `143dd61`）
 > 📢 = 已发布到 CSDN（共 49 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-10-28 | `NEW` | [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) | Security / mobile-security |  |
 | 2026-10-26 | `NEW` | [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md) | Mobile / ios |  |
 | 2026-10-26 | `NEW` | [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) | Mobile / ios | [📢](https://blog.csdn.net/PhilZhou/article/details/169231342) |
 | 2026-10-25 | `NEW` | [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169058025) |
@@ -22,7 +23,12 @@
 | 2026-10-22 | `NEW` | [Spring Boot: Integrating Swagger / OpenAPI With springdoc-openapi](languages/java/springboot/springboot-openapi-swagger.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758708) |
 | 2026-10-22 | `NEW` | [Spring Boot 集成 Swagger / OpenAPI：用 springdoc-openapi 生成接口文档](languages/java/springboot/springboot-openapi-swagger.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/168758658) |
 | 2026-10-22 | `UPD` | [技术讲解仓库链接索引 (Technical Explanation Repos)](technical-repos.md) | Root |  |
-| 2026-10-20 | `NEW` | [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) | DevOps / jenkins | [📢](https://blog.csdn.net/PhilZhou/article/details/168648279) |
+
+### 2026-10-28 — 1 篇
+
+**Add article: mobile app sideloading attacks on Android and iOS** (`143dd61`)
+
+- `NEW` [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) — *Security / mobile-security*
 
 ### 2026-10-26 — 2 篇
 
@@ -130,15 +136,9 @@
 
 - `NEW` [让一个 Agent 驱动另一个交互式 Agent：cmux-delegate 的六个坑](ai/hermes/cmux-delegate.md) — *AI / hermes*
 
-### 2026-09-09 — 1 篇
+*另有 118 条更早的改动未列出（见下方完整目录）。*
 
-**docs(languages/python): uv 完整实践指南（KAN-153）** (`18d9a89`)
-
-- `NEW` [uv：用一个工具替换整条 Python 工具链](languages/python/uv-python-package-manager.zh.md) — *Languages / python* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/165607110)
-
-*另有 117 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 282 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 283 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -146,6 +146,7 @@
 
 ### 2026-10
 
+- `2026-10-28` · **security** — [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md)
 - `2026-10-26` · **mobile** — [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169231342)
 - `2026-10-26` · **mobile** — [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md)
 - `2026-10-25` · **languages** — [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169057877)
