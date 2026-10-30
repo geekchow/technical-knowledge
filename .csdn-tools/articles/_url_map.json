@@ -196,6 +196,27 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/169231342",
       "title": "iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选",
       "published": "2026-10-27"
+    },
+    "sideloading-attack-android-ios.zh.md": {
+      "src": "security/mobile-security/sideloading-attack-android-ios.zh.md",
+      "articleId": "169528154",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169528154",
+      "title": "移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护",
+      "published": "2026-10-30"
+    },
+    "sideloading-attack-android-ios.en.md": {
+      "src": "security/mobile-security/sideloading-attack-android-ios.en.md",
+      "articleId": "169528849",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169528849",
+      "title": "Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS",
+      "published": "2026-10-30"
+    },
+    "public-alb-with-private-subnets.en.md": {
+      "src": "cloud/aws/networking/public-alb-with-private-subnets.en.md",
+      "articleId": "169529548",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/169529548",
+      "title": "Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB",
+      "published": "2026-10-30"
     }
   }
 }
