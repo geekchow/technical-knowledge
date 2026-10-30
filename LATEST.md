@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-10-28（HEAD `a02b589`）
-> 📢 = 已发布到 CSDN（共 49 篇），链接指向线上文章。
+> 生成时间：2026-10-30（HEAD `d7a9d70`）
+> 📢 = 已发布到 CSDN（共 52 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -13,8 +13,8 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-10-28 | `NEW` | [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) | Security / mobile-security |  |
-| 2026-10-28 | `UPD` | [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) | Security / mobile-security |  |
+| 2026-10-28 | `NEW` | [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528849) |
+| 2026-10-28 | `UPD` | [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528154) |
 | 2026-10-26 | `NEW` | [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md) | Mobile / ios |  |
 | 2026-10-26 | `NEW` | [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) | Mobile / ios | [📢](https://blog.csdn.net/PhilZhou/article/details/169231342) |
 | 2026-10-25 | `NEW` | [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169058025) |
@@ -28,8 +28,8 @@
 
 **Add EN version of the sideloading attack article (parallel rewrite), cross-link bilingual pair** (`a02b589`)
 
-- `NEW` [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) — *Security / mobile-security*
-- `UPD` [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) — *Security / mobile-security*
+- `NEW` [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) — *Security / mobile-security* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169528849)
+- `UPD` [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) — *Security / mobile-security* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169528154)
 
 ### 2026-10-26 — 2 篇
 
@@ -141,8 +141,8 @@
 
 ### 2026-10
 
-- `2026-10-28` · **security** — [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md)
-- `2026-10-28` · **security** — [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md)
+- `2026-10-28` · **security** — [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169528154)
+- `2026-10-28` · **security** — [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169528849)
 - `2026-10-26` · **mobile** — [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169231342)
 - `2026-10-26` · **mobile** — [Inspecting an iOS App's Network Traffic: Instruments, Proxyman, mitmproxy, Pulse and More](mobile/ios/inspect-ios-network-traffic.en.md)
 - `2026-10-25` · **languages** — [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169057877)
@@ -152,7 +152,7 @@
 - `2026-10-20` · **devops** — [Building and Using a Jenkins Shared Library](devops/jenkins/jenkins-shared-library.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648279)
 - `2026-10-15` · **cloud** — [AWS Lambda and Connection-Bound Backends (CloudHSM, Relational Databases)](cloud/aws/lambda/lambda-connection-exhaustion.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168648309)
 - `2026-10-12` · **cloud** — [用 Internet Gateway 和公网 ALB 把私有子网里的服务暴露给公网用户](cloud/aws/networking/public-alb-with-private-subnets.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/168758338)
-- `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.en.md)
+- `2026-10-12` · **cloud** — [Exposing a Service in Private Subnets Through an Internet Gateway and a Public ALB](cloud/aws/networking/public-alb-with-private-subnets.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/169529548)
 - `2026-10-12` · **ai** — [飞书一句话，自动派给对应项目的 Claude Code：把 Hermes 改造成项目路由器](ai/hermes/feishu-project-router.md)
 - `2026-10-08` · **ai** — [chrome-devtools-mcp 与 Playwright：调试者的眼睛 vs. 测试者的手](ai/claude-code/chrome-devtools-mcp-vs-playwright.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167388470)
 - `2026-10-08` · **ai** — [chrome-devtools-mcp vs. Playwright: Debugger's Eyes vs. Tester's Hands](ai/claude-code/chrome-devtools-mcp-vs-playwright.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/167391569)
