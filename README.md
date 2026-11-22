@@ -11,7 +11,7 @@ article that references them.
 | Category | Contents |
 |---|---|
 | [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 91 articles |
-| [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS, CloudHSM — 14 articles |
+| [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS, CloudHSM — 15 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 36 articles |
 | [Mobile](./mobile/) | iOS and Android build, packaging, CloudKit and App Store review — 17 articles |
@@ -182,6 +182,7 @@ _AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS_
 
 **AWS › EKS**
 
+- [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md)
 - [AWS EKS Add-ons Explained](cloud/aws/eks/aws-eks-addon.md)
 - [What is AWS EKS?](cloud/aws/eks/AWS-EKS.md)
 - [ECS vs EKS](cloud/aws/eks/ECS-vs-EKS.md)

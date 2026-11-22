@@ -23,6 +23,7 @@ AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS.
 
 **AWS › EKS**
 
+- [502s When New Pods Join an ALB Before They Can Serve](aws/eks/alb-502-new-pods-not-ready.en.md)
 - [AWS EKS Add-ons Explained](aws/eks/aws-eks-addon.md)
 - [What is AWS EKS?](aws/eks/AWS-EKS.md)
 - [ECS vs EKS](aws/eks/ECS-vs-EKS.md)
