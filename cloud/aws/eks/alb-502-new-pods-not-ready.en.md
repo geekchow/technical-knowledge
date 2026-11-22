@@ -2,6 +2,8 @@
 
 *Why the AWS Load Balancer Controller can send traffic to pods that aren't ready yet, and how to make "registered" mean "ready".*
 
+> 中文版：[新 Pod 尚未就绪就被挂到 ALB 上导致 502](./alb-502-new-pods-not-ready.zh.md)
+
 ## Abbreviations
 
 | Abbreviation | Full name |
