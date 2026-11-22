@@ -174,7 +174,7 @@ _AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS_
 
 **AWS › CloudHSM**
 
-- [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.md)
+- [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) · [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md)
 
 **AWS › DynamoDB**
 

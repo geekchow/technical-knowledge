@@ -2,6 +2,8 @@
 
 *Why adding pods ahead of holiday traffic made a CloudHSM-backed API fail more often, and how to scale it properly.*
 
+> 中文版：[EKS Pod 翻倍后 CloudHSM 报错](./cloudhsm-throttling-on-eks.zh.md)
+
 ## Abbreviations
 
 | Abbreviation | Full name |
