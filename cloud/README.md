@@ -13,6 +13,10 @@ AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS.
 
 - [Allocate CIDR dynamically via `cidrsubnet](aws/cidr-allocation/README.md)
 
+**AWS › CloudHSM**
+
+- [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](aws/cloudhsm/cloudhsm-throttling-on-eks.md)
+
 **AWS › DynamoDB**
 
 - [DynamoDB Stream](aws/dynamodb/dynamoDB-stream.md)
