@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-11-22（HEAD `b00ce05`）
+> 生成时间：2026-11-22（HEAD `b2cff28`）
 > 📢 = 已发布到 CSDN（共 52 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,6 +13,7 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
+| 2026-11-22 | `NEW` | [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md) | Cloud / aws |  |
 | 2026-11-22 | `UPD` | [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) | Cloud / aws |  |
 | 2026-11-22 | `NEW` | [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) | Cloud / aws |  |
 | 2026-11-16 | `NEW` | [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md) | AI / claude-code |  |
@@ -22,9 +23,12 @@
 | 2026-10-26 | `NEW` | [iOS App 网络抓包全指南：Instruments、Proxyman、mitmproxy、Pulse 怎么选](mobile/ios/inspect-ios-network-traffic.zh.md) | Mobile / ios | [📢](https://blog.csdn.net/PhilZhou/article/details/169231342) |
 | 2026-10-25 | `NEW` | [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169058025) |
 | 2026-10-25 | `UPD` | [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169057877) |
-| 2026-10-25 | `UPD` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
 
-### 2026-11-22 — 2 篇
+### 2026-11-22 — 3 篇
+
+**Add article: ALB 502s when new EKS pods are registered before they can serve** (`b2cff28`)
+
+- `NEW` [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md) — *Cloud / aws*
 
 **Add Chinese version of the CloudHSM throttling article; rename EN to .en.md and cross-link the pair** (`b00ce05`)
 
@@ -109,7 +113,7 @@
 - `NEW` [Reverse Proxy: First Principles, from the Bank Edge to the AI Gateway](security/reverse-proxy/reverse-proxy.en.md) — *Security / reverse-proxy* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166894093)
 - `NEW` [反向代理：从银行边缘网关到 AI 网关的第一性原理](security/reverse-proxy/reverse-proxy.zh.md) — *Security / reverse-proxy* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166894018)
 
-### 2026-09-23 — 9 篇
+### 2026-09-23 — 8 篇
 
 **add Chinese version of the Nginx reverse proxy article — bilingual set complete** (`e4ab9ac`)
 
@@ -124,11 +128,10 @@
 - `UPD` [Spring Boot Startup Lifecycle: Hosting an Application With Embedded Tomcat](languages/java/springboot/springboot-startup-lifecycle.en.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166229827)
 - `UPD` [Spring Boot 启动生命周期：内嵌 Tomcat 到底是怎么跑起来的](languages/java/springboot/springboot-startup-lifecycle.zh.md) — *Languages / java* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489493)
 - `UPD` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/playwright-e2e-testing.en.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
-- `UPD` [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489470)
 
-*另有 122 条更早的改动未列出（见下方完整目录）。*
+*另有 123 条更早的改动未列出（见下方完整目录）。*
 
-## 全部文章 · 按加入时间 / All articles by date added（共 287 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 288 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -136,6 +139,7 @@
 
 ### 2026-11
 
+- `2026-11-22` · **cloud** — [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md)
 - `2026-11-22` · **cloud** — [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md)
 - `2026-11-22` · **cloud** — [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md)
 - `2026-11-16` · **ai** — [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md)
