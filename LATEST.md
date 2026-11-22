@@ -3,7 +3,7 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-11-22（HEAD `ecbd4cb`）
+> 生成时间：2026-11-22（HEAD `b00ce05`）
 > 📢 = 已发布到 CSDN（共 52 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
@@ -13,7 +13,8 @@
 
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
-| 2026-11-22 | `NEW` | [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.md) | Cloud / aws |  |
+| 2026-11-22 | `UPD` | [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) | Cloud / aws |  |
+| 2026-11-22 | `NEW` | [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) | Cloud / aws |  |
 | 2026-11-16 | `NEW` | [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md) | AI / claude-code |  |
 | 2026-10-28 | `NEW` | [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528849) |
 | 2026-10-28 | `UPD` | [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528154) |
@@ -22,13 +23,13 @@
 | 2026-10-25 | `NEW` | [How Monitors Are Implemented: From the OS Kernel to the HotSpot ObjectMonitor](languages/java/monitor-implementation-os-and-hotspot.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169058025) |
 | 2026-10-25 | `UPD` | [管程是怎么实现的：从操作系统内核到 HotSpot 对象监视器](languages/java/monitor-implementation-os-and-hotspot.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/169057877) |
 | 2026-10-25 | `UPD` | [From PV Operations and Monitors to Modern Java Concurrency](languages/java/semaphores-and-monitors-in-java.en.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175108) |
-| 2026-10-25 | `UPD` | [从 PV 操作、管程到现代 Java 并发](languages/java/semaphores-and-monitors-in-java.zh.md) | Languages / java | [📢](https://blog.csdn.net/PhilZhou/article/details/167175090) |
 
-### 2026-11-22 — 1 篇
+### 2026-11-22 — 2 篇
 
-**Add article: CloudHSM throttling after doubling EKS pods ("HSM could not queue the request")** (`ecbd4cb`)
+**Add Chinese version of the CloudHSM throttling article; rename EN to .en.md and cross-link the pair** (`b00ce05`)
 
-- `NEW` [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.md) — *Cloud / aws*
+- `UPD` [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) — *Cloud / aws*
+- `NEW` [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) — *Cloud / aws*
 
 ### 2026-11-16 — 1 篇
 
@@ -125,15 +126,9 @@
 - `UPD` [Playwright: Reliable End-to-End Testing for Web Apps](web/frontend/playwright-e2e-testing.en.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166230034)
 - `UPD` [Playwright：把端到端测试从「玄学」变回工程](web/frontend/playwright-e2e-testing.zh.md) — *Web / frontend* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166489470)
 
-### 2026-09-22 — 1 篇
+*另有 122 条更早的改动未列出（见下方完整目录）。*
 
-**add article: Agent、Skill 与 MCP —— 三层职责的边界** (`8dfc23a`)
-
-- `NEW` [Agent、Skill 与 MCP：三层职责的边界在哪里](ai/agents/agent-skill-and-mcp.md) — *AI / agents* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/166362349)
-
-*另有 121 条更早的改动未列出（见下方完整目录）。*
-
-## 全部文章 · 按加入时间 / All articles by date added（共 286 篇）
+## 全部文章 · 按加入时间 / All articles by date added（共 287 篇）
 
 回答「这篇是什么时候写的」。日期取自该文件**首次进入 git 历史**的提交
 （经 `--follow` 追踪重命名），因此仅被目录重组移动过的文件仍保留原始日期。
@@ -141,7 +136,8 @@
 
 ### 2026-11
 
-- `2026-11-22` · **cloud** — [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.md)
+- `2026-11-22` · **cloud** — [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md)
+- `2026-11-22` · **cloud** — [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md)
 - `2026-11-16` · **ai** — [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md)
 
 ### 2026-10
