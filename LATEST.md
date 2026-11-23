@@ -3,8 +3,8 @@
 [← 返回总索引](./README.md)
 
 > 本页由 `scripts/gen-latest.py` 生成，请勿手工编辑。
-> 生成时间：2026-11-22（HEAD `117dbd2`）
-> 📢 = 已发布到 CSDN（共 52 篇），链接指向线上文章。
+> 生成时间：2026-11-23（HEAD `e2207cf`）
+> 📢 = 已发布到 CSDN（共 55 篇），链接指向线上文章。
 
 ## 最近改动 / Recently added or updated
 
@@ -14,9 +14,9 @@
 | 日期 | | 文档 | 分类 | CSDN |
 |---|---|---|---|---|
 | 2026-11-22 | `UPD` | [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md) | Cloud / aws |  |
-| 2026-11-22 | `NEW` | [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md) | Cloud / aws |  |
-| 2026-11-22 | `UPD` | [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) | Cloud / aws |  |
-| 2026-11-22 | `NEW` | [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) | Cloud / aws |  |
+| 2026-11-22 | `NEW` | [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/171224229) |
+| 2026-11-22 | `UPD` | [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/171224044) |
+| 2026-11-22 | `NEW` | [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) | Cloud / aws | [📢](https://blog.csdn.net/PhilZhou/article/details/171223960) |
 | 2026-11-16 | `NEW` | [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md) | AI / claude-code |  |
 | 2026-10-28 | `NEW` | [Mobile App Sideloading Attacks: Trust Chains, Weak Points and Defences on Android and iOS](security/mobile-security/sideloading-attack-android-ios.en.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528849) |
 | 2026-10-28 | `UPD` | [移动 App 侧载攻击：Android 与 iOS 的信任链、突破口与防护](security/mobile-security/sideloading-attack-android-ios.zh.md) | Security / mobile-security | [📢](https://blog.csdn.net/PhilZhou/article/details/169528154) |
@@ -29,12 +29,12 @@
 **Add Chinese version of the ALB 502 new-pods article; cross-link the bilingual pair** (`117dbd2`)
 
 - `UPD` [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md) — *Cloud / aws*
-- `NEW` [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md) — *Cloud / aws*
+- `NEW` [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md) — *Cloud / aws* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171224229)
 
 **Add Chinese version of the CloudHSM throttling article; rename EN to .en.md and cross-link the pair** (`b00ce05`)
 
-- `UPD` [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) — *Cloud / aws*
-- `NEW` [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) — *Cloud / aws*
+- `UPD` [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) — *Cloud / aws* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171224044)
+- `NEW` [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) — *Cloud / aws* · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171223960)
 
 ### 2026-11-16 — 1 篇
 
@@ -139,10 +139,10 @@
 
 ### 2026-11
 
-- `2026-11-22` · **cloud** — [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md)
+- `2026-11-22` · **cloud** — [新 Pod 尚未就绪就被挂到 ALB 上导致 502](cloud/aws/eks/alb-502-new-pods-not-ready.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171224229)
 - `2026-11-22` · **cloud** — [502s When New Pods Join an ALB Before They Can Serve](cloud/aws/eks/alb-502-new-pods-not-ready.en.md)
-- `2026-11-22` · **cloud** — [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md)
-- `2026-11-22` · **cloud** — [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md)
+- `2026-11-22` · **cloud** — [EKS Pod 翻倍后 CloudHSM 报错："The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.zh.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171223960)
+- `2026-11-22` · **cloud** — [Doubling EKS Pods Broke CloudHSM: "The HSM could not queue the request for processing"](cloud/aws/cloudhsm/cloudhsm-throttling-on-eks.en.md) · [📢 CSDN](https://blog.csdn.net/PhilZhou/article/details/171224044)
 - `2026-11-16` · **ai** — [Best practices for Claude Code](ai/claude-code/best-practice-of-claude.md)
 
 ### 2026-10
