@@ -238,6 +238,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/171224229",
       "title": "新 Pod 尚未就绪就被挂到 ALB 上导致 502",
       "published": "2026-11-23"
+    },
+    "alb-502-new-pods-not-ready.en.md": {
+      "src": "cloud/aws/eks/alb-502-new-pods-not-ready.en.md",
+      "articleId": "171291128",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/171291128",
+      "title": "502s When New Pods Join an ALB Before They Can Serve",
+      "published": "2026-11-24"
     }
   }
 }
