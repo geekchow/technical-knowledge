@@ -245,6 +245,13 @@
       "url": "https://blog.csdn.net/PhilZhou/article/details/171291128",
       "title": "502s When New Pods Join an ALB Before They Can Serve",
       "published": "2026-11-24"
+    },
+    "claude-code-best-practices.en.md": {
+      "src": "ai/claude-code/claude-code-best-practices.en.md",
+      "articleId": "171291736",
+      "url": "https://blog.csdn.net/PhilZhou/article/details/171291736",
+      "title": "Best Practices for Claude Code: Guide the Model, Enforce in the Harness",
+      "published": "2026-11-24"
     }
   }
 }
