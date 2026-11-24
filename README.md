@@ -10,7 +10,7 @@ article that references them.
 
 | Category | Contents |
 |---|---|
-| [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 91 articles |
+| [AI](./ai/) | LLM fundamentals, Transformer & attention internals, inference, agent harness, Claude Code, prompting, agents, model routing — 92 articles |
 | [Cloud](./cloud/) | AWS services — EKS, networking, DynamoDB, Lambda, IAM/KMS, CloudHSM — 15 articles |
 | [DevOps](./devops/) | CI/CD, Jenkins, Kubernetes, DNS, Linux, shell, observability — 59 articles |
 | [Languages](./languages/) | Java, Python, JavaScript and programming paradigms — 36 articles |
@@ -47,6 +47,7 @@ _LLM fundamentals & inference, Claude Code, prompting, agents, model routing_
 - [Claude Code 安装指南](ai/claude-code/claude-code.md)
 - [claude skill](ai/claude-code/claude-skill.md)
 - [Using Claude Code Efficiently](ai/claude-code/guide.md)
+- [Best Practices for Claude Code: Guide the Model, Enforce in the Harness](ai/claude-code/claude-code-best-practices.en.md)
 - [iOS UI design for AI-powered dictionary app](ai/claude-code/iOS-UI-design-for-AI-powered-dictionary-app.md)
 - [One Layer vs Two Layers: Claude Skill Structure](ai/claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](ai/claude-code/skill.md)

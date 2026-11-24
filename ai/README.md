@@ -16,6 +16,7 @@ LLM fundamentals and inference, agent harness, Claude Code, prompting, agents, m
 - [Claude Code 安装指南](claude-code/claude-code.md)
 - [claude skill](claude-code/claude-skill.md)
 - [Using Claude Code Efficiently](claude-code/guide.md)
+- [Best Practices for Claude Code: Guide the Model, Enforce in the Harness](claude-code/claude-code-best-practices.en.md)
 - [iOS UI design for AI-powered dictionary app](claude-code/iOS-UI-design-for-AI-powered-dictionary-app.md)
 - [One Layer vs Two Layers: Claude Skill Structure](claude-code/One-layer-vs-two-layers-skill.md)
 - [skill](claude-code/skill.md)
